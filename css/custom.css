@@ -50,12 +50,18 @@
   }
 
   .section {
-    padding-bottom: 10rem;
+    padding-top: 7rem;
   }
 
   .filler {
     padding: 5rem;
   }
+
+
+
+
+
+
 
 .lg-view{
    display:inline-block;
@@ -64,7 +70,6 @@
 .sm-view{
    display:none;
 }
-
 
 /*Smaller than tablet*/
 @media screen and (max-width: 750px) {
