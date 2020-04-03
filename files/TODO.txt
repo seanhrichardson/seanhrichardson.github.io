@@ -1,0 +1,5 @@
+- cat paper
+- orbifold paper
+- graphics display
+- other CS code?
+- thesis
