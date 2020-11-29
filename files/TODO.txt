@@ -4,3 +4,4 @@
 - other CS code?
 - thesis
 - symlink CV
+- https://github.com/VISTAS-IVES/sky
