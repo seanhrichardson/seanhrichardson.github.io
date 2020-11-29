@@ -3,3 +3,4 @@
 - graphics display
 - other CS code?
 - thesis
+- symlink CV

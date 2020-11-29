@@ -1,32 +1,69 @@
   :root {
-    --light-grey: grey;
     --grey: #828282;
     --dark-grey: #606060;
   }
 
-  a {
-    color:inherit;
-    text-decoration: none;
-   }
-
-   a:hover {
-    color: #33C3F0;
-
-   }
-
-  p {
-/*    font-family: Serif. Times, serif;*/
+  body {
+    background-color: white;
     font-family: "Computer Modern";
     src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
+  }
+
+  .top-space {
+    margin-top: 100px;
+  }
+
+  .anchor {
+    display: block;
+    height: 95px; /*same height as header*/
+    margin-top: -95px; /*same height as header*/
+    visibility: hidden;
+  }
+
+  p {
     text-align: justify;
-
   }
 
-  .grey {
-    color:grey !important;
+  h2, h3 {
+    text-align: center;
+    border: 4px double black;
   }
 
-  /* Navbar */
+  .project-header {
+    margin-bottom: 20px;
+    width:100%;
+    height: auto;
+  }
+
+  .footer {
+    text-align: center;
+    background-color: #eee;
+    border-top: 2px solid var(--grey);
+    color: var(--grey);
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    line-height: 3rem;
+  }
+
+  .project-header h4 { 
+    display: inline;
+  }
+  .project-header span { 
+    float: right;
+    color: var(--grey);
+    margin: 0px 0px 20px 30px;
+  }
+
+  hr {
+    width: 90%;
+    border-color: black;
+    border-top-style: double;
+  }
+  .space {
+    margin: 5px 0px 5px 0px;
+  }
   .navbar {
     position: fixed;
     display: block;
@@ -35,24 +72,22 @@
     z-index: 9999;
     width: 100%;
     height: 6.5rem;
-    background-color: #fff;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee; 
-  }
-
-  .navbar {
-    position: fixed;
+    background-color: #eee;
+    border-bottom: 2px solid var(--grey); 
   }
 
   .navbar-list {
     list-style: none;
-    margin-bottom: 0; 
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   .navbar-item {
     position: relative;
     float: left;
     margin-bottom: 100; 
+    margin: 0px 0px 0px 0px;
   }
 
   .navbar-link {
@@ -60,7 +95,6 @@
     font-size: 11px;
     font-weight: 600;
     letter-spacing: .2rem;
-    margin-right: 35px;
     text-decoration: none;
     line-height: 6.5rem;
     color: var(--grey); 
@@ -70,75 +104,23 @@
     color: #33C3F0; 
   }
 
-  .header-link {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: var(--dark-grey);
+  a {
+    color: #222;
+    cursor: pointer;
+    text-decoration: none
   }
 
-  .header-link.active {
-    text-decoration: underline;
+  a.active {
+    color: #33C3F0;
   }
-
-  .nice-text, .section-header, .subsection-header, .li-description {
-    text-transform: uppercase;
-    font-weight: 600;
-    color: var(--dark-grey);
-  }
-
-  .section {
-    padding-top: 7rem;
-  }
-
-  .filler {
-    padding: 5rem;
-  }
-/*.li-description {
-    font-weight: bold;
-}
-*/
-
-
-/*.linklist {
-    list-style: none;
-    margin-bottom: 0; 
-  }
-
-.linklist-item {
-    display: inline-block;
-    padding-left: 7rem;
-}*/
-.linklist {
-    font-size: 75%;
-    display: flex;
-    align-items: stretch; /* Default */
-    justify-content: space-between;
-    width: 75%;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    padding-top: 1rem;
-    padding-bottom: 0rem;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px dotted var(--light-grey);
-    color: var(--light-grey);
-
-}
-.linklist-item {
-    display: block;
-    flex: 0 1 auto; /* Default */
-    list-style-type: none;
-}
 
 .lg-view{
-   display:inline-block;
-}
-
-.sm-view{
-   display:none;
-}
+    display:inline-block;
+ }
+ 
+ .sm-view{
+    display:none;
+ }
 
 /*Smaller than tablet*/
 @media screen and (max-width: 900px) {
@@ -155,5 +137,8 @@
 @media screen and (max-width: 600px) {
     .navbar {
       display:none;
+    }
+    .top-space {
+      margin-top: 50px;
     }
 }

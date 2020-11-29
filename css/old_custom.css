@@ -1,0 +1,155 @@
+  :root {
+    --light-grey: grey;
+    --grey: #828282;
+    --dark-grey: #606060;
+  }
+
+  a {
+    color:inherit;
+    text-decoration: none;
+   }
+
+   a:hover {
+    color: #33C3F0;
+
+   }
+
+  p {
+/*    font-family: Serif. Times, serif;*/
+    font-family: "Computer Modern";
+    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
+    text-align: justify;
+
+  }
+
+  .grey {
+    color:grey !important;
+  }
+
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 6.5rem;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee; 
+  }
+
+  .navbar-list {
+    list-style: none;
+    margin-bottom: 0; 
+  }
+
+  .navbar-item {
+    position: relative;
+    float: left;
+    margin-bottom: 100; 
+  }
+
+  .navbar-link {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    margin-right: 35px;
+    text-decoration: none;
+    line-height: 6.5rem;
+    color: var(--grey); 
+  }
+
+  .navbar-link.active {
+    color: #33C3F0; 
+  }
+
+  .header-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--dark-grey);
+  }
+
+  .header-link.active {
+    text-decoration: underline;
+  }
+
+  .nice-text, .section-header, .subsection-header, .li-description {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--dark-grey);
+  }
+
+  .section {
+    padding-top: 7rem;
+  }
+
+  .filler {
+    padding: 5rem;
+  }
+/*.li-description {
+    font-weight: bold;
+}
+*/
+
+
+/*.linklist {
+    list-style: none;
+    margin-bottom: 0; 
+  }
+
+.linklist-item {
+    display: inline-block;
+    padding-left: 7rem;
+}*/
+.linklist {
+    font-size: 75%;
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    width: 75%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dotted var(--light-grey);
+    color: var(--light-grey);
+
+}
+.linklist-item {
+    display: block;
+    flex: 0 1 auto; /* Default */
+    list-style-type: none;
+}
+
+.lg-view{
+   display:inline-block;
+}
+
+.sm-view{
+   display:none;
+}
+
+/*Smaller than tablet*/
+@media screen and (max-width: 900px) {
+    .lg-view{
+       display:none;
+    }
+
+    .sm-view{
+       display:inline-block;
+    }
+}
+
+/*Smaller than Phone*/
+@media screen and (max-width: 600px) {
+    .navbar {
+      display:none;
+    }
+}

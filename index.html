@@ -22,190 +22,173 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
+  <script src="https://kit.fontawesome.com/8d87f0e791.js" crossorigin="anonymous"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
 
 </head>
+
 <body>
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-
+<!-- NAV BAR -->
 <nav class="navbar">
-  <div class="container">
-    <ul class="navbar-list">
-      <li class="navbar-item">
-        <a class="navbar-link" href= "#about">
-          <span class="lg-view">About Me</span>
-          <span class="sm-view">About</span>
-        </a>
-      </li>
-      <li class="navbar-item">
-        <a class="navbar-link" href= "#projects">
-          Projects
-        </a>
-      </li>
-      <li class="navbar-item">
-        <a class="navbar-link" href= "#writing">
-        <span class="lg-view">Writing Samples</span>
-        <span class="sm-view">Writing</span>
-        </a>
-      </li>
-      <li class="navbar-item">
-        <a class="navbar-link" href= "#more">
-          <span class="lg-view">More Information</span>
-          <span class="sm-view">More</span>
-        </a>
-      </li>
-      <li class="navbar-item">
-        <a class="navbar-link" href= "#contact">
-          <span class="lg-view">Contact Me</span>
-          <span class="sm-view">Contact</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
+    <div class="container">
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a class="navbar-link" href= "#about">
+            <span class="lg-view">About Me</span>
+            <span class="sm-view">About</span>
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href= "#projects">
+            Projects
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href= "#writing">
+          <span class="lg-view">Writing Samples</span>
+          <span class="sm-view">Writing</span>
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href= "files/cv.pdf">
+            Resume
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-<div class="container filler"> </div>
+    <div class = "container">
+<!-- ABOUT ME -->
+        <span class="anchor" id="about"></span>
+        <h2 class="top-space">About Sean Richardson</h2>
+        <p>
+            Welcome! I am Sean Richardson &ndash; a tutor, runner, and lover of the outdoors. I have interestes in physics and computer science, but I am particular passionate of pure mathematics. I am a recent graduate of Lewis & Clark College where I majored in mathematics and computer science with a second major in physics. Through my mathematical research and tutoring, I have developed particular passion for the study of pure mathematics and hope to continue exploring the field in graduate school. I am an avid runner, and ran for the Lewis & Clark cross country an track teams throughout my time there; I hope to continue racing in half and full marathons. Other interests include hiking, camping, sailing, and chess. This website primarily consists of a collection of school work, research work, and independent projects that I do not want to lose. 
+        </p>
+        <span class="anchor" id="projects"></span>
+        <h2>Ongoing Projects</h2>
+        <div class = "project-header">
+            <h4> <a class="link" href="https://www.straightforwardmath.com">
+              StraightforwardMath Website
+              <i style=font-size:16pt; class="fa fa-external-link"></i></a></h4>
+            <span>October 2020 &ndash; Present</span>
+        </div>
+        <p>
+            StraightforwardMath will be a free and accessible collection of online interactive mathematics materials that solidify foundational mathematics skills. These materials are presented as a simple and straightforward story, always providing intuitive justification and often allowing students can re-discover the mathematical techniques themselves. 
+        </p>
+        <p>   
+            Pre-college mathematics is often taught as a set of rules and drills, removing the creativity of mathematics. Procedural rules are thrown at students in hope that students retain enough information to complete the problem sets and pass the tests, but this is harmful long term. StraightforwardMath will be a resource to students that wish to quickly re-learn the important material in an intuitive way that will encourae confidence creativity in future mathematics.
+        </p>
 
-<div id="about" class="container section">
-  <h5 class="section-header">About Me</h5>
-  <p> 
-    Welcome! I am a student, runner, and lover of the outdoors with interests in physics and computer science and a particular passion for mathematics. Specifically, I currently attend Lewis & Clark College and will graduate May 2020 with a major in mathematics & computer science with a second major in physics. I have a particular passion for mathematics and plan to continue exploring the field in graduate school. 
+        <h2>Past Projects</h2>
+        <div class = "project-header">
+          <h4> <a class="link" href="files/undergraduate-thesis.pdf">
+            Expository Thesis on Topological K-Theory
+            <i style=font-size:16pt; class="fa fa-external-link"></i></a></h4>
+          <span>September 2019 &ndash; May 2020</span>
+        </div>
+        <p>
+        This expository thesis aims to make topological K-Theory accessible to undergraduates, assuming only background in introductory linear algebra and basic ring theory. The document gives backround in category theory, modules and semirings, and topology. Then, the document describes vector bundles and the definition of K-Theory before proceeding into the cohomology theory and the application to division algebras. Many thanks to Professor Iva Stavrov for advising this thesis.
+        </p>
+        <p>
+        K-Theory is a method of associating topological objects with rings. Carefully placing vector spaces on the surface of any topological space results in a new topological space called a vector bundle. Reducing the set of all possible vector bundles over a fixed topological space allows for an addition and multiplication operation, providing a ring on the reduced set of vector bundles. This process of using vector bundles to associate a ring to a topological space is K-theory. The bountiful patterns within K-theory are particularly well-equipped to analyze spheres.
+        </p>
+        <!--- Give non-technical description-->
 
-    I am a devoted distance runner and am currently training for the half marathon with the conclusion of my final college cross country and track seasons. Other ways I enjoy the outdoors ihclude hiking, camping, and sailing. I additionally enjoy playing chess and other board games.
-  </p>
-</div>
+        <div class = "project-header">
+          <h4> <a class="link" href="https://www.sciencedirect.com/science/article/abs/pii/S092622451930097X">
+             Hearing the Local Orientability of an Orbifold
+            <i style=font-size:16pt; class="fa fa-external-link"></i></a></h4>
+          <span>May 2018 &ndash; August 2018</span>
+        </div>
+        <p> A mathemathematics research project on the Laplace Spectra of Riemannian Orbifolds conducted at Lewis & Clark College. This research was in collaboration with faculty advisor Dr. Liz Stanhope and together we published the paper "You can Hear the Local Orientability of an Orbifold" in the Journal "Differential Geometry and its Applications". In addition to the publication, I have given two slide presentations at Lewis & Clark College and a poster presentation. Thanks to the John S. Rogers Science Program for funding this research.</p>
 
+        <p>
+        A Riemannian orbifold is a generalization of a manifold which allows for local structure given by the quotient of a Riemannian manifold with respect to finite groups of isometries. If all such isometries on the orbifold are orientation preserving, we call the orbifold locally orientable. Using heat invariants, we found that the Laplace spectrum of a Riemannian orbifold determines the local orientability of the orbifold.</p>
 
-<!--- TODO: ADD DATES --->
+        <!--- Give non-technical description-->
 
-<div id="projects" class="container section">
-  <h5 class="section-header">Projects</h5>
+        <div class = "project-header">
+          <h4> <a class="link" href="https://www.sciencedirect.com/science/article/abs/pii/S092622451930097X">
+             Cloud Identification with Neural Networks
+            <i style=font-size:16pt; class="fa fa-external-link"></i></a></h4>
+          <span>May 2017 &ndash; August 2017</span>
+        </div>
 
-  <h6 class="subsection-header"> You can Hear the Local Orientability of an Orbifold </h6>
-  <!-- DESCRIPTION -->
-  <p>
-    A mathemathematics research project on the Laplace Spectra of Riemannian Orbifolds conducted at Lewis & Clark College. This research was in collaboration with faculty advisor Dr. Liz Stanhope and together we published the paper "You can Hear the Local Orientability of an Orbifold" in the Journal "Differential Geometry and its Applications". In addition to the publication, I have given two slide presentations at Lewis & Clark College and a poster presentation. A summary of the findings follows.
-  </p>
-  <p>
-    A Riemannian orbifold is a generalization of a manifold which allows for local structure given by the quotient of a Riemannian manifold with respect to finite groups of isometries. If all such isometries on the orbifold are orientation preserving, we call the orbifold locally orientable. Using heat invariants, we found that the Laplace spectrum of a Riemannian orbifold determines the local orientability of the orbifold.
-  </p>
-  <ul class="linklist">
-    <li class="linklist-item nice-text">Links:</li>
-    <li class="linklist-item nice-text grey">
-      <a href="https://www.sciencedirect.com/science/article/pii/S092622451930097X?utm_campaign=STMJ_75273_AUTH_SERV_PPUB&utm_medium=email&utm_dgroup=Email1Publishing&utm_acid=-800555120&SIS_ID=-1&dgcid=STMJ_75273_AUTH_SERV_PPUB&CMX_ID=&utm_in=DM597592&utm_source=AC_30">Paper</a>
-    </li>
-    <li class="linklist-item nice-text grey">
-      <a href="files/orbifold_poster.pdf">Poster</a>
-    </li>
-    <li class="linklist-item nice-text grey">
-      <a href="files/orbifold_presentation.pdf">Slides</a>
-  </li>
-  </ul>
+        <p>
+          A collaborative research project between the computer science and environmental studies department at Lewis & Clark College. The goal of the research is to automate the identification of of meteorological clouds given a photographic image. Myself and a peer wrote the code to implement and train a convolutional neural network in addition to managing and preprocessing the image data. The network was tasked with distinguishing between sky, thin cloud pixels, and thick cloud pixels; the trained network achieved a 91.9% classification accuracy and an essemble achieved 94.6% accuracy. This research was in collaboration with faculty advisors Dr. Peter Drake and Dr. Jessica Kleiss of Lewis & Clark College. Thanks to the John S. Rogers Science Program for funding this research.
+        </p>
 
-  <h6 class="subsection-header">Cloud Identification with Neural Networks</h6>
-    <p>
-    A collaborative research project between the computer science and environmental studies department at Lewis & Clark College. The goal of the research is to automate the identification of  of meteorological clouds given a photographic image. Myself and a peer wrote the code to implement and train a convolutional neural network in addition to managing and preprocessing the image data. The network was tasked with distinguishing between sky, thin cloud pixels, and thick cloud pixels; the trained network achieved a 91.9% classification accuracy and an essemble achieved 94.6% accuracy. This research was in collaboration with faculty advisors Dr. Peter Drake and Dr. Jessica Kleiss of Lewis & Clark College.
-  </p>
-  <p>
-    Myself along with peer Jeff Mullins gave a poster presentation of the work at the 2017 Northwest Consortorium for Computing Sciences in Colleges Conference in which we won first prize for a student presetation. We additionally gave a slide presentation on the research at Lewis & Clark College.
-  </p>
+        <span class="anchor" id="writing"></span>
+        <h2>Writing Samples</h2>
+        <div class = "project-header">
+          <h4> <a class="link" href="files/history_goulash_communism_economics.pdf">
+            Imre Nagy's Influence on Goulash Economics
+          <i style=font-size:16pt; class="fa fa-external-link"></i></a></h4>
+       <span>December 2019</span>
+       </div>
+       <p>
+       This history paper examines the era of "Goulash Communism" in Hungary under the rule of Janos Kadar. 
 
-    <ul class="linklist">
-      <li class="linklist-item nice-text">Links:</li>
-      <li class="linklist-item nice-text grey">
-        <a href="https://github.com/VISTAS-IVES/sky">GitHub</a>
-      </li>
-      <li class="linklist-item nice-text grey">
-        <a href="files/cloud_identification_poster.pdf">Poster</a>
-      </li>
-    <li class="linklist-item nice-text grey">
-      <a href="files/cloud_identification_presentation.pdf">Slides
-    </a>
-    </li>
-  </ul>
-</div>  
+       Hungary's economic policy in this era move away from tradition communist policy, risking a soviet invasion. This paper argues that the short rule of Imre Nagy &#8212; the leader of the Hungarian Revolution and brief president of Hungary before executed and replaced by the Soviet Union &#8212; is the root cause behind the radical economic policy under Kadar.
+       Specifically, Nagy initiated an environemnt of research economics that survived throughout Kadar's party purges; these research economists gained more political power during economic hardship and ultimately changed the economic policy.
+       </p>
 
-<div id="writing" class="container section">
-  <h5 class="section-header">
-    Writing Samples
-  </h5>
-  <p>
-    Below is a collection of my favorite papers from a variety of disciplines. All the papers below were written for various classes at Lewis & Clark. Note the header of each topic links to the pdf document.
-  </p>
-  <!-- TODO: A DESCRIPTION --->
-  <h6 class="subsection-header"><a href="files/history_goulash_communism_economics.pdf" class="header-link">Imre Nagy's Influence on Goulash Economics</a></h6>
-  <p>
-    This history paper examines the era of "Goulash Communism" in Hungary under the rule of Janos Kadar. 
+       <div class = "project-header">
+        <h4> <a class="link" href="files/falling_cat_phenomenon.pdf">
+          The Physics of the Falling Cat Phenomenon
+        <i style=font-size:16pt; class="fa fa-external-link"></i></a></h4>
+        <span>December 2019</span>
+        </div>
+        <p>
+          This physics report examines why cats always land on their feet along with an accompanying simulation.
 
-    Hungary's economic policy in this era move away from tradition communist policy, risking a soviet invasion. This paper argues that the short rule of Imre Nagy &#8212; the leader of the Hungarian Revolution and brief president of Hungary before executed and replaced by the Soviet Union &#8212; is the root cause behind the radical economic policy under Kadar.
-    Specifically, Nagy initiated an environemnt of research economics that survived throughout Kadar's party purges; these research economists gained more political power during economic hardship and ultimately changed the economic policy.
-  </p>
+          Cats manage to reverse their orientation while still maintaining zero angular momentum. Interestingly, this zero momentum turn of the cat is often misattributed to movement of the cats legs, but the literature suggests that it is the cat's back movement that results in this zero momentum turn. Working in collaboration with peers Arden Rasmussen and Will McDermott, we simulated the cat's turning mechanism by modeling the cat with two connected cylinders and no legs using pybullet. The accompanying paper explores the rotational mathematics of the phenomenon and explains the pybullet code.
+       </p>
 
-  <h6 class="subsection-header">
-    <!--- TODO: GET CAT PAPER --->
-    <a href="" class="header-link">The Physics of the Falling Cat Phenomenon</a></h6>
-  <p>
-    This physics report examines why cats always land on their feet along with an accompanying simulation.
+       <div class = "project-header">
+        <h4> <a class="link" href="files/econ_internet_and_education.pdf">
+          The Economics of Implementing Internet in Schools
+        <i style=font-size:16pt; class="fa fa-external-link"></i></a></h4>
+        <span>May 2019</span>
+      </div>
+      <p>
+        This developmental economics literature review examines the effect of implementing internet into schools. 
 
-    Cats manage to reverse their orientation while still maintaining zero angular momentum. Interestingly, this zero momentum turn of the cat is often misattributed to movement of the cats legs, but the literature suggests that it is the cat's back movement that results in this zero momentum turn. Working in collaboration with peers Arden Rasmussen and Will McDermott, we simulated the cat's turning mechanism by modeling the cat with two connected cylinders and no legs using pybullet. The accompanying paper explores the rotational mathematics of the phenomenon and explains the pybullet code.
-  </p>
+        The literature has a particular focus on Peru, for Peru's investment in the One Laptop per Child program provides much of the relevant data. The literature review additionally touches on the economic and language barriers to internet access and the social effects of internet. Ultimately, the evidence suggests against the investment in internet for schooling, but more data is needed.
+      </p>
 
-  <h6 class="subsection-header">
-    <a href="files/econ_internet_and_education.pdf">The Economics of Implementing Internet in Schools
-    </a> </h6>
-    <p>
-    This developmental economics literature review examines the effect of implementing internet into schools. 
+      <div class = "project-header">
+        <h4> <a class="link" href="files/philosophy_intuitionism.pdf">
+          Intuitionism and Infinity
+        <i style=font-size:16pt; class="fa fa-external-link"></i></a></h4>
+        <span>December 2017</span>
+      </div>
+      <p>
+        This philosophy paper examines Intuitionism as a philosophical theory of mathematics. Intuitionism, developed by Brouwer, uses the philosphical theories of time and memory to capture the concept of infinity. This paper describes how Intuitionism captures infinity through the use of choice sequences while simplifiying the content to an audience unfamilar with some of the mathematical concepts.
+      </p>
 
-    The literature has a particular focus on Peru, for Peru's investment in the One Laptop per Child program provides much of the relevant data. The literature review additionally touches on the economic and language barriers to internet access and the social effects of internet. Ultimately, the evidence suggests against the investment in internet for schooling, but more data is needed.
-    </p>
-  <h6 class="subsection-header"><a href="files/philosophy_intuitionism.pdf">Intuitionism and Infinity</a>  </h6>
-  <p>
-    This philosophy paper examines Intuitionism as a philosophical theory of mathematics. Intuitionism, developed by Brouwer, uses the philosphical theories of time and memory to capture the concept of infinity. This paper describes how Intuitionism captures infinity through the use of choice sequences while simplifiying the content to an audience unfamilar with some of the mathematical concepts.
-  </p>
-  <h6 class="subsection-header"><a href="files/columbia_small_farms.pdf">The History of Small Farms in the Columbia River Basin</a></h6>
-    <p>
-    This paper addresses the failure of small farms in the Columbia River Basin. Roosevelt's New Deal engineers originally described the area as a promised land in which families and war veterans could find success in starting a small farm. However, this small farm dream ultimately failed as larger farms dominated and made small family farms unsustainable. This paper argues that a combination poor policy and poor economic timing ultimately led to this failure.
-  </p>
-</div>
-
-<div id="more" class="container section">
- <!--  <h5 class="section-header">More Information</h5>
-    <h6 class="subsection-header">Education</h6>
-    <h6 class="subsection-header">Academic Achievements</h6>
-    <h6 class="subsection-header">Work Experience</h6> -->
-</div>
-
-
-<!-- CONTACT INFORMATION
---------------------------------------------------------->
-<div id="contact" class="container section">
-  <ul class="linklist">
-    <li class="linklist-item nice-text">
-    <span class="lg-view">Contact Information:</span>
-    <span class="sm-view">Contact:</span>
-  </li>
-    <a href="mailto:seanhrichardson@gmail.com">
-    <li class="linklist-item nice-text grey">
-      <span class="lg-view">seanhrichardson@gmail.com</span>
-      <span class="sm-view">Email</span>
-    </a>
-    </li>
-    <li class="linklist-item nice-text grey">
-      <a href="https://github.com/seanhrichardson/">
-        <span class="lg-view">github.com/seanhrichardson</span>
-        <span class="sm-view">GitHub</span>
-      </a>
-    </li>
-  </ul>
-
-
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class = "project-header">
+        <h4> <a class="link" href="files/columbia_small_farms.pdf">
+          The History of Small Farms in the Columbia River Basin
+        <i style=font-size:16pt; class="fa fa-external-link"></i></a></h4>
+        <span>May 2017</span>
+      </div>
+      <p>
+        This paper addresses the failure of small farms in the Columbia River Basin. Roosevelt's New Deal engineers originally described the area as a promised land in which families and war veterans could find success in starting a small farm. However, this small farm dream ultimately failed as larger farms dominated and made small family farms unsustainable. This paper argues that a combination poor policy and poor economic timing ultimately led to this failure.
+      </p>
+    </div>
+    <div class = "footer">
+      <div class = "container">
+        <span>Contact me at seanrichardson98@gmail.com</span>
+        <br/>
+        <span>GitHub: www.github.com/seanhrichardson</span>
+        <br/>
+        <span>Website powered by Skeleton and GitHub Pages</span>
+      </div>
+    </div>
 </body>
-</html>
