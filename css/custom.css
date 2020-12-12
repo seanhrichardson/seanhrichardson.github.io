@@ -104,13 +104,13 @@
     color: #33C3F0; 
   }
 
-  a {
+  .link {
     color: #222;
     cursor: pointer;
     text-decoration: none
   }
 
-  a.active {
+  .link.active {
     color: #33C3F0;
   }
 
