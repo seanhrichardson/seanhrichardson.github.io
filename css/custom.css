@@ -1,0 +1,280 @@
+/*
+PNW Color Pallete:
+  #37647a 
+  #3a653a
+  #b6864b
+  #8dbdbf
+  #92b070
+*/
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/*MENU:*/
+
+.menu-text > a {
+  font-size: 30px;
+  color: #b6864b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-color {
+  background-image: linear-gradient(#3a653a, #37647a);
+  z-index: 100; /* Stay on top */
+}
+
+.menu-text > a:hover {
+  color: #92b070;
+}  
+
+/*computer left-menu*/
+.menu-full {
+  display: inline-block;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 220px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  padding-top: 20px;
+}
+
+/*mobile drop-down menu*/
+
+.dropdown {
+  display: none;
+  z-index: 1;
+  text-align: center;
+}
+
+.dropdown a {
+  padding: 12px 16px;
+  display: block;
+}
+
+.zero-bottom {
+  margin-bottom: 0;
+}
+
+.menu-icon {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    flex: 0%;
+    font-size: 85px;
+    color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+/*HEADER:*/
+/*add 80% width for mobile*/
+.header-text {
+  color: white;
+  /**/
+  display: flex;
+  height: 300px;
+  flex: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.header-color {
+  /*change height and adjust for mobile*/
+  height: 300px;
+  background-color: #8dbdbf;
+  font-size: 50px;
+  font-weight: bold;
+  vertical-align: middle;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.container{
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+ul, ol {
+    font-size: 100%;
+}
+
+.horiz-center-text {
+    text-align: center;
+}
+
+.vertical-center {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+}
+
+.content {
+  border-top: 1px solid black;
+}
+
+.lg-view {
+  display: inline-block;
+}
+
+.sm-view {
+  display: none;
+}
+
+/*change margin for mobile*/
+.right-full {
+    margin-left: 220px;
+}
+
+/*Smaller than tablet*/
+@media screen and (max-width: 900px) {
+  .menu-full {
+    display: none;
+  }
+  .right-full {
+    margin-left: 0px; 
+  }
+  .menu-icon {
+    display: flex;
+    flex: 20%;
+  }
+  .lg-view {
+    display: none;
+  }
+  .sm-view {
+    display: inline-block;
+  }
+}
+
+.show {display: block;} 
+
+/*larger than tablet*/
+@media screen and (min-width: 901px) {
+  .dropdown {
+    display: none;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  margin: auto;
+  max-width: 1300px;
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
+.grid-container > a {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.grid-container > a:hover {
+  background-color: #92b070;
+  color: black;
+}
+
+#personalA {
+  display: none;
+}
+#personalB {
+  display: none;
+}
+
+.todo {
+  color: red;
+}
+
+.tolearn {
+  color: green;
+}
+
+/*------------*/
+/*
+.top-bar {
+    height: 300px;
+    background-color: #8dbdbf;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    vertical-align: middle;
+    position: relative;
+}
+
+.side-bar {
+    display: inline-block;
+    height: 100%; 
+    width: 220px; 
+    position: fixed;
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-image: linear-gradient(#3a653a, #37647a);
+    overflow-x: hidden;
+    padding-top: 20px;
+    color: #b6864b;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-container > a {
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    color: #b6864b;
+    text-decoration: none;
+    font-weight: bold;
+  }  
+
+  .flex-container > a:hover {
+    color: #92b070;
+  }  
+
+  .main{
+    margin-left: 220px; 
+  }
+
+  .navbar-list {
+    font-size: 20px;
+    margin-top: 300px;
+    list-style: none;
+    display: block;
+    font-weight: bold;
+  }
+
+  .navbar-item {
+    margin: 0 0 100px 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }*/

@@ -1,0 +1,7 @@
+- cat paper
+- orbifold paper
+- graphics display
+- other CS code?
+- thesis
+- symlink CV
+- https://github.com/VISTAS-IVES/sky
