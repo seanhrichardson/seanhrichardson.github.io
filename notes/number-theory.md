@@ -9,15 +9,16 @@ title: Number Theory
 #### Basics
             
 * Divisibility
-* Euclidean division
-* Greatest common divisor
+* [Euclidean division](number-theory/euclidean-division.html)
+* [Greatest common divisor](number-theory/gcd.html)
 * Least common multiple
-* Euclidean algorithm
+* [Euclidean algorithm](number-theory/euclidean-algorithm.html)
+* [Bézout's Identity](number-theory/bezouts-identity.html)
 * Prime numbers
 * Fundamental theorem of arithmetic
 * Canonical form
 * Coprime integers
-* Linear Diophantine equations
+* [Linear Diophantine equations](number-theory/linear-diophantine-equations.html)
 * Dirichelt's approximation
 * Liouville numbers
             
@@ -25,7 +26,7 @@ title: Number Theory
             
 * Congruence
 * Residue classes
-* Chinese remainder theorem
+* [Chinese remainder theorem](number-theory/chinese-remainder-theorem.html)
 * Multiplicative group of coprime residue classes
 * Field of residue classes modulo a prime \\(p\\)
 * Euler-Fermat theorem (and Fermat's corallary)

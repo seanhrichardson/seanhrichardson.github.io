@@ -10,13 +10,11 @@ A [pdf](/files/sean-richardson-cv.pdf) of my CV.
 
 #### Education
 
-**University of Washington**. Seattle, WA. (Beginning Fall 2021)
-
+**University of Washington**. Seattle, WA. (Beginning Fall 2021)\
 PhD in Mathematics.
 
-**Lewis & Clark College, Summa Cum Laude.** Portland, OR. (September 2016 &mdash; May 2020)
-
-Bachelor of Arts in Mathematics and Computer Science, with honors.
+**Lewis & Clark College, Summa Cum Laude.** Portland, OR. (September 2016 &mdash; May 2020)\
+Bachelor of Arts in Mathematics and Computer Science, with honors.\
 Bachelor of Arts in Physics.
 
 #### Research, Tutoring, and Grading
