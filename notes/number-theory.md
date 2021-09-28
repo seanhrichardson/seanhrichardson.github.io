@@ -19,7 +19,7 @@ title: Number Theory
 * Canonical form
 * Coprime integers
 * [Linear Diophantine equations](number-theory/linear-diophantine-equations.html)
-* Dirichelt's approximation
+* Dirichlet's approximation
 * Liouville numbers
             
 #### Modular Artithmetic
@@ -29,7 +29,7 @@ title: Number Theory
 * [Chinese remainder theorem](number-theory/chinese-remainder-theorem.html)
 * Multiplicative group of coprime residue classes
 * Field of residue classes modulo a prime \\(p\\)
-* Euler-Fermat theorem (and Fermat's corallary)
+* Euler-Fermat theorem (and Fermat's corollary)
 * Legendre symbol and quadratic residues
 * Legendre symbol manipulations
 * Law of quadratic reciprocity

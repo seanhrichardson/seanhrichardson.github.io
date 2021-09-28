@@ -18,7 +18,7 @@ title: Group Theory
   * Dihedral groups
   * Symmetric groups
   * Alternating groups
-  * Quarternion group
+  * Quaternion group
 
 #### Subgroups
   * [The subgroup criterion](group-theory/subgroup-criterion.html)

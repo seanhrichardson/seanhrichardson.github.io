@@ -18,7 +18,7 @@ title: Real Analysis
 * Basic results on convergent sequences
 * Bounded
 * Cauchy sequences
-* Cauchy crtiterion.
+* Cauchy criterion.
 * Monotone sequences.
 
 #### Series

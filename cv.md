@@ -19,13 +19,13 @@ Bachelor of Arts in Physics.
 
 #### Research, Tutoring, and Grading
 
-* Americorps Algebra Tutor with [Saga Education](https://www.sagaeducation.org/) (August 2020 &mdash; Present)
+* AmeriCorps Algebra Tutor with [Saga Education](https://www.sagaeducation.org/) (August 2020 &mdash; Present)
 * Teaching Assistant with [Art of Problem Solving](https://artofproblemsolving.com) (August 2020 &mdash; February 2021)
 * Counselor with [Ross Mathematics Program](https://rossprogram.org/) (June 2020 &mdash; August 2020)
 * Math and Physics Grader at Lewis & Clark College (September 2019 &mdash; May 2020)
 * Laplace spectra of an orbifold research through [Lewis & Clark College's Rogers Science Program](https://college.lclark.edu/science/opportunities/rogers/) (May 2018 &mdash; August 2018)
 * Peer Tutor with the [SQRC at Lewis & Clark College](https://college.lclark.edu/departments/mathematical_sciences/sqrc/) (September 2017 &mdash; May 2020)
-* Identifying clouds with neural networds research through [Lewis & Clark College's Rogers Science Program](https://college.lclark.edu/science/opportunities/rogers/) (May 2017 &#8212; August 2017)
+* Identifying clouds with neural networks research through [Lewis & Clark College's Rogers Science Program](https://college.lclark.edu/science/opportunities/rogers/) (May 2017 &#8212; August 2017)
 
 #### Writing and Publications
 
@@ -38,7 +38,7 @@ Bachelor of Arts in Physics.
 * Academic All American, presented by CoSIDA (June 2020)
 * Phi Betta Kappa Honors Society member (April 2020 &mdash; Present)
 * Pi Mu Epsilon Honors Society member (November 2019 &mdash; Present)
-* [Feynmann Book Award to Outstanding Introductory Physics Student](https://college.lclark.edu/departments/physics/student-awards/), awarded by Lewis & Clark Physics Department (May 2018)
+* [Feynman Book Award to Outstanding Introductory Physics Student](https://college.lclark.edu/departments/physics/student-awards/), awarded by Lewis & Clark Physics Department (May 2018)
 * Best Student Poster: CCSC Northwest Conference (October 2017)
 * [Pamplin Honors Society member](https://college.lclark.edu/academics/honors/pamplin_society/) (September 2017 &mdash; Present)
 

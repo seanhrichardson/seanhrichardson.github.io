@@ -8,7 +8,7 @@ title: Writing
 
 #### Orbitopes and Protein Folding
 
-This mathematics report introduces undergraduate students to abstract mathematical objects called orbitopes, which are created by taking the convex hull of an orbit with respect to a provided group action. The paper first provides an intuitive description of orbitopes with the help of finite examples. The paper then proceeds to discuss some necessary background necessary to give a vareful definition of orbitopes. After a fun discussion on constructing platonic solids as orbitopes, the paper proceeds to the discuss the applications of orbifolds to protein folding. In particular, the relationship between the convex hull and weighted averages gives insight on the probability distribution for the orietation of the protein calmodulin.
+This mathematics report introduces undergraduate students to abstract mathematical objects called orbitopes, which are created by taking the convex hull of an orbit with respect to a provided group action. The paper first provides an intuitive description of orbitopes with the help of finite examples. The paper then proceeds to discuss some necessary background necessary to give a careful definition of orbitopes. After a fun discussion on constructing platonic solids as orbitopes, the paper proceeds to the discuss the applications of orbifolds to protein folding. In particular, the relationship between the convex hull and weighted averages gives insight on the probability distribution for the orientation of the protein calmodulin.
 
 [pdf](/files/orbitopes_and_protein_folding.pdf)
 
@@ -32,7 +32,7 @@ This developmental economics literature review examines the effect of implementi
 
 #### Intuitionism and Infinity
 
-This philosophy paper examines Intuitionism as a philosophical theory of mathematics. Intuitionism, developed by Brouwer, uses the philosphical theories of time and memory to capture the concept of infinity. This paper describes how Intuitionism captures infinity through the use of choice sequences while simplifiying the content to an audience unfamilar with some of the mathematical concepts. 
+This philosophy paper examines Intuitionism as a philosophical theory of mathematics. Intuitionism, developed by Brouwer, uses the philosophical theories of time and memory to capture the concept of infinity. This paper describes how Intuitionism captures infinity through the use of choice sequences while simplifying the content to an audience unfamiliar with some of the mathematical concepts. 
 
 [pdf](/files/philosophy_intuitionism.pdf)
 

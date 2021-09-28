@@ -23,13 +23,16 @@ title: Linear Algebra
 * Computing determinant through cofactors.
 * Cramer's rule.
 * Matrices as linear maps.
-* Nullspace, column space.
+* Null space, column space.
 * Rank-nullity theorem.
         
 #### Vector Spaces
         
-* Definition of a vector space.
-* Linear independence, spanning set, and basis.
+* [Definition of a vector space](linear-algebra/vector-space.html)
+* [Linear independence](linear-algebra/linear-independence.html)
+* Spanning set
+* Basis
+* Dimension
 * Change of Basis
         
 #### Linear Transformations
