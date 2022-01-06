@@ -6,12 +6,23 @@ PNW Color Pallete:
   #8dbdbf
   #92b070
 */
+ol {
+  counter-reset: list;
+}
+ol > li {
+  list-style: none;
+  position: relative;
+}
+ol > li:before {
+  counter-increment: list;
+  content: "(" counter(list) ") ";
+  left: -1.4em;
+}
 
 .flex-container {
   display: flex;
   flex-direction: column;
 }
-
 /*MENU:*/
 
 .menu-text > a {
@@ -72,6 +83,7 @@ PNW Color Pallete:
     cursor: pointer;
   }
 
+
 /*HEADER:*/
 /*add 80% width for mobile*/
 .header-text {
@@ -102,7 +114,12 @@ PNW Color Pallete:
     margin-bottom: 3em;
 }
 
+p {
+  margin-bottom: 1em;
+}
+
 ul, ol {
+    margin-top: -1rem;
     font-size: 100%;
 }
 

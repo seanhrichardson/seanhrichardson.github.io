@@ -4,12 +4,12 @@ section: NOTES
 title: Notes
 ---
 
-[Linear Algebra](/notes/linear-algebra.html)
-[Ring Theory](/notes/ring-theory.html)
-[Group Theory](/notes/group-theory.html)
-<!-- [Field Theory](/notes/field-theory.html) -->
-[Real Analysis](/notes/real-analysis.html)
-<!-- [Complex Analysis](/notes/complex-analysis.html) -->
-<!-- [Differential Equations](/notes/diff-eqs.html) -->
-<!-- [Geometry & Topology](/notes/geom-topology.html) -->
-[Number Theory](/notes/number-theory.html)
+[Analysis Q1](/notes/analysisQ1)
+[Analysis Q2](/notes/analysisQ2)
+[Algebra Q1](/notes/algebraQ1)
+[Algebra Q2](/notes/algebraQ2)
+[Manifolds Q1](/notes/manifoldsQ1)
+[Manifolds Q2](/notes/manifoldsQ2)
+[Linear Algebra](/notes/linear-algebra)
+[Calculus](/notes/calculus)
+[Differential Equations](/notes/diffeqs)

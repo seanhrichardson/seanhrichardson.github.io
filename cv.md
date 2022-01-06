@@ -6,11 +6,11 @@ title: cv
 
 # Sean Richardson
 
-A [pdf](/files/sean-richardson-cv.pdf) of my CV.
+A [pdf](/files/sean-richardson-cv.pdf) of my CV (updated less frequently than this page).
 
 #### Education
 
-**University of Washington**. Seattle, WA. (Beginning Fall 2021)\
+**University of Washington**. Seattle, WA. (Fall 2021 &mdash; present)\
 PhD in Mathematics.
 
 **Lewis & Clark College, Summa Cum Laude.** Portland, OR. (September 2016 &mdash; May 2020)\
@@ -19,7 +19,7 @@ Bachelor of Arts in Physics.
 
 #### Research, Tutoring, and Grading
 
-* AmeriCorps Algebra Tutor with [Saga Education](https://www.sagaeducation.org/) (August 2020 &mdash; Present)
+* AmeriCorps Algebra Tutor with [Saga Education](https://www.sagaeducation.org/) (August 2020 &mdash; July 2021)
 * Teaching Assistant with [Art of Problem Solving](https://artofproblemsolving.com) (August 2020 &mdash; February 2021)
 * Counselor with [Ross Mathematics Program](https://rossprogram.org/) (June 2020 &mdash; August 2020)
 * Math and Physics Grader at Lewis & Clark College (September 2019 &mdash; May 2020)
