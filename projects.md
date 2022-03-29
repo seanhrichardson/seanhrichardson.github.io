@@ -8,4 +8,3 @@ title: Projects
 [You can hear the local orientability of an orbifold](projects/hearing-orbifolds.html) 
 [Cloud identification with neural networks](projects/cloud-identification.html)
 [Miscellaneous Writing](projects/writing.html)
-[Notes](notes.html)
