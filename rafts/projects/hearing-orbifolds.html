@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Info-->
+  <meta charset="utf-8">
+  <title>Sean Richardson</title>
+  <meta name="description" content="">
+  <meta name="Sean Richardson" content="">
+
+  <!-- Mobile Adjustments -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS -->
+  <!-- <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css"> -->
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/custom.css">
+
+  <!-- JavaScript-->
+    <!--Custom-->
+
+    <!-- MathJax-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<!--
+TODO:
+- Create js for automating the insertion of sidebar.
+-->
+
+<body>
+    <div class = "menu-full menu-color">
+      <!--Change horiz-center-text to center with flex?-->
+      <div class = "flex-container horiz-center-text vertical-center menu-text">
+        <a href = /index.html>HOME</a>
+        <a href = /cv.html>CV</a>
+        <a href = /projects.html>PROJECTS</a>
+        <a href = /personal.html id = "personalA">PERSONAL</a> 
+      </div>
+    </div>
+    <div class = "right-full">
+        <div class = "header-color">
+          <div class = "header-text">
+            <!--HEADER-TITLE BELOW:-->
+            PROJECTS
+          </div>
+          <button onclick="myFunction()" class = "menu-icon">
+            <b>&equiv;</b>
+        </div>
+        <div id="myDropdown" class="menu-text menu-color dropdown">
+        <!-- <div id="myDropdown" class="dropdown-content dropdown-style"> -->
+          <a href = /index.html>HOME</a>
+          <a href = /cv.html>CV</a>
+          <a href = /projects.html>PROJECTS</a>
+        </div>
+        <div class = "content">
+          <div class = "container">
+            <!--MAIN CONTENT BELOW:-->
+              <h2 id="you-can-hear-the-local-orientability-of-an-orbifold">You can hear the local orientability of an orbifold</h2>
+
+<p>A mathematics research project on the Laplace Spectra of Riemannian Orbifolds conducted at Lewis &amp; Clark College. This research was in collaboration with faculty advisor Dr. Liz Stanhope and together we published the paper “You can Hear the Local Orientability of an Orbifold” in the Journal “Differential Geometry and its Applications”. In addition to the publication, I have given two slide presentations at Lewis &amp; Clark College and a poster presentation. Thanks to the John S. Rogers Science Program for funding this research.</p>
+
+<p>A Riemannian orbifold is a generalization of a manifold which allows for local structure given by the quotient of a Riemannian manifold with respect to finite groups of isometries. If all such isometries on the orbifold are orientation preserving, we call the orbifold locally orientable. Using heat invariants, we found that the Laplace spectrum of a Riemannian orbifold determines the local orientability of the orbifold.</p>
+
+<ul>
+  <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S092622451930097X">link to paper</a></li>
+  <li><a href="/files/orbifold_presentation.pdf">slides</a></li>
+  <li><a href="/files/orbifold_poster.pdf">poster</a></li>
+</ul>
+
+          </div>
+        </div>
+    </div>
+</body>
+
+<script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  console.log("click");
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+
+</script>

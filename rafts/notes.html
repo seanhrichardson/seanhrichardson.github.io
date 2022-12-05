@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Info-->
+  <meta charset="utf-8">
+  <title>Sean Richardson</title>
+  <meta name="description" content="">
+  <meta name="Sean Richardson" content="">
+
+  <!-- Mobile Adjustments -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/custom.css">
+
+  <!-- JavaScript-->
+    <!--Custom-->
+
+    <!-- MathJax-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<style>
+p {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  margin: auto;
+  max-width: 1300px;
+  padding-top: 50px;
+}
+
+p > a {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+}
+  
+p > a:hover {
+    background-color: #92b070;
+    color: black;
+}
+</style>
+
+<body>
+    <div class = "menu-full menu-color">
+      <!--Change horiz-center-text to center with flex?-->
+      <div class = "flex-container horiz-center-text vertical-center menu-text">
+        <a href = /index.html>HOME</a>
+        <a href = /cv.html>CV</a>
+        <a href = /projects.html>PROJECTS</a>
+      </div>
+    </div>
+    <div class = "right-full">
+        <div class = "header-color">
+          <div class = "header-text">
+            <!--HEADER-TITLE BELOW:-->
+            NOTES
+          </div>
+          <button onclick="myFunction()" class = "menu-icon">
+            <b>&equiv;</b>
+        </div>
+        <div id="myDropdown" class="menu-text menu-color dropdown">
+        <!-- <div id="myDropdown" class="dropdown-content dropdown-style"> -->
+          <a href = /index.html>HOME</a>
+          <a href = /cv.html>CV</a>
+          <a href = /projects.html>PROJECTS</a>
+        </div>
+        <div class = "content">
+          </div>
+            <p><a href="/notes/analysis">Elementary Analysis</a></p>
+
+<!-- [Calculus](/notes/calculus)
+[Complex Analysis](/notes/complex-analysis)
+[Differential Equations](/notes/diff-eqns)
+[Field Theory](/notes/field-theory)
+[Functional Analysis](/notes/functional-analysis)
+[Galois Theory](/notes/galois-theory)
+[Group Theory](/notes/group-theory)
+[Inequalities](/notes/inequalities)
+[Linear Algebra](/notes/linear-algebra)
+[Differential Geometry](/notes/diff-geom)
+[Measure Theory](/notes/measure-theory)
+[Metric Spaces](/notes/metric-spaces)
+[Module Theory](/notes/module-theory)
+[Ring Theory](/notes/ring-theory)
+[Topology](/notes/topology) -->
+
+          </div>
+    </div>
+</body>
+
+<script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  console.log("click");
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+</script>

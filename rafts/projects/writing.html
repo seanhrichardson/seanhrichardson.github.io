@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Info-->
+  <meta charset="utf-8">
+  <title>Sean Richardson</title>
+  <meta name="description" content="">
+  <meta name="Sean Richardson" content="">
+
+  <!-- Mobile Adjustments -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS -->
+  <!-- <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css"> -->
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/custom.css">
+
+  <!-- JavaScript-->
+    <!--Custom-->
+
+    <!-- MathJax-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<!--
+TODO:
+- Create js for automating the insertion of sidebar.
+-->
+
+<body>
+    <div class = "menu-full menu-color">
+      <!--Change horiz-center-text to center with flex?-->
+      <div class = "flex-container horiz-center-text vertical-center menu-text">
+        <a href = /index.html>HOME</a>
+        <a href = /cv.html>CV</a>
+        <a href = /projects.html>PROJECTS</a>
+        <a href = /personal.html id = "personalA">PERSONAL</a> 
+      </div>
+    </div>
+    <div class = "right-full">
+        <div class = "header-color">
+          <div class = "header-text">
+            <!--HEADER-TITLE BELOW:-->
+            PROJECTS
+          </div>
+          <button onclick="myFunction()" class = "menu-icon">
+            <b>&equiv;</b>
+        </div>
+        <div id="myDropdown" class="menu-text menu-color dropdown">
+        <!-- <div id="myDropdown" class="dropdown-content dropdown-style"> -->
+          <a href = /index.html>HOME</a>
+          <a href = /cv.html>CV</a>
+          <a href = /projects.html>PROJECTS</a>
+        </div>
+        <div class = "content">
+          <div class = "container">
+            <!--MAIN CONTENT BELOW:-->
+              <h2 id="miscellaneous-writing">Miscellaneous Writing</h2>
+
+<h4 id="orbitopes-and-protein-folding">Orbitopes and Protein Folding</h4>
+
+<p>This mathematics report introduces undergraduate students to abstract mathematical objects called orbitopes, which are created by taking the convex hull of an orbit with respect to a provided group action. The paper first provides an intuitive description of orbitopes with the help of finite examples. The paper then proceeds to discuss some necessary background necessary to give a careful definition of orbitopes. After a fun discussion on constructing platonic solids as orbitopes, the paper proceeds to the discuss the applications of orbifolds to protein folding. In particular, the relationship between the convex hull and weighted averages gives insight on the probability distribution for the orientation of the protein calmodulin.</p>
+
+<p><a href="/files/orbitopes_and_protein_folding.pdf">pdf</a></p>
+
+<h4 id="imre-nagys-influence-on-goulash-economics">Imre Nagy’s Influence on Goulash Economics</h4>
+
+<p>This history paper examines the era of “Goulash Communism” in Hungary under the rule of Janos Kadar. Hungary’s economic policy in this era move away from tradition communist policy, risking a soviet invasion. This paper argues that the short rule of Imre Nagy — the leader of the Hungarian Revolution and brief president of Hungary before executed and replaced by the Soviet Union — is the root cause behind the radical economic policy under Kadar. Specifically, Nagy initiated an environment of research economics that survived throughout Kadar’s party purges; these research economists gained more political power during economic hardship and ultimately changed the economic policy.</p>
+
+<p><a href="/files/history_goulash_communism_economics.pdf">pdf</a></p>
+
+<h4 id="the-physics-of-the-falling-cat-phenomenon">The Physics of the Falling Cat Phenomenon</h4>
+
+<p>This physics report examines why cats always land on their feet along with an accompanying simulation. Cats manage to reverse their orientation while still maintaining zero angular momentum. Interestingly, this zero momentum turn of the cat is often misattributed to movement of the cats legs, but the literature suggests that it is the cat’s back movement that results in this zero momentum turn. Working in collaboration with peers Arden Rasmussen and Will McDermott, we simulated the cat’s turning mechanism by modeling the cat with two connected cylinders and no legs using pybullet. The accompanying paper explores the rotational mathematics of the phenomenon and explains the pybullet code.</p>
+
+<p><a href="/files/falling_cat_phenomenon.pdf">pdf</a></p>
+
+<h4 id="the-economics-of-implementing-internet-in-schools">The Economics of Implementing Internet in Schools</h4>
+
+<p>This developmental economics literature review examines the effect of implementing internet into schools. The literature has a particular focus on Peru, for Peru’s investment in the One Laptop per Child program provides much of the relevant data. The literature review additionally touches on the economic and language barriers to internet access and the social effects of internet. Ultimately, the evidence suggests against the investment in internet for schooling, but more data is needed.</p>
+
+<p><a href="/files/econ_internet_and_education.pdf">pdf</a></p>
+
+<h4 id="intuitionism-and-infinity">Intuitionism and Infinity</h4>
+
+<p>This philosophy paper examines Intuitionism as a philosophical theory of mathematics. Intuitionism, developed by Brouwer, uses the philosophical theories of time and memory to capture the concept of infinity. This paper describes how Intuitionism captures infinity through the use of choice sequences while simplifying the content to an audience unfamiliar with some of the mathematical concepts.</p>
+
+<p><a href="/files/philosophy_intuitionism.pdf">pdf</a></p>
+
+<h4 id="the-history-of-small-farms-in-the-columbia-river-basin">The History of Small Farms in the Columbia River Basin</h4>
+
+<p>This paper addresses the failure of small farms in the Columbia River Basin. Roosevelt’s New Deal engineers originally described the area as a promised land in which families and war veterans could find success in starting a small farm. However, this small farm dream ultimately failed as larger farms dominated and made small family farms unsustainable. This paper argues that a combination poor policy and poor economic timing ultimately led to this failure.</p>
+
+<p><a href="/files/columbia_small_farms.pdf">pdf</a></p>
+
+          </div>
+        </div>
+    </div>
+</body>
+
+<script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  console.log("click");
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+
+</script>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Info-->
+  <meta charset="utf-8">
+  <title>Sean Richardson</title>
+  <meta name="description" content="">
+  <meta name="Sean Richardson" content="">
+
+  <!-- Mobile Adjustments -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS -->
+  <!-- <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css"> -->
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/custom.css">
+
+  <!-- JavaScript-->
+    <!--Custom-->
+
+    <!-- MathJax-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<!--
+TODO:
+- Create js for automating the insertion of sidebar.
+-->
+
+<body>
+    <div class = "menu-full menu-color">
+      <!--Change horiz-center-text to center with flex?-->
+      <div class = "flex-container horiz-center-text vertical-center menu-text">
+        <a href = /index.html>HOME</a>
+        <a href = /cv.html>CV</a>
+        <a href = /projects.html>PROJECTS</a>
+        <a href = /personal.html id = "personalA">PERSONAL</a> 
+      </div>
+    </div>
+    <div class = "right-full">
+        <div class = "header-color">
+          <div class = "header-text">
+            <!--HEADER-TITLE BELOW:-->
+            
+          </div>
+          <button onclick="myFunction()" class = "menu-icon">
+            <b>&equiv;</b>
+        </div>
+        <div id="myDropdown" class="menu-text menu-color dropdown">
+        <!-- <div id="myDropdown" class="dropdown-content dropdown-style"> -->
+          <a href = /index.html>HOME</a>
+          <a href = /cv.html>CV</a>
+          <a href = /projects.html>PROJECTS</a>
+        </div>
+        <div class = "content">
+          <div class = "container">
+            <!--MAIN CONTENT BELOW:-->
+              <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
+
+<p>You can find the source code for Minima at GitHub:
+<a href="https://github.com/jekyll">jekyll</a> /
+<a href="https://github.com/jekyll/minima">minima</a></p>
+
+<p>You can find the source code for Jekyll at GitHub:
+<a href="https://github.com/jekyll">jekyll</a> /
+<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
+
+
+          </div>
+        </div>
+    </div>
+</body>
+
+<script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  console.log("click");
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+
+</script>

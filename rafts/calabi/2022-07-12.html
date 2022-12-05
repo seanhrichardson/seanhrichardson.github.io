@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Info-->
+  <meta charset="utf-8">
+  <title>Sean Richardson</title>
+  <meta name="description" content="">
+  <meta name="Sean Richardson" content="">
+
+  <!-- Mobile Adjustments -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS -->
+  <!-- <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css"> -->
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/custom.css">
+
+  <!-- JavaScript-->
+    <!--Custom-->
+
+    <!-- MathJax-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<!--
+TODO:
+- Create js for automating the insertion of sidebar.
+-->
+
+<body>
+    <div class = "menu-full menu-color">
+      <!--Change horiz-center-text to center with flex?-->
+      <div class = "flex-container horiz-center-text vertical-center menu-text">
+        <a href = /index.html>HOME</a>
+        <a href = /cv.html>CV</a>
+        <a href = /projects.html>PROJECTS</a>
+        <a href = /personal.html id = "personalA">PERSONAL</a> 
+      </div>
+    </div>
+    <div class = "right-full">
+        <div class = "header-color">
+          <div class = "header-text">
+            <!--HEADER-TITLE BELOW:-->
+            CALABI CONJECTURE
+          </div>
+          <button onclick="myFunction()" class = "menu-icon">
+            <b>&equiv;</b>
+        </div>
+        <div id="myDropdown" class="menu-text menu-color dropdown">
+        <!-- <div id="myDropdown" class="dropdown-content dropdown-style"> -->
+          <a href = /index.html>HOME</a>
+          <a href = /cv.html>CV</a>
+          <a href = /projects.html>PROJECTS</a>
+        </div>
+        <div class = "content">
+          <div class = "container">
+            <!--MAIN CONTENT BELOW:-->
+              <h2 id="2022-07-12">2022-07-12</h2>
+
+<p><strong>Goal:</strong> Understand Yau’s proof of the Calabi conjecture, which, according to wikipedia, is the following.</p>
+
+<p><em>Calabi Conjecture.</em> If M is a compact Kähler manifold with Kähler metric $g$ and Kähler form $\omega$ and $R$ is any $(1,1)$-form representing the manifold’s first Chern class, then there exists a unique Kähler metric $\widetilde{g}$ on $M$ with Kähler form $\widetilde{\omega}$ such that $\omega$ and $\widetilde{\omega}$ represent the same class in cohomology $H^2(M,\mathbb{R})$ and the Ricci form of $\widetilde{\omega}$ is $R$.</p>
+
+<p>Before attempting the proof, I must first thoroughly understand all pieces of the statement. In paticular,</p>
+
+<ul>
+  <li>What is a Kähler manifold, a Kähler metric, and a Kähler form?</li>
+  <li>What is the “first Chern class”.</li>
+  <li>What is a Ricci form?</li>
+  <li>Additionally, I need to properly understand cohomology as this was rushed at the end of the manifolds sequence.</li>
+</ul>
+
+<p>Next, I would like to understand some significance and motivation behind the Calabi conjecture, which, after brief googling, involves GR. Ideally, get some intuition behind the statement before diving into the technicalities.</p>
+
+<p>Tomorrow I’ll review the relevant chapters in Lee’s ITM and ISM so that I properly understand cohomology.</p>
+
+          </div>
+        </div>
+    </div>
+</body>
+
+<script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  console.log("click");
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+
+</script>
