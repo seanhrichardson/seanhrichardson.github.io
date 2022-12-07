@@ -4,7 +4,8 @@ section: NOTES
 title: Notes
 ---
 
-[Elementary Analysis](/notes/analysis)
+[Tensor Products](/notes/tensors.md)
+[Minecraft Projectiles](/notes/minecraft-projectiles.md)
 
 <!-- [Calculus](/notes/calculus)
 [Complex Analysis](/notes/complex-analysis)
