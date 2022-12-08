@@ -1,8 +1,7 @@
 ---
 layout: page
 section: NOTES
-title: S2
-permalink: /tensors.html
+title: Tensors
 ---
 ## Tensors
 

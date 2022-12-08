@@ -1,6 +1,6 @@
 ---
 layout: page
-section: RANDOM
+section: NOTES
 title: Minecraft Projectiles
 ---
 
