@@ -8,6 +8,9 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 
+# I ADDED BELOW LINE:
+gem 'webrick'
+
 # I COMMENTED OUT BELOW LINE
 gem "jekyll", "~> 4.2.0"
 

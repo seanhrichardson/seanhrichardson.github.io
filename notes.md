@@ -1,11 +1,13 @@
 ---
-layout: box-menu
+layout: page
 section: NOTES
 title: Notes
 ---
 
-[Tensor Products](/notes/tensors.html)
-[Minecraft Projectiles](/notes/minecraft-projectiles.html)
+# Table of Contents
+
+* [Tensor Products](/notes/tensors.html)
+* [Minecraft Projectiles](/notes/minecraft-projectiles.html)
 
 <!-- [Calculus](/notes/calculus)
 [Complex Analysis](/notes/complex-analysis)

@@ -1,7 +1,7 @@
 ---
 layout: page
-section: NOTES
 title: Minecraft Projectiles
+description: A description and derivation of explicit and accurate equations of motion for minecraft projectiles.
 ---
 
 ## Minecraft Projectile Motion

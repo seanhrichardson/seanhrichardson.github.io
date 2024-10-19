@@ -1,0 +1,38 @@
+PRIORITY:
+- Manifolds, following manifolds class.
+    - topology page (almost done)
+- Dynamics
+- PDES stuff that I want to learn
+    - Sobolev spaces
+    - Pseudodifferential operators
+    - Elliptic regularity
+- clean up all ongoing projects
+    - Euler Lagrange (almost done)
+    - forms motivation and wedge product pages (finish this when manifolds gets there)
+    - heat equation motivation (almost done... add easier motivation and exercises to Einstein one.)
+    - minimal surface equation motivation (almost done)
+    - rigid body dynamics page
+    - metric space continuity (done with proof)
+    - wave equation (derivation and 1d basically done)
+- Road to Schwarzschild
+    - finish riemannian manifold page
+    - finish geodesic page
+    - finish sphere page
+    - start tangent vectors...
+    - special relatiivity (almost done)
+
+
+SOON:
+- distributions (not motovation, will think of that later).
+- Riesz representation theorem
+- Fourier series, Fourier transform, Pontryagin Duality
+- Dirichlet problem
+
+TECHNICAL:
+- create engine for making mini-books.
+- click dots in mathjax to display computation steps.
+- allow for hover text over equals signs to explain steps in mathjax? ALthough also want to try and be mobile friendly...
+
+FINISHED!
+- tensor product page
+- minecraft page
