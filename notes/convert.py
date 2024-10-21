@@ -27,8 +27,18 @@ def convert_md_to_pdf(md_file_path):
     if not os.path.exists(tex_folder):
         os.makedirs(tex_folder)
 
+    # bash_command = f"sed 's/\\\\\\\\/\\\\/g; s/\\\\_/_/g; s/\\\\\\*/\\*/g; s/\\\\|/|/g' {md_file_path} | pandoc "
+    # "-f markdown+tex_math_dollars+tex_math_single_backslash -t latex --standalone "
+    # "-V author=\"Sean Richardson\" "
+    # "-V geometry:margin=1in "
+    # "-V header-includes=\"\\usepackage{mathrsfs}\" "
+    # "-o {tex_file_path}"
+
     # The sed command to apply transformations and the pandoc command to convert the file
-    bash_command = f"sed 's/\\\\\\\\/\\\\/g; s/\\\\_/_/g; s/\\\\\\*/\\*/g' {md_file_path} | pandoc -f markdown+tex_math_dollars+tex_math_single_backslash -t latex --standalone -V author=\"Sean Richardson\" -V geometry:margin=1in -o {tex_file_path}"
+    bash_command = "sed 's/\\\\\\\\/\\\\/g; s/\\\\_/_/g; s/\\\\\\*/\\*/g; s/\\\\|/|/g' " + md_file_path + " | pandoc -f markdown+tex_math_dollars+tex_math_single_backslash -t latex --standalone -V author=\"Sean Richardson\" -V geometry:margin=1in -V header-includes=\"\\usepackage{mathrsfs}\n\\usepackage{amsthm}\n\\renewcommand{\square}{\hfill\qed}\" -o " + tex_file_path
+
+    print("\n\n\n\n\n\n")
+    print(bash_command)
 
     try:
         # Execute the bash command to convert .md to .tex

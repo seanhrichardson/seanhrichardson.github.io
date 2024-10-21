@@ -140,10 +140,10 @@ p {
   margin-bottom: 1em;
 }
 
-ul, ol {
+/* ul, ol {
     margin-top: -1rem;
     font-size: 100%;
-}
+} */
 
 .horiz-center-text {
     text-align: center;

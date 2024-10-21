@@ -4,10 +4,7 @@ section: NOTES
 title: Notes
 ---
 
-# Table of Contents
-
-* [Tensor Products](/notes/tensors.html)
-* [Minecraft Projectiles](/notes/minecraft-projectiles.html)
+* [pseudodifferential operators](notes/pdes/pdos.html) : [(pdf)](notes/pdes/pdos.pdf)
 
 <!-- [Calculus](/notes/calculus)
 [Complex Analysis](/notes/complex-analysis)

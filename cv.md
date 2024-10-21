@@ -8,7 +8,7 @@ title: cv
 
 A [pdf](/files/sean-richardson-cv.pdf) of my CV (updated less frequently than this page).
 
-#### Education
+## Education
 
 **University of Washington**. Seattle, WA. (Fall 2021 &mdash; present)\
 PhD in Mathematics.
@@ -17,7 +17,7 @@ PhD in Mathematics.
 Bachelor of Arts in Mathematics and Computer Science, with honors.\
 Bachelor of Arts in Physics.
 
-#### Research, Tutoring, and Grading
+## Research, Tutoring, and Grading
 
 * AmeriCorps Algebra Tutor with [Saga Education](https://www.sagaeducation.org/) (August 2020 &mdash; July 2021)
 * Teaching Assistant with [Art of Problem Solving](https://artofproblemsolving.com) (August 2020 &mdash; February 2021)
@@ -27,12 +27,12 @@ Bachelor of Arts in Physics.
 * Peer Tutor with the [SQRC at Lewis & Clark College](https://college.lclark.edu/departments/mathematical_sciences/sqrc/) (September 2017 &mdash; May 2020)
 * Identifying clouds with neural networks research through [Lewis & Clark College's Rogers Science Program](https://college.lclark.edu/science/opportunities/rogers/) (May 2017 &#8212; August 2017)
 
-#### Writing and Publications
+## Writing and Publications
 
 * "You can hear the local orientability of an orbifold" with Elizabeth Stanhope, _Differential Geometry and its Applications_ 68 (2020), 101577. ([link](https://www.sciencedirect.com/science/article/abs/pii/S092622451930097X))
 * "Topological K-Theory for Undergraduates" advised by Iva Stavrov, Lewis & Clark Department of Mathematical Sciences undergraduate thesis. ([pdf](files/undergraduate-thesis.pdf))
 
-#### Honors and Awards
+## Honors and Awards
 
 * NSF Graduate Research Fellowship Program Award (April 2021 &mdash; Present)
 * Academic All American, presented by CoSIDA (June 2020)
@@ -42,7 +42,7 @@ Bachelor of Arts in Physics.
 * Best Student Poster: CCSC Northwest Conference (October 2017)
 * [Pamplin Honors Society member](https://college.lclark.edu/academics/honors/pamplin_society/) (September 2017 &mdash; Present)
 
-#### Presentations
+## Presentations
 
 * "Topological K-Theory for Undergraduates" for Lewis & Clark Mathematics Department (May 2020)
 * You can hear the local orientability of an orbifold" for Lewis & Clark Mathematics Dept. (September 2018)

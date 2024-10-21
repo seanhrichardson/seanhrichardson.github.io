@@ -1,91 +1,86 @@
 ---
 layout: page
 title: Pseudo-differential operators
+section: Pseudo-differential operators
 ---
-#### Motivation
-Recall that a differential operator \\(P: C_c^{\infty}(\Omega) \to C^{\infty}(\Omega)\\) is something of the following form, written in multi-index notation.
-\\[
-    P(x,D)u = \sum\_{\|\alpha\| \leq m} a_{\alpha}(x)D^{\alpha}u
-\\]
-where \\[
-    D^{\alpha} = \left(\frac{1}{i}\partial_{1}\right)^{\alpha_1}\cdots\left(\frac{1}{i}\partial_{n}\right)^{\alpha_n}
-\\]
 
-An alternate way to write differential operators is through the Fourier transform. In particular, we can write
+# Bessel Potential
+
+Consider the PDE
 \\[
-    u(x) = \mathscr{F}^{-1}(\hat{u}(\xi))
-    = \frac{1}{(2\pi)^n}\int e^{i x \cdot \xi} \hat{u}(\xi) d\xi
+    (1-\Delta)u = f \quad\quad \text{in } \mathbb{R}^n.
 \\]
-And so
+We can take the Fourier transform of both sides and solve for the Fourier transform \\(\hat{u}(\xi)\\) of the solution.
 \\[
+    (1+|\xi|^2)\hat{u}(\xi) = \hat{f}(\xi) \implies \hat{u}(\xi) = \frac{1}{1+|\xi|^2} \hat{f}(\xi).
+\\]
+Taking the inverse Fourier transform \\(\mathcal{F}^{-1}\\) of the solution allows us to solve for the solution
+\\[
+    u(x) = \mathcal{F}^{-1}\left(\frac{1}{1+|\xi|^2}\hat{f}(\xi)\right).
+\\]
+In other words, this PDE can be solved with the *Bessel Potential* operator
+\\[
+    Bf := \mathcal{F}^{-1}\left(\frac{1}{1+|\xi|^2}\hat{f}(\xi)\right),
+\\]
+which inverts the differential operator \\((1-\Delta)\\). Such "pseudodifferential operators" appear frequently when trying to invert differential operators.
+
+# Definition of Pseudodifferential Operators
+
+Consider some order \\(m\\) differential operator \\(P(x,D) = \sum_{|\alpha| \leq m} a_{\alpha}(x)D^{\alpha}\\) on \\(\mathbb{R}^n\\) with \\(a_{\alpha}(x)\\) smooth and all derivatives \\(\partial^{\beta}a_{\alpha}(x)\\) bounded. Use that the Fourier transform intertwines differentiation and multiplication to compute
 \begin{align}
-    P(x,D)u &= \sum\_{\|\alpha\| \leq m} a_{\alpha}D^{\alpha}\frac{1}{(2\pi)^n}\int e^{i x \cdot \xi} \hat{u}(\xi) d\xi\\\\\
-    &= \frac{1}{(2\pi)^n} \int e^{ix \cdot \xi} \left(\sum_{\|\alpha\| \leq m} a_{\alpha}(x) \xi^{\alpha}\right)\hat{u}(\xi)d\xi
+    P(x,D)u
+    &= P(x,D)\mathcal{F}^{-1}(\hat{u}(\xi))
+    = \sum_{|\alpha| \leq m} a_{\alpha}(x)D^{\alpha}\mathcal{F}^{-1}(\hat{u}(\xi))\\\\\
+    &= \mathcal{F}^{-1}\left(\sum_{|\alpha| \leq m} a_{\alpha}(x)\xi^{\alpha}\hat{u}(\xi)\right)
+    = \mathcal{F}^{-1}\left(p(x,\xi)\hat{u}(\xi)\right)
 \end{align}
-\\]
-To summarize, we can write 
+where the polynomial \\(p(x,\xi) := \sum_{|\alpha| \leq m} a_{\alpha}(x) \xi^{\alpha}\\) is the *(full) symbol*. The above gives
 \\[
-    P(x,D)u = \frac{1}{(2\pi)^n} \int e^{ix \cdot \xi} a(x,\xi) \hat{u}(\xi)d\xi
+    P(x,D)u = \mathcal{F}^{-1}\left(p(x,\xi)\hat{u}(\xi)\right).
 \\]
-where \\(a(x,\xi)\\) is called the *symbol* of \\(P(x,D)\\) and is given by
+That is, applying a differential operator to a function is equivalent to multiplying it's Fourier transform by the symbol. In other words, the Fourier transorm intertwines the differential operator and this principle symbol:
 \\[
-    a(x,\xi) = \sum_{\|\alpha\| \leq m} a_{\alpha}(x) \xi^{\alpha}
+    P(x,D)\mathcal{F}^{-1} = \mathcal{F}^{-1}p(x,\xi) 
+    \quad \text{or} \quad
+    \mathcal{F} \circ P(x,D) = p(x,\xi) \mathcal{F}.
 \\]
-The form for \\(P(x,D)u\\) given in /\*refer to eqn.\*/ reveals a new way to define operators.
+We saw above that the differential operator \\((1-\Delta)\\) has symbol \\(1+|\xi|^2\\). The idea of pseudodifferential operators is to consider operators with non-polynomial symbols \\(p(x, \xi)\\). For example, we defined the Bessel potential operator above to have "symbol" \\((1+\|\xi\|^2)^{-1}\\). We ask the question then: what symbols can we use to define a nice operator?
 
-**Exercise.** Find the symbol \\(p(x,\xi)\\) for the operator \\(\frac{d^n}{d x^n}: C^{\infty}_c(\mathbb{R}) \to C^{\infty}(\mathbb{R})\\).
+Because we are working with Fourier transforms, one particularly important property of our differential operator \\(P(x,D)\\) is the mapping property \\(P(x,D): \mathscr{S}(\mathbb{R}^n) \to \mathscr{S}(\mathbb{R}^n)\\) where \\(\mathscr{S}(\mathbb{R}^n)\\) is Schwartz space. This mapping property is due to two properties of the symbol \\(p(x, \xi)\\).  
 
-**Solution.** \\(p(x,\xi) = \xi^n\\).
-
-**Exercise.** Find the symbol \\(p(x,\xi)\\) for the Laplace operator \\(\Delta: C^{\infty}_c(\mathbb{R}^n) \to C^{\infty}(\mathbb{R}^n)\\).
-
-**Solution.** \\(p(x,\xi) = \|\xi\|^2\\).
-
-#### Definition
-A *pseudo-differential operator* \\(P(x,D)\\) acts on functions \\(u \in \mathscr{S}\\) by
+Firstly, the symbol \\(p(x,\xi) = \sum a_{\alpha}(x)\xi^{\alpha}\\) is smooth. This allows us to write the derivatives
 \\[
-    P(x,D)u = \frac{1}{(2\pi)^n} \int e^{ix \cdot \xi} p(x,\xi) \hat{u}(\xi)d\xi.
+    \partial_x^{\gamma}(P(x,D)u)
+    = \partial_x^{\gamma} \mathcal{F}^{-1}(p(x, \xi))\hat{u}(\xi)
+    = \int_{\mathbb{R}^n} \partial_x^{\gamma}(e^{ix \cdot \xi}p(x, \xi))\hat{u}(\xi)d\xi
 \\]
-However, we need some restrictions on the symbol \\(p(x,\xi)\\). We require \\(p \in C^{\infty}(\Omega_x \times \mathbb{R}^n_{\xi})\\) and one extra condition so that /\*justify why need this condition\*/. In particular, we require there to exists some \\(m \in \mathbb{R}\\) such that for any multi-indices \\(\alpha, \beta\\) and compact \\(K \subset \Omega\\) there is constant \\(C_{\alpha, \beta, K} > 0\\) so that over \\(K\\) we have
-\\[
-    \|\partial_x^{\alpha}\partial_{\xi}^{\beta}p(x,\xi)\| \leq C_{\alpha, \beta, K}(1+\|\xi\|)^{m-\|\beta\|}
-\\]
-In this case the symbol \\(p(x,\xi)\\) is said to be *a symbol of order $m$* and the pseudo-differential operator is said to be of order $m$.
+in terms of the derivatives \\(\partial_x^{\gamma}(e^{ix \cdot \xi}p(x, \xi))\\), which after expanding by product rule relies on the derivatives \\(\partial\_x^{\alpha} p_x(x,\xi)\\) of the symbol.
 
-Furthermore, we let \\(S^m(\Omega)\\) denote the set of symbols of order \\(m\\) over \\(\Omega\\) and we let \\(\Psi^m(\Omega)\\) denote the set of pseudo-differential operators of order \\(m\\).
-
-#### ???
-**Exercise.** Show that a differential operator of order \\(m\\) is a pseudo-differential operator of order \\(m\\).
-
-**Solution.** As discussed previously, a differential operator has symbol \\(p(x,\xi) = \sum_{\|\mu\| \leq m} a_{\mu}(x) \xi^{\mu}\\); we must show this symbol is of order \\(m\\).
-
-Take multi-indices \\(\alpha,\beta\\) and compact set \\(K \subset \Omega\\). Then over \\(K\\) we find
-\\[
+Secondly, the above integrals are well-defined because for differential operators with symbol \\(p(x, \xi)\\), if \\(\hat{u}(\xi) \in \mathscr{S}(\mathbb{R}^n)\\), then \\(\partial^{\alpha}p(x,\xi) \hat{u}(\xi) \in \mathscr{S}(\mathbb{R}^n)\\). To see this, compute the bound
 \begin{align}
-    \left\|\partial^{\alpha}\_x\partial^{\beta}\_{\xi}p(x,\xi)\right\|
-    &= \left\|\partial^{\alpha}\_x\partial^{\beta}\_{\xi}\sum_{\|\mu\| \leq m} a_{\mu}(x) \xi^{\mu}\right\|\\\\\
-    &= \left\|\sum\_{\|\mu\| \leq m}(\partial_x^{\alpha}a_{\mu}(x))(\partial_{\xi}^{\beta}\xi^\mu)\right\|\\\\\
-    &\leq \max_{\|\alpha\| \leq m} \sup_{x \in K} \|\partial_x^{\alpha}a_{\mu}(x)\|\sum_{\|\mu\| \leq m}\frac{\mu!}{\beta!}|\xi^{\mu-\beta}\|\\\\\
-    &\leq m!\max_{\|\alpha\| \leq m} \sup_{x \in K} \|\partial_x^{\alpha}a_{\mu}(x)\|\sum_{\|\mu\| \leq m}|\xi^{\mu-\beta}\|
+    \|\partial_{\xi}^{\beta} \partial\_{x}^{\alpha} p(x,\xi)\|
+    &= \left\|\partial_{\xi}^{\beta} \partial\_{x}^{\alpha} \sum_{|\mu| \leq m} a\_{\mu}(x)\xi^{\mu}\right\|\\\\\
+    &\leq \sum\_{|\mu| \leq m} |\partial_x^{\alpha}a\_{\mu}(x)|\frac{\mu!}{\beta!}\|\xi\|^{\mu-\beta}
+    \leq C\sum_{|\mu| \leq m}|\xi|^{\mu - \beta}
+    \leq C_{\alpha, \beta} \langle \xi \rangle^{m - \|\beta\|}.
 \end{align}
-\\]
-Thus it suffices to get a bound \\(\|\xi^{\mu-\beta}\| \leq C_{\beta}(1+\|\xi\|)^{m-\|\beta\|}\\).
-For this, apply the weighted AM-GM inequlity /\*link page\*/ to get
+where \\(\langle \xi \rangle^2 = (1+|\xi|^2)\\) is the bracket notation and we used that \\(\partial_x^{\alpha}a_{\mu}\\) are bounded. Thus two key properties of the symbol \\(p(x,\xi)\\) of a differential operator are smoothness, and that we have the bound \\(\|\partial_{\xi}^{\beta} \partial\_{x}^{\alpha} p(x,\xi)\| \leq C_{\alpha, \beta} \langle \xi \rangle^{m - \|\beta\|}\\). We then consider a more general set of symbols \\(p(x, \xi)\\) that satisfy precisely these two properties as well as the corresponding class of operators.
+
+**Def (Symbol class \\(S^m\\).)** Given some \\(m \in \mathbb{Z}\\), define the *symbol class* \\(S^m\\) of order \\(m\\) to be all \\(p \in C^{\infty}(\mathbb{R}\_x^{n} \times \mathbb{R}^n\_{\xi})\\) so that for all \\(\alpha, \beta\\) there exists \\(C_{\alpha, \beta} > 0\\) so that
 \\[
-\begin{align}
-    \|\xi^{\mu-\beta}\| 
-    &\leq \left|\frac{1}{\|\mu-\beta\|}\sum_{i=1}^n(\mu_i-\beta_i)\xi_i\right|^{|\mu-\beta|}\\\\\
-    &\leq \left|\sum_{i=1}^n\xi_i\right|^{\|\mu\|-\|\beta\|}
-    \leq C\|\xi_i\|^{|\mu|-|\beta|}
-    \leq C(1+\|\xi_i\|)^{|\mu|-|\beta|}
-    \leq C(1+\|\xi_i\|)^{m-|\beta|}
-\end{align}
+    \|\partial_{\xi}^{\beta}\partial_{x}^{\alpha}p(x, \xi)\| \leq C_{\alpha, \beta}\langle \xi \rangle^{m-|\beta|}.
 \\]
 
-/\*note that we can assume \\(\beta < \mu\\) otherwise get \\(0\\)\*/
+**Def (Pseudodifferential operator).** For some \\(p \in S^m\\), we define its *quantization* \\(P = \\operatorname{Op}(p)\\) to be the operator
+\\[
+    Pf(x) := (2\pi)^{-1}\int\_{\mathbb{R}^n} e^{ix \cdot \xi} p(x, \xi) \hat{f}(\xi)d\xi.
+\\]
+This operator \\(P\\) is called a *pseudodifferential operator of order \\(m\\)* and the set of all pseudodifferential operators of order \\(m\\) is denoted
+\\(
+    \Psi^m = \\{\operatorname\{Op\}(p): p \in S^m\\}.
+\\)
+
+Later we may consider an alternate bound on the derivatives of the symbols, but the symbol class as defined above is the most common and most closely resembles the bound on differential operators, which results in nice Sobolev mapping properties. Note that the definitions above immediately generalize to \\(m \in \mathbb{R}\\).
 
 
-/\*It seems it might also be possible to do this through the multinomial theorem?\*/
 
-#### Extend to distributions
-A pseudo differential operator \\(P: \mathscr{S}'(\Omega) \to \mathscr{S}'(\Omega)\\) 
