@@ -36,7 +36,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Curvature},
+  pdftitle={Curvature Motivation},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
@@ -45,8 +45,11 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{mathrsfs}
+\usepackage{amsthm}
+\renewcommand{\square}{\hfill\qed}
 
-\title{Curvature}
+\title{Curvature Motivation}
 \author{Sean Richardson}
 \date{}
 
@@ -54,25 +57,27 @@
 \maketitle
 
 \hypertarget{motivation-for-the-riemann-curvature-tensor}{%
-\subsection{Motivation for the Riemann Curvature
+\section{Motivation for the Riemann Curvature
 Tensor}\label{motivation-for-the-riemann-curvature-tensor}}
 
-\hypertarget{noncommutativity-of-parallel-transport}{%
-\paragraph{Noncommutativity of Parallel
-Transport}\label{noncommutativity-of-parallel-transport}}
+\hypertarget{studying-isometries}{%
+\subsection{Studying Isometries}\label{studying-isometries}}
 
-One of the most important questions in Riemannian geometry is: given two
-Riemannian manifolds, are they isometric? This is an extremely hard
-problem that is an active area of research, but a first step to
-answering this question is to consider the following local question:
-given two different coordinate neighborhoods of Riemannian manifolds,
-are they isometric? This is still a hard problem that is still unknown
-in general, but an even easier question is: when does a point on a
-Riemannian manifold have a \emph{flat neighborhood} (a neighborhood
-isometric to a neighborhood of \(\mathbb{R}^n\))? This question was
-answered by Riemann and the investigation of this problem naturally
-gives rise to the \emph{Riemann curvature tensor}, which precisely
-encodes the extent to which a manifold fails to be flat at every point.
+An important questions in Riemannian geometry is: given two Riemannian
+manifolds, are they isometric? A first step to answering this extremely
+hard problem is to consider the following local question: given two
+different coordinate neighborhoods of Riemannian manifolds, are they
+isometric? This is still extremely hard, but a more reasonable place to
+start is: when does a point on a Riemannian manifold have a \emph{flat
+neighborhood} (a neighborhood isometric to a neighborhood of
+\(\mathbb{R}^n\))? This question was answered by Riemann and the
+investigation of this problem naturally gives rise to the \emph{Riemann
+curvature tensor}, which precisely encodes the extent to which a
+manifold fails to be flat at every point.
+
+\hypertarget{noncommutativity-of-parallel-transport}{%
+\subsection{(Non)commutativity of Parallel
+Transport}\label{noncommutativity-of-parallel-transport}}
 
 First, notice that parallel transport in \(\mathbb{R}^n\) is path
 independent: for example, transporting a vector along the \(x^1\) axis,
@@ -82,14 +87,14 @@ necessary condition for a neighborhood to be flat. Importantly,
 path-independence of parallel transport is also sufficient, for it
 allows us to construct flat coordinates as follows. Begin with an
 orthornormal basis \(\{e_i\}\) of \(T_pM\), then if parallel transport
-is path-independent in a neighborhood of \(p\), we can transport this
-basis to a frame \(E_i\) in a well-defined way such that each \(E_i\) is
-parallel in \emph{every direction}. Because parallel transport preserves
-inner product, this frame is orthornormal. We only need to check that
-\(E_i\) is a coordinate frame, which occurs precisely when \(E_i\) is a
-commuting frame; indeed, because each \(E_i\) is parallel in every
-direction, we have \(\nabla_X E_i = 0\) for any \(X\) and so we compute
-\[
+is path-independent in a neighborhood \(U\) of \(p\), transporting this
+basis along any choice of paths yields the same frame \(E_i\) in \(U\),
+implying each \(E_i\) is parallel in \emph{every direction}. Because
+parallel transport preserves inner product, this frame is orthornormal.
+We only need to check that \(E_i\) is a coordinate frame, which occurs
+precisely when \(E_i\) is a commuting frame; indeed, because each
+\(E_i\) is parallel in every direction, we have \(\nabla_X E_i = 0\) for
+any \(X\) and so we compute \[
     [E_i, E_j] = \nabla_{E_i}E_j - \nabla_{E_j}E_i = 0 - 0 = 0.
 \]
 
@@ -98,37 +103,43 @@ this by investigating the noncommutativity of parallel transport around
 small squares. Consider the square \(I \times I \to M\) parametrized by
 \((s,t)\) such that \(p\) corresponds to \((0,0)\) and choose some
 tangent vector \(v \in T_p M\). Then we compare the following two
-methods to transport \(v\) to the point \((\varepsilon, \delta)\). We
-could first transport \(v\) in the \(s\) direction to get
+methods of transporting \(v\) to the point \((\varepsilon, \delta)\). We
+could first transport \(v\) in the \(s\) direction from \((0,0)\) to
+\((\varepsilon, 0)\), which we denote
 \(P^{(0,0)}_{(\varepsilon,0)}v \in T_{(\varepsilon,0)}\), then transport
-this in the \(t\) direction to get
+this vector in the \(t\) direction from \((\varepsilon, 0)\) to
+\((\varepsilon, \delta)\) to get
 \(P_{(\varepsilon,\delta)}^{(\varepsilon,0)}P^{(0,0)}_{(\varepsilon,0)}v \in T_{(\varepsilon,\delta)}M\).
 Alternatively, we could first transport \(v\) in the \(t\) direction
-yielding \(P^{(0,0)}_{(0,\delta)}v \in T_{(0,\delta)}\), then transport
-in the \(s\) direction to get
+from \((0,0)\) to \((0, \delta)\) yielding
+\(P^{(0,0)}_{(0,\delta)}v \in T_{(0,\delta)}\), then transport this
+vector in the \(s\) direction from \((0, \delta)\) to
+\((\varepsilon, \delta)\) resulting in
 \(P_{(\varepsilon,\delta)}^{(0,\delta)}P^{(0,0)}_{(0,\delta)}v \in T_{(\varepsilon,\delta)}M\).
-The difference between these two methods is quantified by \[
+The difference between these two methods is quantified by
+
+\[
     P_{(\varepsilon,\delta)}^{(\varepsilon,0)} P_{(\varepsilon,0)}^{(0,0)} v - P_{(\varepsilon,\delta)}^{(0,\delta)} P_{(0,\delta)}^{(0,0)} v.
 \] We now compute a Taylor approximation of this difference. One trick
 to simplify this computation is to extend \(v\) to any vector field
 \(X\), then compare the value of \(X\) to the parallel transport of
 \(v\) along each of the four segments, giving \begin{align}
     &P_{(\varepsilon,\delta)}^{(\varepsilon,0)} P_{(\varepsilon,0)}^{(0,0)} X_{(0,0)} - P_{(\varepsilon,\delta)}^{(0,\delta)} P_{(0,\delta)}^{(0,0)} X_{(0,0)}.\\\
-    &= ((X_{(\varepsilon,\delta)} - P_{(\varepsilon,\delta)}^{(0,\delta)}X_{(0,\delta)})
-    - P_{(\varepsilon,\delta)}^{(\varepsilon,0)}(X_{(\varepsilon,0)} - P_{(\varepsilon,0)}^{(0,0)}X_{(0,0)}))\\\
-    &- ((X_{(\varepsilon,\delta)} - P_{(\varepsilon,\delta)}^{(\varepsilon,0)}X_{(\varepsilon,0)})
-    - P_{(\varepsilon,\delta)}^{(0,\delta)}(X_{(0,\delta)} - P_{(0,\delta)}^{(0,0)}X_{(0,0)})).
+    &= (P_{(\varepsilon,\delta)}^{(\varepsilon,0)}(P_{(\varepsilon,0)}^{(0,0)}X_{(0,0)} - X_{(\varepsilon,0)})
+    - (P_{(\varepsilon,\delta)}^{(0,\delta)}X_{(0,\delta)} - X_{(\varepsilon,\delta)}))\\\
+    &- (P_{(\varepsilon,\delta)}^{(0,\delta)}(P_{(0,\delta)}^{(0,0)}X_{(0,0)} - X_{(0,\delta)})
+    - (P_{(\varepsilon,\delta)}^{(\varepsilon,0)}X_{(\varepsilon,0)} - X_{(\varepsilon,\delta)})).
 \end{align} Recall that the parallel transport \(P_t\) of a vector field
 \(X\) from \(p\) to \(q\) along a curve
 \(\gamma: [0, \varepsilon] \to M\) is approximated by
 \(P_t X_p - X_q \approx t \nabla_{\dot{\gamma}(0)}X\). Applying this
 approximation to the above yields \begin{align}
     &P_{(\varepsilon,\delta)}^{(\varepsilon,0)} P_{(\varepsilon,0)}^{(0,0)} X_{(0,0)} - P_{(\varepsilon,\delta)}^{(0,\delta)} P_{(0,\delta)}^{(0,0)} X_{(0,0)}.\\\
-    &\approx \varepsilon((\nabla_{\partial_s}X)_{(\varepsilon, \delta)} 
-    - P_{(\varepsilon,\delta)}^{(\varepsilon,0)}(\nabla_{\partial_s}X)_{(\varepsilon, 0)})
-    - \delta((\nabla_{\partial_t}X)_{(\varepsilon, \delta)} 
-    - P_{(\varepsilon,\delta)}^{(0, \delta)}(\nabla_{\partial_t}X)_{(0, \delta)}) \\\
-    &\approx \varepsilon\delta (\nabla_{\partial_t}\nabla_{\partial_s} X - \nabla_{\partial_s}\nabla_{\partial_t} X)
+    &\approx \varepsilon(P_{(\varepsilon,\delta)}^{(\varepsilon,0)}(\nabla_{\partial_s}X)_{(\varepsilon, 0)}
+    - (\nabla_{\partial_s}X)_{(\varepsilon, \delta)})
+    - \delta(P_{(\varepsilon,\delta)}^{(0, \delta)}(\nabla_{\partial_t}X)_{(0, \delta)}
+    - (\nabla_{\partial_t}X)_{(\varepsilon, \delta)})\\\
+    &\approx \varepsilon\delta (\nabla_{\partial_t}\nabla_{\partial_s} X - \nabla_{\partial_s}\nabla_{\partial_t} X).
 \end{align}
 
 In the above computation, we used the approximation
@@ -152,11 +163,10 @@ transport to commute around the small coordinate square parametrized by
 \(\nabla_{\partial_{i}}\nabla_{\partial_{j}} X - \nabla_{\partial_{j}}\nabla_{\partial_{i}} X\).
 This difference for all such pairs \((i,j)\) gives more obstructions to
 local flattness (in fact, we will prove later these are the \emph{only}
-obstructions). However, this collection of differences
+obstructions). Next, we can encode these differences
 \(\nabla_{\partial_{i}}\nabla_{\partial_{j}} X - \nabla_{\partial_{j}}\nabla_{\partial_{i}} X\)
-is coordinate dependent! To fix this, we would like to extend this to a
-tensor field that encodes the same information. In fact, these
-differences are already tensorial in \(X\).
+in a coordinate-independent way by extending to a tensor field. In fact,
+note these differences are already tensorial in \(X\).
 
 \textbf{Exercise.} Verify that
 \(\nabla_{\partial_{i}}\nabla_{\partial_{j}} X - \nabla_{\partial_{j}}\nabla_{\partial_{i}} X\)
@@ -177,12 +187,11 @@ input arbitrary vector fields \(X = X^i\partial_i\) and
     R(X, Y)Z = X^iY^jR(\partial_i, \partial_j)Z 
     = X^iY^j\nabla_{\partial_{i}}\nabla_{\partial_{j}} Z - Y^jX^i\nabla_{\partial_{j}}\nabla_{\partial_{i}} Z
 \] This is the \emph{Riemann curvature tensor}, which will encodes all
-obstructions to a manifold being locally flat. We constructed this with
-a coordinate chart, but we can actually rewrite the Riemann curvature
-tensor in a form that is independent of coordinates. Indeed, notice the
-terms appearing in the Riemann curvature tensor are components of
-\(\nabla_X\nabla_Y Z\) and \(\nabla_Y\nabla_X Z\) after product rule:
-\begin{align}
+obstructions to a manifold being locally flat. In fact, we can rewrite
+the Riemann curvature tensor in a form that is independent of
+coordinates. Indeed, notice the terms appearing in the Riemann curvature
+tensor are components of \(\nabla_X\nabla_Y Z\) and
+\(\nabla_Y\nabla_X Z\) after product rule: \begin{align}
     \nabla_X\nabla_Y Z 
     &= \nabla_{X^i\partial_i}\nabla_{Y^j\partial_j} Z 
     = X^iY^j\nabla_{\partial_i}\nabla_{\partial_j} Z + X^i\partial_iY^j\nabla_{\partial_j}Z\\\
@@ -209,7 +218,6 @@ tensor} is the \((3,1)\) tensor
 By how we derived this expression, we expect this to encode obstructions
 to a manifold being locally flat and to quantify the failure for
 parallel transport to commute. This is indeed the case and we can now
-begin reverse the logic of this derivation to formally prove these
-properties.
+reverse the logic of this derivation to formally prove these properties.
 
 \end{document}

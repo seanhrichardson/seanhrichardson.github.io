@@ -4,7 +4,8 @@ section: NOTES
 title: Notes
 ---
 
-* [pseudodifferential operators](notes/pdes/pdos.html) : [(pdf)](notes/pdes/pdos.pdf)
+* [pseudodifferential operators](notes/pdes/pdos.html) or [pdf](notes/pdes/pdos.pdf)
+* [riemann curvature tensor motivation](notes/riemannian-manifolds/curvature-motivation.html) or [pdf](notes/riemannian-manifolds/curvature-motivation.pdf)
 
 <!-- [Calculus](/notes/calculus)
 [Complex Analysis](/notes/complex-analysis)
