@@ -77,7 +77,7 @@ where \\(\langle \xi \rangle^2 = (1+|\xi|^2)\\) is the bracket notation and we u
 \\]
 This operator \\(P\\) is called a *pseudodifferential operator of order \\(m\\)* and the set of all pseudodifferential operators of order \\(m\\) is denoted
 \\(
-    \Psi^m = \\{\operatorname\{Op\}(p): p \in S^m\\}.
+    \Psi^m = \\{\operatorname{Op}(p): p \in S^m\\}.
 \\)
 
 Later we may consider an alternate bound on the derivatives of the symbols, but the symbol class as defined above is the most common and most closely resembles the bound on differential operators, which results in nice Sobolev mapping properties. Note that the definitions above immediately generalize to \\(m \in \mathbb{R}\\).

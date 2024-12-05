@@ -46,6 +46,8 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \usepackage{mathrsfs}
+\usepackage{amsthm}
+\renewcommand{\square}{\hfill\qed}
 
 \title{Pseudo-differential operators}
 \author{Sean Richardson}
@@ -155,7 +157,7 @@ operator \[
     Pf(x) := (2\pi)^{-1}\int_{\mathbb{R}^n} e^{ix \cdot \xi} p(x, \xi) \hat{f}(\xi)d\xi.
 \] This operator \(P\) is called a \emph{pseudodifferential operator of
 order \(m\)} and the set of all pseudodifferential operators of order
-\(m\) is denoted \(\Psi^m = \{\operatorname\{Op\}(p): p \in S^m\}.\)
+\(m\) is denoted \(\Psi^m = \{\operatorname{Op}(p): p \in S^m\}.\)
 
 Later we may consider an alternate bound on the derivatives of the
 symbols, but the symbol class as defined above is the most common and

@@ -47,8 +47,7 @@
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \usepackage{mathrsfs}
 \usepackage{amsthm}
-\
-enewcommand{\square}{\hfill\qed}
+\renewcommand{\square}{\hfill\qed}
 
 \title{Hölder Spaces}
 \author{Sean Richardson}
@@ -133,10 +132,6 @@ denotes the uniform norm. This motivates defining the
 Arzelà-Ascoli applies and there exists \(u_k \in \mathcal{F}\) such that
 \(u_k \to u \in C(X)\) uniformly.
 
-\hypertarget{huxf6lder-spaces-over-a-compact-subset}{%
-\section{Hölder spaces over a compact
-subset}\label{huxf6lder-spaces-over-a-compact-subset}}
-
 The point is the \(\alpha\)-Hölder norm \(\|\cdot\|_{\alpha}\) is useful
 because it allows us to conclude uniform convergence due to
 Arzelà-Ascoli. We can rephrase this oberservation using the language of
@@ -148,66 +143,5 @@ functional analysis, which begins by considering the function space of
 space} \(C^{\alpha}(X)\) is \[
     C^{\alpha}(X) := \{u \in C(X) : \|u\|_{\alpha} < \infty\}.
 \]
-
-It is over \(C^{\alpha}(X)\) that \([\cdot]_{\alpha}\) is a semi-norm
-and \(\|\cdot\|_{\alpha}\) is a norm, which we prove below.
-
-\textbf{Proposition.} \([\cdot]_{\alpha}\) is a semi-norm over
-\(C^{\alpha}(X)\).
-
-\emph{Proof.} First we check positive homogeneity \[
-    [cu]_{\alpha} 
-    = \sup_{x \neq y}\frac{|cu(x) - cu(y)|}{\|x-y\|^{\alpha}}
-    = |c|\cdot\sup_{x \neq y}\frac{|u(x) - u(y)|}{\|x-y\|^{\alpha}}
-    = |c|\cdot[u]_{\alpha}.
-\] Next we check the triangle inequality \[
-    [u+v]_{\alpha}
-    = \sup_{x \neq y}\frac{|(u+v)(x) - (u+v)(y)|}{\|x-y\|^{\alpha}}
-    \leq \sup_{x \neq y}\frac{|u(x) - u(y)|}{\|x-y\|^{\alpha}}
-    + \sup_{x \neq y}\frac{|v(x) - v(y)|}{\|x-y\|^{\alpha}}
-    \leq [u]_{\alpha} + [v]_{\alpha}.
-\]
-
-\textbf{Proposition.} \(\|\cdot\|_{\alpha}\) is a norm over
-\(C^{\alpha}(X)\).
-
-\emph{Proof.} Positive homogeneity of \(\|\cdot\|_{\alpha}\) follows
-immediately from that of \([\cdot]_{\alpha}\) and \(\|\cdot\|_{\sup}\):
-\[
-    \|cu\|_{\alpha} 
-    = \|cu\|_{\sup} + [cu]_{\alpha}
-    = |c| \cdot (\|u\|_{\sup} + [u]_{\alpha})
-    = |c|\cdot\|u\|_{\alpha}.
-\] Similarly, the triangle inequality of \(\|\cdot\|_{\alpha}\) follows
-from that of \([\cdot]_{\alpha}\) and \(\|\cdot\|_{\sup}\): \[
-    \|u+v\|_{\alpha} 
-    = \|u+v\|_{\sup} + [u+v]_{\alpha}
-    \leq  \|u\|_{\sup} + [u]_{\alpha} + \|v\|_{\sup} + [v]_{\alpha}
-    = \|u\|_{\alpha} + \|v\|_{\alpha}.
-\] Finally, positive definiteness of \(\|\cdot\|_{\alpha}\) follows from
-the positive definiteness of \(\|\cdot\|_{\sup}\). Indeed, if
-\(0 = \|u\|_{\alpha} = \|u\|_{\sup} + [u]_{\alpha}\) then we must have
-\(\|u\|_{\sup} = 0\), implying \(u = 0\).
-
-\textbf{Proposition.} The \emph{Hölder space} \(C^{\alpha}(X)\) is a
-Banach space.
-
-\emph{Proof.} Take a Cauchy sequence \(u_k \in C^{\alpha}(X)\). Then
-
-\hypertarget{compact-embedding-theorems}{%
-\subsection{Compact embedding
-theorems}\label{compact-embedding-theorems}}
-
-/\emph{recall motivation for Holder spaces\ldots{} rephrase in terms of
-compact embeddings}/
-
-\(C^{0, \alpha} \to C^0\)
-
-\(C^{0, \alpha} \to C^{0, \beta}\)
-
-\(C^{k, \alpha} \to C^{k}\) /\emph{hopefully using earlier embedding}/
-
-\(C^{k, \alpha} \to C^{k, \beta}\) /\emph{hopefully using earlier
-embedding}/
 
 \end{document}

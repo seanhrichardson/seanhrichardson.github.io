@@ -44,7 +44,7 @@ This semi-norm is convenient because \\(\\{ [u]\_{\alpha}: u \in \mathcal{F}\\}\
 \\]
 because if \\(\\{\\\|u\\\|\_{\alpha}: u \in \mathcal{F}\\}\\) is bounded, then \\(\mathcal{F}\\) is equicontinuous and pointwise bounded, so Arzelà-Ascoli applies and there exists \\(u\_k \in \mathcal{F}\\) such that \\(u\_k \to u \in C(X)\\) uniformly.
 
-# Hölder spaces over a compact subset
+<!-- # Hölder spaces over a compact subset -->
 
 The point is the \\(\alpha\\)-Hölder norm \\(\\\|\cdot\\\|\_{\alpha}\\) is useful because it allows us to conclude uniform convergence due to Arzelà-Ascoli. We can rephrase this oberservation using the language of functional analysis, which begins by considering the function space of \\(\alpha\\)-Hölder continuous functions.
 
@@ -53,7 +53,7 @@ The point is the \\(\alpha\\)-Hölder norm \\(\\\|\cdot\\\|\_{\alpha}\\) is usef
     C^{\alpha}(X) := \\{u \in C(X) : \\\|u\\\|\_{\alpha} < \infty\\}.
 \\]
 
-It is over \\(C^{\alpha}(X)\\) that \\([\cdot]\_{\alpha}\\) is a semi-norm and \\(\\\|\cdot\\\|\_{\alpha}\\) is a norm, which we prove below.
+<!-- It is over \\(C^{\alpha}(X)\\) that \\([\cdot]\_{\alpha}\\) is a semi-norm and \\(\\\|\cdot\\\|\_{\alpha}\\) is a norm, which we prove below.
 
 **Proposition.** \\([\cdot]\_{\alpha}\\) is a semi-norm over \\(C^{\alpha}(X)\\).
 
@@ -102,4 +102,4 @@ Finally, positive definiteness of \\(\\\|\cdot\\\|\_{\alpha}\\) follows from the
 *Proof.* Take a Cauchy sequence \\(u\_k \in C^{\alpha}(X)\\). Then 
 
 
-## Compact embedding theorems
+## Compact embedding theorems -->

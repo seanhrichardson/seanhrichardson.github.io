@@ -1,0 +1,254 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Levi-Civita Connection},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{mathrsfs}
+\usepackage{amsthm}
+\renewcommand{\square}{\hfill\qed}
+
+\title{Levi-Civita Connection}
+\author{Sean Richardson}
+\date{}
+
+\begin{document}
+\maketitle
+
+\hypertarget{levi-civita-connection}{%
+\section{Levi-Civita Connection}\label{levi-civita-connection}}
+
+On a Riemannian manifold, there is a natural choice for which connection
+to use. Choosing a connection is choosing a sense of acceleration on our
+manifold. For a Riemannian manifold \(M\), a natural choice is to agree
+that geodesics have \(0\) accelertaion. Indeed, geodesics are paths that
+go in a ``straight line'' without changing velocity. Thus we would like
+a connection \(\nabla\) such that for any geodesic \(\gamma(t)\) we have
+\(\nabla_{\dot{\gamma}(t)}\dot{\gamma}(t) = 0\). If we have
+\(\gamma(t) = (x^1(t), \cdots, x^n(t))\) in local coordinates, this
+requirement is equivalent to \begin{align}
+    0 
+    &= \nabla_{\dot{\gamma}(t)} \dot{\gamma}(t)\\\
+    &= \nabla_{\dot{\gamma}(t)} (\dot{x}^j(t)\partial_j)\\\
+    &= \dot{\gamma}(t)(\dot{x}^j(t))\partial_j + \dot{x}^j(t)\nabla_{\dot{\gamma}(t)} \partial_j\\\
+    &= \ddot{x}^j(t)\partial_j + \dot{x}^j(t)\nabla_{\dot{x}^i\partial_i} \partial_j\\\
+    &=  (\ddot{x}^k(t) + \dot{x}^i\dot{x}^j(t)A_{ij}^k) \partial_k.
+\end{align} That is, this is equivalent to \[
+    \ddot{x}^k(t) + \dot{x}^i\dot{x}^j(t)A_{ij}^k = 0 \quad \text{for all } k.
+\] Thus we want to choose our functions \(A_{ij}^k\) so that all
+geodesics satisfy the above equation. However, comparing the above
+equation to the geodesic equation, we realize that this will always be
+true if we choose \(A_{ij}^k = \Gamma_{ij}^k\) to be the Christoffel
+symbols! Therefore, on a Riemannian manifold we should define our
+connection in coordinates by setting \[
+    \nabla_{\partial_i}\partial_j = \Gamma_{ij}^k \partial_k.
+    \tag{C}
+    \label{eq:lc-coords}
+\] This definition, however, opens one important question: does this
+choice of connection rely on the choice of coordinates? The answer is
+no, which we will prove by later defining this natural connection in a
+coordinate independent way. The resulting connection is called the
+``Levi-Civita connection''.
+
+Recall the connection for Euclidean space \(\mathbb{R}^n\) is given by
+\[
+    \nabla_{X}Y = XY^i\partial_i.
+\] This \emph{Euclidean connection} satisfies the product rule \[
+    \nabla_{Z}\langle X , Y\rangle
+    = \nabla_{X} \left(\sum_{i}X^iY^i\right)
+    = \sum_{i}(XZ^i)Y^i + X^i(ZY^i)
+    = \langle \nabla_Z X , Y\rangle + \langle X , \nabla_ZY\rangle.
+\] Additionally, observe that for any vector fields \(X,Y\) over
+\(\mathbb{R}^n\), we can compute the difference of the Euclidean
+connection \(\nabla_X Y - \nabla_Y X\) to be \[
+   \nabla_X Y - \nabla_Y X
+   = XY^i\partial_i - YX^i\partial_i
+   = (XY^i - YX^i) \partial_i. 
+\] But this is juts the Lie bracket \([X,Y]\). That is, the Euclidean
+connection satisfies the commutator relation \[
+    \nabla_X Y - \nabla_Y X = [X,Y].
+    \tag{S}
+    \label{eq:symmetry}
+\]
+
+It turns out that for a Riemannian manifold \(M\), the Levi-Civita
+connection defined in local coordinates by (\ref{eq:lc-coords}) also
+satisfies the commutator relation (\ref{eq:symmetry}) as well as the
+following product rule with respect to the metric \(g\). \[
+    \nabla_Z\langle X , Y\rangle_g = \langle \nabla_Z X , Y\rangle_g + \langle X , \nabla_Z Y\rangle_g.
+    \tag{M}
+    \label{eq:compatibility}
+\] A connection satisfying (\ref{eq:symmetry}) is called
+\emph{symmetric} and a connection satisfying the product rule
+(\ref{eq:compatibility}) is said to be \emph{compatible with the
+metric}. We begin by showing the symmetry which is simply a coordinate
+computation.
+
+\textbf{Prop.} The Levi-Civita connection as defined in coordinates by
+(\ref{eq:lc-coords}) is symmetric.
+
+\emph{Proof.} Compute \begin{align}
+    \nabla_X Y - \nabla_Y X
+    &= \nabla_{X^i \partial_i}(Y^j \partial_j) - \nabla_{Y^j\partial_j}(X^i \partial_i)\\\
+    &= X^i((\partial_iY^j)\partial_j + Y^j \nabla_{\partial_j}\partial_i)
+    -  Y^j((\partial_jX^i)\partial_i + X^i \nabla_{\partial_i}\partial_j)\\\
+    &= (XY^j\partial_j - YX^i\partial_i) + X^iY^j(\nabla_{\partial_j}\partial_i - \nabla_{\partial_i}\partial_j)\partial_k\\\
+    &= [X,Y] + X^iY^j(\Gamma_{ij}^k - \Gamma_{ji}^k)\partial_k.
+\end{align} Then the result follows from
+\(\Gamma_{ij}^k = \Gamma_{ji}^k\) which we can see from the definition
+of Christoffel symbols: \[
+    \Gamma_{ij}^k = \frac{1}{2}g^{kl}(\partial_ig_{jl} + \partial_jg_{li} - \partial_lg_{ij})
+\]
+
+\(\square\)
+
+Next we show the Levi-Civita connection as defined in coordinates is
+compatible with the metric, which follows from a substantially longer
+coordinate computation.
+
+\textbf{Prop.} The Levi-Civita connection as defined in coordinates by
+(\ref{eq:lc-coords}) is compatible with the metric.
+
+\emph{Proof.} First we expand out the right side of
+(\ref{eq:compatibility}). \begin{align}
+    \langle \nabla_Z X , Y\rangle + \langle X , \nabla_Z Y\rangle
+    &= \langle \nabla_{Z^k \partial_k}(X^i \partial_i) , Y^j\partial_j \rangle
+    + \langle X^i \partial_i , \nabla_{Z^k \partial_k}(Y^j \partial_j)\rangle\\\
+    &= Z^k(Y^j\langle \partial_k X^i\partial_i + X^i \nabla_{\partial_k}\partial
+    _i , \partial_j\rangle
+    + X^i\langle \partial_i , \partial_kY^j \partial_j + Y^j \nabla_{\partial_k}\partial_j\rangle)\\\
+    &= Z^k(Y^j\langle (\partial_kX^l + X^i\Gamma_{ik}^l)\partial_l , \partial_j\rangle
+    + X^i \langle \partial_i , (\partial_kY^l + Y^j\Gamma_{kj}^l)\partial_l\rangle)\\\
+    &= Z^kY^j(\partial_kX^l + X^i\Gamma_{ik}^l)g_{lj}
+    + Z^kX^i(\partial_kY^l + Y^j\Gamma_{kj}^l)g_{il}\\\
+    &= Z^k(Y^j\partial_kX^lg_{lj} + X^i\partial_kY^l g_{il}) + Z^kX^iY^j(\Gamma_{ik}^lg_{lj} + \Gamma_{kj}^lg_{il}).
+\end{align} Next we expand out the left size of
+(\ref{eq:compatibility}). \[
+    \nabla_Z\langle X , Y\rangle
+    = Z^k \partial_k\langle X^i \partial_i , Y^j \partial_j\rangle
+    = Z^k \partial_k(X^i Y^j g_{ij})
+    = Z^k(Y^j\partial_kX^ig_{ij} + X^i\partial_kY^jg_{ij})
+    + Z^kX^iY^j\partial_kg_{ij}.
+\] Note these expansions are quite similar, and we see that in fact the
+right and left sides of (\ref{eq:compatibility}) are equal so long as we
+can show \[
+    \partial_kg_{ij} = \Gamma_{ik}^lg_{lj} + \Gamma_{kj}^lg_{il}.
+\] Indeed, to show this we use the definition of the Christoffel symbols
+\[
+    \Gamma_{ij}^k = \frac{1}{2}g^{kl}(\partial_ig_{jl} + \partial_jg_{li} - \partial_lg_{ij})
+\] and apply the matrix \(g_{km}\) to both sides to conclude \[
+    \Gamma_{ij}^k g_{km} = \frac{1}{2}(\partial_ig_{jm} + \partial_jg_{mi} - \partial_mg_{ij}).
+\] Thus using the above expression twice we can compute \[
+    \Gamma_{ik}^lg_{lj} + \Gamma_{kj}^lg_{il}
+    = \frac{1}{2}(\partial_ig_{kj} + \partial_kg_{ji} - \partial_jg_{ik})
+    + \frac{1}{2}(\partial_kg_{ji} + \partial_jg_{ik} - \partial_ig_{kj})
+    = \partial_kg_{ij}
+\] as needed.
+
+\(\square\)
+
+It turns out that these two properties -- symmetry and metric
+compatibility -- are quite special. In fact, on a Riemannian manifold
+there will only be one connection that satisfies both properties.
+
+\textbf{Prop. (Fundamental Theorem of Riemannian Geometry).} For any
+Riemannian manifold \(M\), there exists a unique connection \(\nabla\)
+that is both symmetric and compatible with the metric. This connection
+is called the \emph{Levi-Civita connection}.
+
+\emph{Proof in coordinates.} We have already demonstrated existence, for
+the Levi-Civita connection is symmetric and metric-compatible. To see
+why an arbitrary symmetric and metric-compatible connection \(\nabla\)
+must be the Levi-Civita connection, we work locally in coordinates
+\((x^i)\) and write \(\nabla_{\partial_i}\partial_j = A_{ij}^k\). By the
+same computation we performed to show symmetry of the Levi-Civita
+connection, we see the symmetry of \(\nabla\) is equivalent to
+\(A_{ij}^k = A_{ji}^k\). Similarly, we see \(\nabla\) is compatible with
+the metric exactly when \[
+   \partial_kg_{ij} = A_{ik}^lg_{lj} + A_{kj}^lg_{il}.
+\] by the corresponding computation for the Levi-Civita connection; this
+expression is often called the \emph{first Christoffel identity}. These
+two requirements give a linear system of \(\frac{1}{2}n^2(n+1)\)
+equations with the same amount of unknowns. The trick to solve this
+system is to permute the first Christoffel identity to get cancellation
+and solve for the sum \begin{align}
+    \partial_i g_{jl} + \partial_j g_{il} - \partial_l g_{ij}
+    = (A_{ij}^p g_{pl} + A_{il}^p g_{jp}) + (A_{ji}^p g_{pl} + A_{jl}^p g_{ip}) - (A^p_{li} g_{pj} + A_{lj}^p g_{ip})
+    = 2A_{ij}^p g_{pl}.
+\end{align} Then applying the inverse matrix \(g^{kl}\) we recover the
+definition of the Christoffel symbols: \[
+    A_{ij}^k = \frac{1}{2}g^{kl}(\partial_i g_{jl} + \partial_j g_{il} - \partial_l g_{ij}).
+\]
+
+\(\square\)
+
+\emph{Proof without coordinates.} Existence follows from the Levi-Civita
+connection. For uniqueness, suppose \(\nabla\) is a symmetric and
+metric-compatible connection and use both properties to write
+\begin{align}
+    X\langle Y , Z\rangle_g 
+    = \langle \nabla_X Y , Z \rangle_g + \langle Y , \nabla_X Z \rangle_g
+    = \langle \nabla_X Y , Z \rangle_g + \langle Y , \nabla_Z X \rangle_g + \langle Y , [X, Z]\rangle_g.
+\end{align} We will use a similar trick as the proof in coordinates to
+find an expression for \(\nabla\). By cyclically permuting the above, we
+get two more identities: \begin{align}
+    Y\langle Z , X\rangle_g 
+    = \langle \nabla_Y Z , X \rangle_g + \langle Z , \nabla_Y X \rangle_g
+    = \langle \nabla_Y Z , X \rangle_g + \langle Z , \nabla_X Y \rangle_g + \langle Z , [Y, X]\rangle_g\\\
+    Z\langle X , Y\rangle_g 
+    = \langle \nabla_Z X , Y \rangle_g + \langle X , \nabla_Z Y \rangle_g
+    = \langle \nabla_Z X , Y \rangle_g + \langle X , \nabla_Y Z \rangle_g + \langle X , [Z, Y]\rangle_g.
+\end{align} Now adding the first two equations and subtracting the third
+gives the cancellation \begin{align}
+X\langle Y , Z\rangle_g  + Y\langle Z , X\rangle_g - Z\langle X , Y\rangle_g
+= 2 \langle \nabla_X Y , Z \rangle_g + \langle Y , [X, Z]\rangle_g + \langle Z , [Y, X]\rangle_g - \langle X , [Z, Y]\rangle_g.
+\end{align} Thus we can solve for \(\langle \nabla_X Y , Z \rangle_g\)
+to find \begin{align}
+\langle \nabla_X Y , Z \rangle_g
+= \frac{1}{2}(X\langle Y , Z\rangle_g  + Y\langle Z , X\rangle_g - Z\langle X , Y\rangle_g - \langle Y , [X, Z]\rangle_g - \langle Z , [Y, X]\rangle_g + \langle X , [Z, Y]\rangle_g).
+\end{align} which uniquely determines the connection \(\nabla\). The
+above is thus a coordinate-invariant expression for the Levi-Civita
+connection and is called \emph{Koszul's formula}.
+
+\end{document}

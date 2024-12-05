@@ -1,0 +1,201 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Covariant Derivative},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{mathrsfs}
+\usepackage{amsthm}
+\renewcommand{\square}{\hfill\qed}
+
+\title{Covariant Derivative}
+\author{Sean Richardson}
+\date{}
+
+\begin{document}
+\maketitle
+
+\hypertarget{covariant-derivative}{%
+\section{Covariant Derivative}\label{covariant-derivative}}
+
+\hypertarget{differentiating-vector-fields-in-mathbbrn}{%
+\subsection{\texorpdfstring{Differentiating vector fields in
+\(\mathbb{R}^n\)}{Differentiating vector fields in \textbackslash mathbb\{R\}\^{}n}}\label{differentiating-vector-fields-in-mathbbrn}}
+
+Given a path \(\gamma(t)\) in \(\mathbb{R}^n\), we know we can represent
+its velocity by \[
+    \dot{\gamma}(t) = \dot{\gamma}^i(t) \partial_i.
+\] Furthermore, in the case of \(\mathbb{R}^n\), we understand the
+acceleration of the curve \(\gamma(t)\) to be given by \[
+    \ddot{\gamma}(t) = \frac{d }{d t}\left(\dot{\gamma}^i(t) \partial_i\right) = \ddot{\gamma}^i(t) \partial_i.
+\] In computing the acceleration, we are differentiating a vector field.
+More generally in \(\mathbb{R}^n\), we understand the derivative of some
+vector field \(X\) in the direction \(v \in T_p\mathbb{R}^n\) at point
+\(p\), which we denote \(\nabla_v X\), to be \[
+    \nabla_v X = \left.\frac{d }{d t}\right|_{t=0}X(\gamma(t)) = \left.\frac{d }{d t}\right|_{t=0}X^i(\gamma(t))\partial_i = v(X^i)\partial_i.
+\] where \(\gamma(t)\) is a smooth curve such that
+\(\dot{\gamma}(0) = v\). This directional derivative enjoys the
+following nice properties:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  First, the directional derivative is linear with respect to the
+  direction. Indeed, for any vectors \(v,w\) based at point
+  \(p \in \mathbb{R}^n\), real numbers \(a,b\), and vector field \(X\)
+  we find \[
+   \nabla_{av + bw}X
+   = (av + bw)X^i \partial_i
+   = avX^i\partial_i + bwX^i\partial_i
+   = a\nabla_vX + b\nabla_wX.
+  \]
+\item
+  Second, this directional derivative is linear with respect to the
+  vector fields. Indeed, for any vector \(v\) based at
+  \(p \in \mathbb{R}^n\), any real numbers \(a,b\), and any vector
+  fields \(X,Y\) that \[
+   \nabla_v(aX + bY)
+   = v(aX^i + bY^i)\partial_i
+   = avX^i\partial_i + bvY^i\partial_i
+   = a\nabla_vX + b\nabla_vY
+  \]
+\item
+  Finally, we have a product rule. For any vector \(v\) at point
+  \(p \in \mathbb{R}^n\), vector field \(X\), and smooth function \(f\)
+  we find \[
+   \nabla_v(fX)
+   = v(fX^i)\partial_i
+   = (vf)X^i\partial_i + f(vX^i)\partial_i
+   = (vf)X + f\nabla_vX
+  \]
+\end{enumerate}
+
+\hypertarget{the-problem-with-differentiating-vector-fields-on-manifolds}{%
+\subsection{The problem with differentiating vector fields on
+manifolds}\label{the-problem-with-differentiating-vector-fields-on-manifolds}}
+
+However, the definition of the directional derivative of a vector field
+\(X\) in direction \(v\) \[
+    \left.\frac{d }{d t}\right|_{t=0} X(\gamma(t)) = \lim_{t \to 0}\frac{X(\gamma(t)) - X(\gamma(0))}{t}
+\] does not make sense on a general Riemannian manifold! The vectors
+\(X(\gamma(t))\) and \(X(\gamma(0))\) belong to the two different
+tangent spaces \(T_{\gamma(t)}M\) and \(T_{\gamma(0)}M\), so it does not
+make sense to subtract them. Note that in the case of \(\mathbb{R}^n\),
+there is a natural identification between different tangent spaces
+\(T_p\mathbb{R}^n\) and \(T_q\mathbb{R}^n\) by simply translating the
+vectors. However, this a consequence of having a nice coordinate frame
+\((\partial_i)\), for we are naturally identifying
+\(v^i\partial_i \in T_p\mathbb{R}^n\) with
+\(v^i\partial_i \in T_q\mathbb{R}^n\).
+
+\hypertarget{connections}{%
+\subsection{Connections}\label{connections}}
+
+We are looking to define a directional derivative operation
+\(\nabla_v X\) on a general smooth manifold. Formally, we are looking
+for a map \(\nabla: T_pM \times \Gamma(TM) \to T_pM\) varying smoothly
+with \(p\). If this map is denoted \(\nabla: (v, X) \mapsto \nabla_vX\),
+we want \(\nabla\) to satisfy the following three properties we expect
+from a directional derivative. In the following, \(a,b \in \mathbb{R}\)
+are real numbers, \(v,w \in T_pM\) are vectors based at \(p\), and
+\(X,Y \in \Gamma(TM)\) are vector fields on the manifold.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Linearity with respect to the direction: \[
+   \nabla_{av + bw}X = a\nabla_vX + b\nabla_wX.
+  \]
+\item
+  Linearity with respect to the vector field: \[
+   \nabla_v(aX + bY) = a\nabla_vX + b\nabla_vY.
+  \]
+\item
+  Product rule: \[
+   \nabla_v(fX) = (vf)X + f\nabla_vX.
+  \]
+\end{enumerate}
+
+Such a map \(\nabla: T_pM \times \Gamma(TM) \to T_pM\) varying smoothly
+with \(p\) that satisfies the three properties above is called a
+\emph{connection}. Equivalently, we can consider two vector fields
+\(X,Y\) and say \(\nabla_X Y\) is vector field such that
+\((\nabla_X Y)(p) = \nabla_{X(p)} Y\) so that we now have a map
+\(\nabla: \Gamma(TM) \times \Gamma(TM) \to \Gamma(TM)\). The directional
+derivative \((\nabla_X Y)\) corresponding to a connection is called the
+\emph{covariant derivative} of \(Y\) in the direction of \(X\). The main
+question, however, is how do we choose which connection to use? In
+general, there are many connections on a smooth manifold: choose any
+coordinate frame \((\partial_i)\) and decide the derivative of each
+coordinate frame in the direction of all the other coordinate frames at
+every point. That is, choose functions \(A_{ij}^k\) such that \[
+    \nabla_{\partial_i}\partial_j = A_{ij}^k \partial_k.
+\] Then given any arbitrary vector fields \(X = X^i\partial_i\) and
+\(Y = Y^j\partial_j\), we can determine what the covariant derivative
+\(\nabla_XY\) should be by \[
+    \nabla_X Y 
+    = \nabla_{X^i \partial_i}(Y^j \partial_j)
+    = X^i((\partial_iY^j)\partial_j + Y^j \nabla_{\partial_i}\partial_j)
+    = X^i(\partial_iY^k + Y^jA_{ij}^k)\partial_k.
+    \label{eq:As}
+    \tag{A}
+\] For any smooth functions \(A_{ij}^k\) that we choose, the above
+formula in fact defines a connection.
+
+\textbf{Exercise.} Verify that for any smooth functions \(A_{ij}^k\),
+the formula (\ref{eq:As}) defines a connection by checking the three
+necessary properties are satisfied.
+
+Thus there are many possible connections on a general smooth manifold.
+For some intuition for connections, note that choosing a connection
+gives us a sense of acceleration on our manifold. Given a curve
+\(\gamma(t)\), it's velocity at each point along the curve is given by
+the tangent vectors \(\dot{\gamma}(t)\). Then the acceleration should be
+the change of \(\dot{\gamma}(t)\) in direction \(\dot{\gamma}(t)\). That
+is, the \emph{acceleration} of \(\gamma(t)\) is defined to be
+\(\ddot{\gamma}(t) = \nabla_{\dot{\gamma}(t)}\dot{\gamma}(t)\).
+
+\end{document}

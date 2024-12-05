@@ -3,10 +3,12 @@ layout: page
 title: Levi-Civita Connection
 ---
 
-## Levi-Civita Connection
+<!-- TODO: possibly compare to extrinsic covariant derivative for embedded surfaces -->
+
+# Levi-Civita Connection
 
 On a Riemannian manifold, there is a natural choice for which connection to use. Choosing a connection is choosing a sense of acceleration on our manifold. For a Riemannian manifold \\(M\\), a natural choice is to agree that geodesics have \\(0\\) accelertaion. Indeed, geodesics are paths that go in a "straight line" without changing velocity. Thus we would like a connection \\(\nabla\\) such that for any geodesic \\(\gamma(t)\\) we have \\(\nabla\_{\dot{\gamma}(t)}\dot{\gamma}(t) = 0\\). If we have \\(\gamma(t) = (x^1(t), \cdots, x^n(t))\\) in local coordinates, this requirement is equivalent to
-\\[
+<!-- TODO: define connection coefficients... -->
 \begin{align}
     0 
     &= \nabla\_{\dot{\gamma}(t)} \dot{\gamma}(t)\\\\\
@@ -15,7 +17,6 @@ On a Riemannian manifold, there is a natural choice for which connection to use.
     &= \ddot{x}^j(t)\partial\_j + \dot{x}^j(t)\nabla\_{\dot{x}^i\partial\_i} \partial\_j\\\\\
     &=  (\ddot{x}^k(t) + \dot{x}^i\dot{x}^j(t)A_{ij}^k) \partial\_k.
 \end{align}
-\\]
 That is, this is equivalent to
 \\[
     \ddot{x}^k(t) + \dot{x}^i\dot{x}^j(t)A_{ij}^k = 0 \quad \text{for all } k.
@@ -63,7 +64,6 @@ A connection satisfying (\ref{eq:symmetry}) is called *symmetric* and a connecti
 **Prop.** The Levi-Civita connection as defined in coordinates by (\ref{eq:lc-coords}) is symmetric.
 
 *Proof.* Compute
-\\[
 \begin{align}
     \nabla\_X Y - \nabla\_Y X
     &= \nabla\_{X^i \partial\_i}(Y^j \partial\_j) - \nabla\_{Y^j\partial\_j}(X^i \partial\_i)\\\\\
@@ -72,7 +72,6 @@ A connection satisfying (\ref{eq:symmetry}) is called *symmetric* and a connecti
     &= (XY^j\partial\_j - YX^i\partial\_i) + X^iY^j(\nabla\_{\partial\_j}\partial\_i - \nabla\_{\partial\_i}\partial\_j)\partial\_k\\\\\
     &= [X,Y] + X^iY^j(\Gamma\_{ij}^k - \Gamma\_{ji}^k)\partial\_k.
 \end{align}
-\\]
 Then the result follows from \\(\Gamma\_{ij}^k = \Gamma\_{ji}^k\\) which we can see from the definition of Christoffel symbols:
 \\[
     \Gamma\_{ij}^k = \frac{1}{2}g^{kl}(\partial\_ig\_{jl} + \partial\_jg\_{li} - \partial\_lg\_{ij})
@@ -84,7 +83,6 @@ Next we show the Levi-Civita connection as defined in coordinates is compatible 
 **Prop.** The Levi-Civita connection as defined in coordinates by (\ref{eq:lc-coords}) is compatible with the metric.
 
 *Proof.* First we expand out the right side of (\ref{eq:compatibility}).
-\\[
 \begin{align}
     \langle \nabla\_Z X , Y\rangle + \langle X , \nabla\_Z Y\rangle
     &= \langle \nabla\_{Z^k \partial\_k}(X^i \partial\_i) , Y^j\partial\_j \rangle
@@ -98,7 +96,6 @@ Next we show the Levi-Civita connection as defined in coordinates is compatible 
     + Z^kX^i(\partial\_kY^l + Y^j\Gamma\_{kj}^l)g\_{il}\\\\\
     &= Z^k(Y^j\partial\_kX^lg\_{lj} + X^i\partial\_kY^l g\_{il}) + Z^kX^iY^j(\Gamma\_{ik}^lg\_{lj} + \Gamma\_{kj}^lg\_{il}).
 \end{align}
-\\]
 Next we expand out the left size of (\ref{eq:compatibility}). 
 \\[
     \nabla\_Z\langle X , Y\rangle
@@ -133,4 +130,46 @@ It turns out that these two properties -- symmetry and metric compatibility -- a
 
 **Prop. (Fundamental Theorem of Riemannian Geometry).** For any Riemannian manifold \\(M\\), there exists a unique connection \\(\nabla\\) that is both symmetric and compatible with the metric. This connection is called the *Levi-Civita connection*.
 
-*Proof.* /\*TODO: follow Lee\*/
+*Proof in coordinates.* We have already demonstrated existence, for the Levi-Civita connection is symmetric and metric-compatible. To see why an arbitrary symmetric and metric-compatible connection \\(\nabla\\) must be the Levi-Civita connection, we work locally in coordinates \\((x^i)\\) and write \\(\nabla\_{\partial\_i}\partial\_j = A\_{ij}^k\\). By the same computation we performed to show symmetry of the Levi-Civita connection, we see the symmetry of \\(\nabla\\) is equivalent to \\(A\_{ij}^k = A\_{ji}^k\\). Similarly, we see \\(\nabla\\) is compatible with the metric exactly when
+\\[
+   \partial\_kg\_{ij} = A\_{ik}^lg\_{lj} + A\_{kj}^lg\_{il}.
+\\]
+by the corresponding computation for the Levi-Civita connection; this expression is often called the *first Christoffel identity*. These two requirements give a linear system of \\(\frac{1}{2}n^2(n+1)\\) equations with the same amount of unknowns. The trick to solve this system is to permute the first Christoffel identity to get cancellation and solve for the sum
+\begin{align}
+    \partial\_i g\_{jl} + \partial\_j g\_{il} - \partial\_l g\_{ij}
+    = (A\_{ij}^p g\_{pl} + A\_{il}^p g\_{jp}) + (A\_{ji}^p g\_{pl} + A\_{jl}^p g\_{ip}) - (A^p_{li} g\_{pj} + A\_{lj}^p g\_{ip})
+    = 2A\_{ij}^p g\_{pl}.
+\end{align}
+Then applying the inverse matrix \\(g^{kl}\\) we recover the definition of the Christoffel symbols:
+\\[
+    A\_{ij}^k = \frac{1}{2}g^{kl}(\partial\_i g\_{jl} + \partial\_j g\_{il} - \partial\_l g\_{ij}).
+\\]
+<div style="text-align: right"> \(\square\) </div>
+
+*Proof without coordinates.* Existence follows from the Levi-Civita connection. For uniqueness, suppose \\(\nabla\\) is a symmetric and metric-compatible connection and use both properties to write
+<!--  -->
+\begin{align}
+    X\langle Y , Z\rangle\_g 
+    = \langle \nabla\_X Y , Z \rangle\_g + \langle Y , \nabla\_X Z \rangle\_g
+    = \langle \nabla\_X Y , Z \rangle\_g + \langle Y , \nabla\_Z X \rangle\_g + \langle Y , [X, Z]\rangle\_g.
+\end{align}
+We will use a similar trick as the proof in coordinates to find an expression for \\(\nabla\\). By cyclically permuting the above, we get two more identities:
+\begin{align}
+    Y\langle Z , X\rangle\_g 
+    = \langle \nabla\_Y Z , X \rangle\_g + \langle Z , \nabla\_Y X \rangle\_g
+    = \langle \nabla\_Y Z , X \rangle\_g + \langle Z , \nabla\_X Y \rangle\_g + \langle Z , [Y, X]\rangle\_g\\\\\
+    Z\langle X , Y\rangle\_g 
+    = \langle \nabla\_Z X , Y \rangle\_g + \langle X , \nabla\_Z Y \rangle\_g
+    = \langle \nabla\_Z X , Y \rangle\_g + \langle X , \nabla\_Y Z \rangle\_g + \langle X , [Z, Y]\rangle\_g.
+\end{align}
+Now adding the first two equations and subtracting the third gives the cancellation
+\begin{align}
+X\langle Y , Z\rangle\_g  + Y\langle Z , X\rangle\_g - Z\langle X , Y\rangle\_g
+= 2 \langle \nabla\_X Y , Z \rangle\_g + \langle Y , [X, Z]\rangle\_g + \langle Z , [Y, X]\rangle\_g - \langle X , [Z, Y]\rangle\_g.
+\end{align}
+Thus we can solve for \\(\langle \nabla\_X Y , Z \rangle\_g\\) to find
+\begin{align}
+\langle \nabla\_X Y , Z \rangle\_g
+= \frac{1}{2}(X\langle Y , Z\rangle\_g  + Y\langle Z , X\rangle\_g - Z\langle X , Y\rangle\_g - \langle Y , [X, Z]\rangle\_g - \langle Z , [Y, X]\rangle\_g + \langle X , [Z, Y]\rangle\_g).
+\end{align}
+which uniquely determines the connection \\(\nabla\\). The above is thus a coordinate-invariant expression for the Levi-Civita connection and is called *Koszul's formula*.
