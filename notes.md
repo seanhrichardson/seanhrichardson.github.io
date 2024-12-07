@@ -4,11 +4,11 @@ section: NOTES
 title: Notes
 ---
 
-* [pseudodifferential operators](pdes/pdos.html) or [pdf](pdes/pdos.pdf)
+* [pseudodifferential operators](notes/pdes/pdos.html) or [pdf](notes/pdes/pdos.pdf)
 
-* [connections](riemannian-manifolds/connections.html) or [pdf](riemannian-manifolds/connections.pdf)
-* [Levi-Civita connection](riemannian-manifolds/levi-civita-connection.html) or [pdf](riemannian-manifolds/levi-civita-connection.pdf)
-* [riemann curvature tensor motivation](riemannian-manifolds/curvature-motivation.html) or [pdf](riemannian-manifolds/curvature-motivation.pdf)
+* [connections](notes/riemannian-manifolds/connections.html) or [pdf](notes/riemannian-manifolds/connections.pdf)
+* [Levi-Civita connection](notes/riemannian-manifolds/levi-civita-connection.html) or [pdf](notes/riemannian-manifolds/levi-civita-connection.pdf)
+* [riemann curvature tensor motivation](notes/riemannian-manifolds/curvature-motivation.html) or [pdf](notes/riemannian-manifolds/curvature-motivation.pdf)
 
 <!-- [Calculus](/notes/calculus)
 [Complex Analysis](/notes/complex-analysis)
