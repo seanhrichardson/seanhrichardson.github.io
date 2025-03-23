@@ -3,7 +3,7 @@ layout: page
 title: Holomorphic functions
 ---
 
-## Holomorphic functions
+# Holomorphic functions
 
 When extending functions to the complex plane, extra structure and patterns emerge. For example, let us take a closer look at the maps given by \\(e^z\\), \\(\sin z\\), and \\(\sqrt{z}\\).
 
@@ -15,7 +15,7 @@ Notice that the above complex functions take the coordinate lines from the input
 
 Complex analysis in large part studies complex functions whose derivative at each point is a complex number. This is a surprisingly strong property that almost all familiar functions, when extended to the complex plane, satisfy. Thus this is a crucial property to study to better understand complex functions - even when we are only interested in real arguments.
 
-#### Derivative of a complex function
+## Derivative of a complex function
 
 If a complex function satisfies the crucial property of having a complex derivative at each point, it is called "holomorphic". Many familiar complex functions satisfy this property, and so we can learn a lot by studying holomorphic complex functions generally. The formal definition of holomorphic, which is nearly identical to the real version of differentiability, is given below
 

@@ -3,13 +3,13 @@ layout: page
 title: Complex Motivation
 ---
 
-## Complex Numbers
+# Complex Numbers
 
 /\*complex numbers are a useful tool\*/
 
 /\*took centuries to be widely accepted and recognized\*/
 
-#### Complex numbers are useful tools
+## Complex numbers are useful tools
 
 Complex numbers are a useful tool in solving real problems. Historically, the first hints of the usefulness of complex numbers arose in the 16th century when mathematicians /\*names?\*/ found a formula to solve cubic equations. Through a change of variables, it turns out every cubic can be reduced to the form 
 \\[x^3 = 3px + 2q\\]

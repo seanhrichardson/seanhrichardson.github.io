@@ -12,16 +12,13 @@ pre reqs:
 <!-- TODO:
 This is written for Riemannian manifolds, but this can be greatly shortened if the goal is only topological manifolds. -->
 
-## Manifolds
+# Manifolds
 
 /\*perhaps explain big picture why mathematicians are interested in manifolds\*/
 
 /\*some visual examples wiwth pictures\*/
 
 All of the above examples have one important property: a neighborhood each point \\(p\\) of an \\(n\\) dimensional manifold \\(M \subset \mathbb{R}^m\\) locally "looks like" \\(\mathbb{R}^n\\). Precisely defining what a manifold requires speciying what we mean by "looks like". If we are only interested in the topology of the manifold, then we can use the notion of homeomorphism to precisely define what we mean by "looks like" as follows.
-
-
-/\*possibly do not give definition of locally Euclidean now... do it later in the topological manifold section. For now, just say every point has a neighborhood homeomorphic to an open subset of \\(\mathbb{R}^n\\)\*/
 
 **Def. (Locally Euclidean).** A topological space \\(X\\) is *locally Euclidean of dimension \\(n\\)* if for each \\(p \in X\\), there exists an open set \\(U \subset X\\) containing \\(p\\) that is homeorphic to an open subset \\(U \subset \mathbb{R}^n\\).
 

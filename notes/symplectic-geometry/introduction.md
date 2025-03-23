@@ -3,9 +3,9 @@ layout: page
 title: Symplectic Geometry Introduction
 ---
 
-## Symplectic geometry introduction
+# Symplectic geometry introduction
 
-#### Hamiltonian \\(n\\)-body problem.
+## Hamiltonian \\(n\\)-body problem.
 
 Consider the problem of mathematically modeling the planetary motion of the solar system. For this, consider \\(k\\) point masses  all gravitationally interacting with eachother with the goal of predicting the positions \\(\mathbf{q_1}(t), \cdots, \mathbf{q_k}(t) \in \mathbb{R}^3\\) and momentums \\(\mathbf{p_1}(t), \cdots, \mathbf{p_k}(t) \in \mathbb{R}^3\\) of these \\(k\\) particles over time. That is, all possible positions and momentums are encoded as points in the phase space \\((\mathbb{R}^3)^k \times (\mathbb{R}^3)^k\\) with coordinates \\((\mathbf{q_1}, \cdots, \mathbf{q_k}, \mathbf{p_1}, \cdots, \mathbf{p_k})\\). Equivalently, letting \\(n = 3k\\), we can consider the phase space \\(\mathbb{R}^{2n}\\) with coordinates \\((x^1, \cdots, x^n, \xi^1, \cdots, \xi^n)\\) encoding the positions and momentums by \\(\mathbf{q\_j} = (x\_{3j-2}, x\_{3j-1}, x\_{3j})\\) and \\(\mathbf{p\_j} = (\xi\_{3j-2}, \xi\_{3j-1}, \xi\_{3j})\\). The Hamiltonian equations from classical mechanics determine the evolution of the positions and momentums \\((x^1(t), \cdots, x^n(t), \xi^1(t), \cdots, \xi^n(t))\\) by
 \\[
@@ -15,9 +15,10 @@ Consider the problem of mathematically modeling the planetary motion of the sola
 \\]
 where \\(H: \mathbb{R}^{2n} \to \mathbb{R}\\) is given by the sum \\(H(x^1, \cdots, x^n, \xi^1, \cdots, \xi^n) = V(x^1, \cdots, x^n) + K(\xi^1, \cdots, \xi^n)\\) of the potential and kinetic energy of the system. 
 
-#### Information of Hamiltonian Systems
+## Information of Hamiltonian Systems
 
 Like the problem of modeling the solar system, many mechanical systems have phase space \\(\mathbb{R}^{2n}\\) with coordinates \\((x^1, \cdots, x^n, \xi^1, \cdots, \xi^n)\\) and the evolution is determined by two pieces of information.
+<!--  -->
 1. A function \\(H: \mathbb{R}^{2n} \to \mathbb{R}\\) on the phase space called the *Hamiltonian*.
 2. The evolution rule given by
 \\[

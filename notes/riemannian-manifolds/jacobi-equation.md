@@ -5,10 +5,11 @@ title: Jacobi Equation
 
 ## The Jacobi Equation
 
-/\*visual motivation: hyperbolic space, sphere, etc....\*/
+<!-- /\*visual motivation: hyperbolic space, sphere, etc....\*/ -->
 
-Consider a family of geodesics \\(\Gamma\_s(t)\\) parametrized by \\(s\\). /\*finish setup\*/
-
+Consider a family of geodesics \\(\Gamma\_s(t)\\) parametrized by \\(s\\), which determines vector fields \\(\partial\_t\\) and \\(\partial\_s\\).
+<!-- explain how these V.F's are determined -->
+As we move along the geodesic \\(\gamma(t) = \Gamma\_0(t)\\), the acceleration of nearby geodesics is determined by the geometry of the manifold and can be computed by
 \\[
 \begin{align}
     D\_t^2 \partial\_s 
@@ -18,6 +19,7 @@ Consider a family of geodesics \\(\Gamma\_s(t)\\) parametrized by \\(s\\). /\*fi
     = - R(\partial\_s, \partial\_t)\partial\_t.
 \end{align}
 \\]
+Indeed, we see the acceleration of nearby geodesics is determined by the Riemann curvature tensor.
 
 /\*define jacobi field\*/
 

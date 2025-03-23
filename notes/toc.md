@@ -26,8 +26,9 @@ done (green)
 
 ## Linear Algebra
 * [tensors](linear-algebra/tensors.html) <span style="color:green">(rework)</span>.
+* [forms](linear-algebra/forms.html) <span style="color:red">(empty)</span>
 * [symplectic forms](linear-algebra/symplectic-forms.html) <span style="color:red">(empty)</span>.
-* [complexification](linear-algebra/complexification.html) <span style="color:red">(empty)</span>
+* [complexification](linear-algebra/complexification.html) <span style="color:red">(empty)</span>.
 
 ## Calculus
 * [inverse function theorem](calculus/inverse-function-theorem.html) <span style="color:red">(empty)</span>
@@ -84,7 +85,7 @@ done (green)
 * [sequences](topology/sequences.html) <span style="color:red">(empty)</span>.
 
 ## Topological Manifolds
-* [manifolds motivation](geometry/manifolds.html) <span style="color:blue">(almost done)</span>.
+* [manifolds motivation](topological-manifolds/manifolds.html) <span style="color:blue">(almost done)</span>.
 * [topological manifolds](topological-manifolds/topological-manifold.html) <span style="color:orange">(in progress)</span>.
 * [homotopy equivalence](topological-manifolds/homotopy-equivalence.html) <span style="color:red">(empty)</span>.
 * [fundamental group](topological-manifolds/fundamental-group.html) <span style="color:orange">(in progress)</span>.
@@ -104,17 +105,20 @@ done (green)
 * [bundles](smooth-manifolds/bundles.html) <span style="color:red">(empty)</span>.
 
 ## Riemannian Manifolds
-* [riemannian manifolds](riemannian-manifolds/riemannian-manifolds.html) <span style="color:blue">(almost done)</span>.
+* [riemannian manifolds](riemannian-manifolds/riemannian-manifolds.html) <span style="color:blue">(almost done)</span>
 * [examples](riemannian-manifolds/examples.html) <span style="color:red">(empty)</span>
 * [lengths, angles, and areas](riemannian-manifolds/lengths-angles-area.html) <span style="color:orangered">(outline)</span>
-* [geodesics](riemannian-manifolds/geodesics.html) <span style="color:orange">(in progress)</span>.
+* [geodesics](riemannian-manifolds/geodesics.html) <span style="color:blue">(almost done)</span>
 * [connections](riemannian-manifolds/connections.html) <span style="color:blue">(almost done)</span>.
-* [levi-civita connection](riemannian-manifolds/levi-civita-connection.html) <span style="color:blue">(almost done)</span>
+* [Levi-Civita connection](riemannian-manifolds/levi-civita-connection.html) <span style="color:blue">(almost done)</span>
+* [parallel-transport](riemannian-manifolds/parallel-transport.html) <span style="color:blue">(almost done)</span>
+* [covariant derivative](riemannian-manifolds/covariant-derivative.html) <span style="color:blue">(almost done)</span>
+* [covariant derivative on tensors](riemannian-manifolds/covariant-derivative-tensors.html) <span style="color:blue">(almost done)</span>
 * [curvature motivation](riemannian-manifolds/curvature-motivation.html) <span style="color:blue">(almost done)</span>
-* [curvature](riemannian-manifolds/curvature.html) <span style="color:red">(empty)</span>
-* [jacobi equation](riemannian-manifolds/jacobi-equation.html) <span style="color:red">(empty)</span>
-* [riemannian metric](riemannian-manifolds/riemannian-metric.html) (REMOVE).
-* [sphere](riemannian-manifolds/sphere.html) (REMOVE).
+* [Riemannian curvature](riemannian-manifolds/riemannian-curvature.html) <span style="color:orange">(in progress)</span>
+* [Jacobi equation](riemannian-manifolds/jacobi-equation.html) <span style="color:red">(empty)</span>
+* [riemannian metric](riemannian-manifolds/riemannian-metric.html) (REMOVE)
+* [sphere](riemannian-manifolds/sphere.html) (REMOVE)
 
 ## Symplectic and Contact Geometry
 * [introduction](symplectic-geometry/introduction.html) <span style="color:lime">(done)</span>.

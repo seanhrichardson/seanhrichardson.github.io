@@ -1,9 +1,10 @@
 ---
 layout: page
-title: Covariant Derivative
+title: Connections
+section: Connections
 ---
 
-# Covariant Derivative
+# Connections
 
 ## Differentiating vector fields in \\(\mathbb{R}^n\\)
 
@@ -48,7 +49,7 @@ However, the definition of the directional derivative of a vector field \\(X\\) 
 \\[
     \left.\frac{d }{d t}\right\|\_{t=0} X(\gamma(t)) = \lim_{t \to 0}\frac{X(\gamma(t)) - X(\gamma(0))}{t}
 \\]
-does not make sense on a general Riemannian manifold! The vectors \\(X(\gamma(t))\\) and \\(X(\gamma(0))\\) belong to the two different tangent spaces \\(T\_{\gamma(t)}M\\) and \\(T\_{\gamma(0)}M\\), so it does not make sense to subtract them. Note that in the case of \\(\mathbb{R}^n\\), there is a natural identification between different tangent spaces \\(T\_p\mathbb{R}^n\\) and \\(T\_q\mathbb{R}^n\\) by simply translating the vectors. However, this a consequence of having a nice coordinate frame \\((\partial\_i)\\), for we are naturally identifying \\(v^i\partial_i \in T\_p\mathbb{R}^n\\) with \\(v^i\partial_i \in T\_q\mathbb{R}^n\\). 
+does not make sense on a general smooth manifold! The vectors \\(X(\gamma(t))\\) and \\(X(\gamma(0))\\) belong to the two different tangent spaces \\(T\_{\gamma(t)}M\\) and \\(T\_{\gamma(0)}M\\), so it does not make sense to subtract them. Note that in the case of \\(\mathbb{R}^n\\), there is a natural identification between different tangent spaces \\(T\_p\mathbb{R}^n\\) and \\(T\_q\mathbb{R}^n\\) by simply translating the vectors. However, this a consequence of having a nice coordinate frame \\((\partial\_i)\\), for we are naturally identifying \\(v^i\partial_i \in T\_p\mathbb{R}^n\\) with \\(v^i\partial_i \in T\_q\mathbb{R}^n\\). In order to differentiate vector fields on manifolds, we need more structure on the manifold.
 
 <!-- /\* TODO: perhaps an example demonstrating how coordinates change with respect to themselves\*/ -->
 
@@ -84,7 +85,7 @@ Then given any arbitrary vector fields \\(X = X^i\partial\_i\\) and \\(Y = Y^j\p
     \tag{A}
 \\]
 For any smooth functions \\(A_{ij}^k\\) that we choose, the above formula in fact defines a connection.
-<!-- define connection coefficients -->
+<!-- TODO: define connection coefficients -->
 
 **Exercise.** Verify that for any smooth functions \\(A_{ij}^k\\), the formula (\ref{eq:As}) defines a connection by checking the three necessary properties are satisfied.
 
