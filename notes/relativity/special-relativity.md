@@ -3,11 +3,13 @@ layout: page
 title: Special Relativity
 ---
 
-## Special Relativity
+# Special Relativity
 
-#### A problem with intuition
+## A problem with intuition
 
-Suppose you are floating in space: isolated and not accelerating. Then suppose you see me rapidly approaching you at speed \\(v\\). You shine a flashlight in my direction: how fast do I measure the light coming out of your flashlight moving? Experimental evidence confirms that both you and me will measure the light emiting from your flashlight to be the same speed: about \\(299,792,458\\) m/s, which we call \\(c\\). However, it is customary (and convenient) for mathematicians to choose coordinates so that \\(c = 1\\). But this is a problem: if I am rapidly moving towards you and you emit something moving at the speed of light, shouldn't I measure that this moves faster than the speed of light?
+Suppose you are floating in space: isolated and not accelerating. 
+<!-- give more description of what you see in space for fun -->
+Then suppose you see me rapidly approaching you at speed \\(v\\). You shine a flashlight in my direction: how fast do I measure the light coming out of your flashlight moving? Experimental evidence confirms that both you and me will measure the light emiting from your flashlight to be the same speed: about \\(299,792,458\\) m/s, which we call \\(c\\). However, it is customary (and convenient) for mathematicians to choose coordinates so that \\(c = 1\\). But this is a problem: if I am rapidly moving towards you and you emit something moving at the speed of light, shouldn't I measure that this moves faster than the speed of light?
 
 Let's describe this problem more precisely. We each experience various *events*: particular locations in space occuring at a particular time. However, we have two different ways of describing the places and times of these events. You have coordinates \\((t,x,y,z)\\) to indicate an event at point \\((x,y,z)\\) and ocurring at time \\(t\\). You consider yourself to be staionary and at position \\(x = y = z = 0\\), so from your perspective, you follow the \\(t\\) axis in your coordinates. However, I also consider myself to be stationary and I consider you to be moving quickly towards me. So I have my own coordinate system \\((\widetilde{t}, \widetilde{x}, \widetilde{y}, \widetilde{z})\\) where my own position follows the \\(\widetilde{t}\\) axis. For simplicity, suppose you have choosen coordinates so that it appears I am moving towards you in only the \\(x\\) direction, and I have choosen coordinates so that it appears you are moving towards me in only the \\(\widetilde{x}\\) direction. In this case, you compute the speed of the shining light by \\({\Delta x}/{\Delta t}\\) and I compute the speed of the light by \\({\Delta \widetilde{x}}/{\Delta \widetilde{t}}\\). However, the problem is that you intuitively expect my coordinate system to be related to your coordinate system by the simple relation \\((\widetilde{t}, \widetilde{x}, \widetilde{y}, \widetilde{z}) = (t, x+tv, y, z)\\); however, this intuition is *not true* for it incorrectly predicts that I measure the speed of light to be
 \\[
@@ -17,7 +19,7 @@ Therefore, the relation between your coordinates \\((t,x,y,z)\\) and my coordina
 
 /\*possibly some Lorentz transformation visuals before formalizing...\*/
 
-#### Axioms
+## Axioms
 
 We both experience the world of events: particular moments at particular places in space. The space of events is called *space-time* which we consider to be the space \\(\mathbb{R}^{3+1}\\). Then different inertial observers close to eachother experience the same space \\(\mathbb{R}^{3+1}\\) of events, but each inertial observer might choose different coordinate axes so that coordinates \\((t,x,y,z)\\) have different meanings. However, we understand these coordinates to be choosen so that the inertial observer computes the velocity of objects by \\(\sqrt{\Delta x^2 + \Delta y^2 + \Delta z^2}/\Delta t\\). In particular, each inertial observer considers themselves to be stationary with velocity \\(0\\) and therefore is moving in the positive \\(t\\) direction in their own coordinates. Furthermore, all coordinate systems must obey some axioms:
 1. All inertial observers measure the same speed of light \\(c\\).
@@ -27,7 +29,7 @@ We hope to study the relationship between different coordinate systems. That is,
 
 This final assumption is less convincing and indeed this final assumption is discarded in the theory of general relativity. However, we can continue forward with the understanding that the change of coordinates map we find is the linear approximation of the actual change of coordinates map, which is still useful and accurate enough in applications. 
 
-#### Invariance of the Interval
+## Invariance of the Interval
 
 /\*state that we are located at the same point in space-time more clearly\*/
 
@@ -74,7 +76,7 @@ By the above exercise, we conclude that there is some constant \\(\alpha\\) so t
 
 /\*above is a little hand-wavy. try to make formal argument using (2)\*/
 
-#### Lorentz Transformations
+## Lorentz Transformations
 
 Once again, suppose you have coordinates \\((t,x,y,z)\\) and I have coordinates \\((\widetilde{t}, \widetilde{x}, \widetilde{y}, \widetilde{z})\\). Then we are interested in the change of coordinate map \\((t,x,y,z) \mapsto (\widetilde{t}, \widetilde{x}, \widetilde{y}, \widetilde{z})\\). However, we are acually interested in the linear approximation of this map, which formally is a map \\(L: \mathbb{R}^{3+1} \to \mathbb{R}^{3+1}\\) from a vector space to itself. As you are using coordinates \\((t,x,y,z)\\), we let the vector \\(\partial\_t\\) be the unit vector in the direction of the \\(t\\)-axis with respect to these coordinates: this observer moves in the direction \\(\partial\_t\\) along the \\(t\\)-axis. Similarly, \\(\partial\_x\\), \\(\partial\_y\\), and \\(\partial\_z\\) are the unit directions along the \\(x\\), \\(y\\), and \\(z\\) axes respectively so that \\(\\{\partial\_t, \partial\_x, \partial\_y, \partial\_z\\}\\) spans the vector space \\(\mathbb{R}^{3+1}\\)n. In the same way, I define vectors \\(\\{\partial\_\widetilde{t}, \partial\_\widetilde{x}, \partial\_\widetilde{y}, \partial\_\widetilde{z}\\}\\) to span the vector space \\(\mathbb{R}^{3+1}\\).
 
@@ -102,9 +104,9 @@ Combining the two equations above, we can conclude /\*TODO\*/
 
 /\*therefore... the *Lorentz transformations*, defined as the space of linear transformations that preserrve the Minkowski norm, are important\*/
 
-#### Time Dilation and Length Contraction
+## Time Dilation and Length Contraction
 
-#### Minkowski Metric
+## Minkowski Metric
 In this section, we give space-time a metric \\(m\\) that accurately captures the behavior of physics, the *Minkowski metric*. This will allow us to apply all the tools from Riemannian geometry to study relativity.
 
 The laws of physics remain the same regarldess of how fast an inertial observer is moving, so the most important property of such a metric \\(m\\) is that *all inertial observers must observe the same metric*. In other words, the metric should be invariant under Lorentz transformations.
@@ -156,7 +158,7 @@ Recall that
 
 /\*motivation below... optional?\*/
 
-#### Geodesics in Minkowski space-time
+## Geodesics in Minkowski space-time
 
 /\*Solve geodesic equations\*/
 
@@ -164,7 +166,7 @@ Recall that
 
 /\*Jumping point into GR... observers in free-fall should also be inertial (motivate this), so the curvature should behave such that \*/
 
-#### Apendix: Invariance of Minkowski Form Argument
+## Apendix: Invariance of Minkowski Form Argument
 
 **Scalar Multiple.**
 
@@ -205,7 +207,7 @@ We have found that \\(\widetilde{m}(v,v) = \alpha m(v,v)\\) for some constant \\
 
 /\*explain \\(m\\) is an invariant and define as inner product\*/
 
-#### Lorentz Transformations
+## Lorentz Transformations
 
 /\*explain: studying transormations between observer bases... showing these must be exactly the transformations that leave minkowski norm invariant\*/
 

@@ -26,9 +26,10 @@ done (green)
 
 ## Linear Algebra
 * [tensors](linear-algebra/tensors.html) <span style="color:green">(rework)</span>.
-* [forms](linear-algebra/forms.html) <span style="color:red">(empty)</span>
-* [symplectic forms](linear-algebra/symplectic-forms.html) <span style="color:red">(empty)</span>.
-* [complexification](linear-algebra/complexification.html) <span style="color:red">(empty)</span>.
+* [exterior forms](linear-algebra/forms.html) <span style="color:orange">(in progress)</span>
+* [multivectors](linear-algebra/multivectors.html) <span style="color:orange">(in progress)</span>
+* [symplectic forms](linear-algebra/symplectic-forms.html) <span style="color:red">(empty)</span>
+* [complexification](linear-algebra/complexification.html) <span style="color:blue">(almost done)</span>
 
 ## Calculus
 * [inverse function theorem](calculus/inverse-function-theorem.html) <span style="color:red">(empty)</span>
@@ -101,7 +102,7 @@ done (green)
 * [tangent vectors](smooth-manifolds/tangent-vectors.html) <span style="color:blue">(almost done)</span>.
 * [tangent bundle](smooth-manifolds/tangent-bundle.html) <span style="color:orange">(in progress)</span>.
 * [forms motivation](smooth-manifolds/forms-motivation.html) <span style="color:orange">(in progress)</span>.
-* [exterior derivative motivation](smooth-manifolds/exterior-derivative-motivation.html) <span style="color:red">(empty)</span>.
+* [integration](smooth-manifolds/integration.html) <span style="color:red">(empty)</span>.
 * [bundles](smooth-manifolds/bundles.html) <span style="color:red">(empty)</span>.
 
 ## Riemannian Manifolds
