@@ -5,9 +5,9 @@ title: Euler Lagrange Equations
 
 <!-- FOCUS ON 1D CASE HERE -->
 
-## Euler-Lagrange Equations
+# Euler-Lagrange Equations
 
-#### Formal Statement
+## Formal Statement
 Consider the function
 \\[
     S(q) = \int_a^b \mathcal{L}(t, q(t), q'(t))dt

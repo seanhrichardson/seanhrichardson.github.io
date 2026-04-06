@@ -19,7 +19,7 @@ Given a curve \\(\gamma: [t\_0, t\_1] \to M\\) We may now identify \\(v \in T\_{
     \tag{1}
     \label{eq:pt-ode}
 \\]
-where \\(A^{k}\_{ij}\\) are the connection coefficients. Thus by the existence, uniqueness, and smoothness of ODEs, there exisits a unique smooth solution \\(X(t)\\) although there is some technical work to formally verify this (see Lee *Introduction to Riemannian manifolds* Theroem 4.31).
+where \\(A^{k}\_{ij}\\) are the connection coefficients. Thus by the existence, uniqueness, and smoothness of ODEs, there exisits a unique smooth solution \\(X(t)\\) although there is some technical work to formally verify this (see Lee *Introduction to Riemannian manifolds* Theorem 4.31).
 
 **Def. (Parallel transport)** Given a smooth curve \\(\gamma: [t\_0, t\_1] \to M\\) and an initial vector \\(v \in T\_{\gamma(t\_0)}M\\), the unqiue solution \\(X\_v(t) \in T\_{\gamma(t)}M\\) is called the *parallel transport of \\(v\\)*. The *parallel transport map* \\(P\_{t\_0, t\_1}^{\gamma}M: T\_{\gamma(t\_0)} \to T\_{\gamma(t\_1)}\\) is given by \\(P^{\gamma}\_{t\_0, t\_1}v = X\_v(t)\\).
 

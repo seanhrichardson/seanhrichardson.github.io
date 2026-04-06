@@ -15,16 +15,25 @@ done (green)
 <!-- # Table of Contents -->
 
 ## Short term priority:
-* Wave front set in \\(\mathbb{R}^n\\)
-* Wave front set on manifolds.
-* Psi-DOs on manifolds.
-* Sobolev spaces on manifolds.
-* Basic spectral theory.
-* Basic ergodic theory.
+* Riemannian metric in coords
+* Smooth manifold definition
+* Tangent space definition
+* lengths, angles, volumes
+* Riemannian curvature tensor
+* Jacobi equation
+* Scalar curvature
+* Sectional curvature
+* Ricci curvature
+* Curvature in low dimensions
+* Sphere: \\(\mathbb{S}^2\\), and \\(\mathbb{S}^n\\), then briefly discuss \\(\mathbb{S}^1\\)
+* Hyperbolic plane: \\(\mathbb{H}^2\\), then \\(\mathbb{H}^n\\)
+* tensors
+* tensor fields
 
 ## Fundamentals
 
 ## Linear Algebra
+* [covectors](linear-algebra/covectors.md) <span style="color:red">(empty)</span>
 * [tensors](linear-algebra/tensors.html) <span style="color:green">(rework)</span>.
 * [exterior forms](linear-algebra/forms.html) <span style="color:orange">(in progress)</span>
 * [multivectors](linear-algebra/multivectors.html) <span style="color:orange">(in progress)</span>
@@ -46,8 +55,10 @@ done (green)
 ## Classical Analysis
 /\*maybe split into "classical analysis" and "metric space theory?"\*/
 * [continuity](analysis/continuity.html) <span style="color:orange">(in progress)</span>.
-* [euler-lagrange](analysis/euler-lagrange.html) <span style="color:blue">(almost done)</span>.
 * [arzela-ascoli](analysis/arzela-ascoli.html) <span style="color:orange">(in progress)</span>.
+
+## Calculus of Variations
+* [euler-lagrange](calculus-of-variations/euler-lagrange.html) <span style="color:blue">(almost done)</span>.
 
 ## Measure Theory
 * [motivation](measure-theory/motivation.html) <span style="color:orange">(in progress)</span>
@@ -97,25 +108,27 @@ done (green)
 * [cohomology](algebraic-topology/cohomology.html) <span style="color:red">(empty)</span>
 
 ## Smooth Manifolds
-* [extrinsic definition](smooth-manifolds/extrinsic-definition.html) <span style="color:orange">(in progress)</span>.
-* [intrinsic definition](smooth-manifolds/intrinsic-definition.html) <span style="color:blue">(almost done)</span>.
+* [extrinsic definition](smooth-manifolds/extrinsic-definition.html) (REMOVE).
+* [intrinsic definition](smooth-manifolds/intrinsic-definition.html) (REMOVE).
+* [smooth manifolds](smooth-manifolds/smooth-manifolds.html)
 * [tangent vectors](smooth-manifolds/tangent-vectors.html) <span style="color:blue">(almost done)</span>.
-* [tangent bundle](smooth-manifolds/tangent-bundle.html) <span style="color:orange">(in progress)</span>.
+* [tangent bundle](smooth-manifolds/tangent-bundle.html) <span style="color:orange">(in progress)</span>.s
+* [cotangent bundle](smooth-manifolds/cotangent-bundle.html) <span style="color:red">(empty)</span>
 * [forms motivation](smooth-manifolds/forms-motivation.html) <span style="color:orange">(in progress)</span>.
 * [integration](smooth-manifolds/integration.html) <span style="color:red">(empty)</span>.
 * [bundles](smooth-manifolds/bundles.html) <span style="color:red">(empty)</span>.
 
 ## Riemannian Manifolds
-* [riemannian manifolds](riemannian-manifolds/riemannian-manifolds.html) <span style="color:blue">(almost done)</span>
-* [examples](riemannian-manifolds/examples.html) <span style="color:red">(empty)</span>
+* [riemannian manifolds](riemannian-manifolds/riemannian-manifolds.html) <span style="color:lime">(done)</span>
+* [riemannian metric in coordinates]() <span style="color:red">(empty)</span>
 * [lengths, angles, and areas](riemannian-manifolds/lengths-angles-area.html) <span style="color:orangered">(outline)</span>
-* [geodesics](riemannian-manifolds/geodesics.html) <span style="color:blue">(almost done)</span>
-* [connections](riemannian-manifolds/connections.html) <span style="color:blue">(almost done)</span>.
-* [Levi-Civita connection](riemannian-manifolds/levi-civita-connection.html) <span style="color:blue">(almost done)</span>
-* [parallel-transport](riemannian-manifolds/parallel-transport.html) <span style="color:blue">(almost done)</span>
-* [covariant derivative](riemannian-manifolds/covariant-derivative.html) <span style="color:blue">(almost done)</span>
+* [geodesics](riemannian-manifolds/geodesics.html) <span style="color:lime">(done)</span>
+* [connections](riemannian-manifolds/connections.html) <span style="color:lime">(done)</span>
+* [Levi-Civita connection](riemannian-manifolds/levi-civita-connection.html) <span style="color:lime">(done)</span>
+* [parallel-transport](riemannian-manifolds/parallel-transport.html) <span style="color:lime">(done)</span>
+* [covariant derivative](riemannian-manifolds/covariant-derivative.html) <span style="color:lime">(done)</span>
 * [covariant derivative on tensors](riemannian-manifolds/covariant-derivative-tensors.html) <span style="color:blue">(almost done)</span>
-* [curvature motivation](riemannian-manifolds/curvature-motivation.html) <span style="color:blue">(almost done)</span>
+* [curvature motivation](riemannian-manifolds/curvature-motivation.html) <span style="color:lime">(done)</span>
 * [Riemannian curvature](riemannian-manifolds/riemannian-curvature.html) <span style="color:orange">(in progress)</span>
 * [Jacobi equation](riemannian-manifolds/jacobi-equation.html) <span style="color:red">(empty)</span>
 * [riemannian metric](riemannian-manifolds/riemannian-metric.html) (REMOVE)
@@ -123,6 +136,7 @@ done (green)
 
 ## Symplectic and Contact Geometry
 * [introduction](symplectic-geometry/introduction.html) <span style="color:lime">(done)</span>.
+* [Liouville's theorem]() <span style="color:orange">(in progress)</span>
 
 ## Complex Manifold Theory
 * [kahler manifolds](complex-manifolds/kahler-manifolds.html) <span style="color:red">(empty)</span>
@@ -189,9 +203,11 @@ done (green)
 * [minecraft projectiles](random/minecraft-projectiles.html) <span style="color:lime">(done)</span>.
 
 ## Objectives
-* riemann curvature tensor
+* [riemann curvature tensor](books/curvature.html)
 * schwarzschild
 * gauss-bonnet
+
+* [noethers theorem]()
 
 * abel-ruffini theorem
 

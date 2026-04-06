@@ -3,9 +3,9 @@ layout: page
 title: Tangent Vectors
 ---
 
-## Tangent Vectors
+# Tangent Vectors
 
-#### Vector Fields in \\(\mathbb{R}^n\\)
+## Vector Fields in \\(\mathbb{R}^n\\)
 
 Recall the concept of a *vector field* \\(V\\) in \\(\mathbb{R}^n\\). At each point \\(p \in \mathbb{R}^n\\), we place a vector \\(V_p \in \mathbb{R}^n\\). Importantly, notice that in such vector fields, we use Euclidean space \\(\mathbb{R}^n\\) in two fundamentally different ways. Firstly, as a space containing *points* \\(p \in \mathbb{R}^n\\) in which the *manifold structure* of \\(\mathbb{R}^n\\) is most relevant, and secondly as a *vector space* at every point \\(p\\) called the *tangent space at \\(p\\)*, which is the space that the *tangent vector* \\(V_p\\) is an element of.
 
@@ -13,7 +13,7 @@ Recall the concept of a *vector field* \\(V\\) in \\(\mathbb{R}^n\\). At each po
 
 In this section, we work towards defining tangent vectors on an arbitrary smooth \\(n\\)-manifold \\(M\\). Observe that simply associating some \\(V_p \in \mathbb{R}^n\\) to a point \\(p \in M\\) no longer works, for it is unclear what direction such a vector points in! This strategy only worked for \\(M = \mathbb{R}^n\\) because of the extra structure of \\(\mathbb{R}^n\\) (in particular, the ability to compare vectors based at different points by translating). For a general smooth manifold \\(M\\), we need a different strategy.
 
-#### Extrinsic Tangent Vectors
+## Extrinsic Tangent Vectors
 
 To build intuition, we will first study tangent vectors on an extrinsically defined \\(n\\)-manifold \\(M \subset \mathbb{R}^m\\). We have already discussed the case of \\(M = \mathbb{R}^n\\): at each point \\(p \in \mathbb{R}^n \subset \mathbb{R}^m\\), the tangent space at \\(p\\), denoted \\(T_p\mathbb{R}^n\\), is simply a copy of \\(\mathbb{R}^n \subset \mathbb{R}^m\\) (now considered as a vector space and a linear subspace of a copy of \\(\mathbb{R}^m\\)). 
 
@@ -21,7 +21,7 @@ To build intuition, we will first study tangent vectors on an extrinsically defi
 
 We can carry over our understanding of tangent spaces on \\(\mathbb{R}^n\\) to a general extrinsically defined \\(n\\)-manifold \\(M \subset \mathbb{R}^m\\) by using and that \\(M\\) locally looks like \\(\mathbb{R}^n\\). Given \\(p \in M\\), there will be a neighborhood \\(U\\) of \\(M \subset \mathbb{R}^m\\), a neighborhood \\(V\\) of \\(\mathbb{R}^n \subset \mathbb{R}^m\\), and a diffeomorphism \\(\varphi: V \to U\\) such that \\(\varphi(0) = p\\). By definition of diffeomorphism, this will extend to a diffeomorphism \\(\varphi: \widetilde{V} \to \widetilde{U}\\) between open subsets of \\(\mathbb{R}^m\\). Then, we can simply define \\(T_pM\\) to be the subspace given by the image \\(D\varphi_0(T_0\mathbb{R}^m) \subset \mathbb{R}^m\\) where \\(D\varphi\\) is the Jacobian of \\(\varphi\\). Visually, this literally gives the subspace of all vectors tangent ("parallel") to the surface at \\(p\\).
 
-#### Motivation for Intrinsic Definition
+## Motivation for Intrinsic Definition
 As seen by the use of the Jacobian above, tangent vectors on are closely connected to differentiation; this connection will allow us to intrinsically define vectors on smooth manifolds and is why a smooth structure is necessary for the notion of tangent vectors. Two more important such connectections are as follows, letting \\(M \subset \mathbb{R}^n\\) be an extrinsically defined \\(n\\)-manifold and \\(p \in M\\).
 1. Given a smooth curve \\(\gamma: \mathbb{R} \to M \subset \mathbb{R}^m\\) with \\(\gamma(0) = p\\), the velocity vector \\(\gamma'(0) \subset \mathbb{R}^m\\) will be an element of the tangent space \\(T_pM\\).
 2. Given a smooth function \\(f: M \to \mathbb{R}\\) and a tangent vector \\(v \in T_pM\\), we can compute the derivative of \\(f\\) in the direction of \\(v\\), denoted \\(\nabla_v\\). For example, simply extend \\(f\\) to an open set \\(\widetilde{U} \supset M\\) of \\(\mathbb{R}^m\\), then compute \\(\nabla_vf := (D_pf) v\\).
@@ -45,7 +45,7 @@ Furthermore, we see directional derivatives satisfy the following product rule:
     \nabla_{v}(fg) = D_p(fg) v = (f(p)D_pg + g(p)D_pf)v = f(p)(D_pg)v + g(p)(D_pf)v = f(p) \nabla_v g + g(p) \nabla_v f.
 \\]
 
-#### Intrinsic Definition
+## Intrinsic Definition
 We are finally ready to intrinsically define tangent vectors. For this sectioin, let \\(M\\) be a smooth manifold (defined intrinsically) and fix a point \\(p \in M\\). We now define the notion of a *derivation*, which is simply another name for the directional derivative.
 
 /\*is continuity important or implied anywhere?\*/

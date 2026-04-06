@@ -4,6 +4,18 @@ section: NOTES
 title: Curvature Motivation
 ---
 
+<!-- PREREQS: -->
+<!-- NECESSARY:
+    - parallel transport (including approximation using the connection)
+    - Lie bracket
+    - Coordinate frame iff commuting frame 
+    - Levi-civita connection
+    - tensor fields
+-->
+ <!-- MOTIVATION:
+    - 
+-->
+
 # Motivation for the Riemann Curvature Tensor
 
 <!-- /\*todo: animations for this page (parallel transport, etc.)\*/
@@ -23,14 +35,14 @@ First, notice that parallel transport in \\(\mathbb{R}^n\\) is path independent:
     [E\_i, E\_j] = \nabla_{E\_i}E\_j - \nabla_{E\_j}E\_i = 0 - 0 = 0.
 \\]
 
-Thus we study the path-dependence of parallel transport. We quantify this by investigating the noncommutativity of parallel transport around small squares. Consider the square \\(I \times I \to M\\) parametrized by \\((s,t)\\) such that \\(p\\) corresponds to \\((0,0)\\) and choose some tangent vector \\(v \in T\_p M\\). Then we compare the following two methods of transporting \\(v\\) to the point \\((\varepsilon, \delta)\\). We could first transport \\(v\\) in the \\(s\\) direction from \\((0,0)\\) to \\((\varepsilon, 0)\\), which we denote \\(P^{(0,0)}\_{(\varepsilon,0)}v \in T\_{(\varepsilon,0)}\\), then transport this vector in the \\(t\\) direction from \\((\varepsilon, 0)\\) to \\((\varepsilon, \delta)\\) to get \\(P\_{(\varepsilon,\delta)}^{(\varepsilon,0)}P^{(0,0)}\_{(\varepsilon,0)}v \in T\_{(\varepsilon,\delta)}M\\). Alternatively, we could first transport \\(v\\) in the \\(t\\) direction from \\((0,0)\\) to \\((0, \delta)\\) yielding \\(P^{(0,0)}\_{(0,\delta)}v \in T\_{(0,\delta)}\\), then transport this vector in the \\(s\\) direction from \\((0, \delta)\\) to \\((\varepsilon, \delta)\\) resulting in \\(P\_{(\varepsilon,\delta)}^{(0,\delta)}P^{(0,0)}\_{(0,\delta)}v \in T\_{(\varepsilon,\delta)}M\\). The difference between these two methods is quantified by
+Thus we study the path-dependence of parallel transport. We quantify this by investigating the noncommutativity of parallel transport around small squares. Consider the square \\(I \times I \to M\\) parametrized by \\((s,t)\\) such that \\(p\\) corresponds to \\((0,0)\\) and choose some tangent vector \\(v \in T\_p M\\). Then we compare the following two methods of transporting \\(v\\) to the point \\((\varepsilon, \delta)\\). We could first transport \\(v\\) in the \\(s\\) direction from \\((0,0)\\) to \\((\varepsilon, 0)\\), which we denote \\(P^{(0,0)}\_{(\varepsilon,0)}v \in T\_{(\varepsilon,0)}M\\), then transport this vector in the \\(t\\) direction from \\((\varepsilon, 0)\\) to \\((\varepsilon, \delta)\\) to get \\(P\_{(\varepsilon,\delta)}^{(\varepsilon,0)}P^{(0,0)}\_{(\varepsilon,0)}v \in T\_{(\varepsilon,\delta)}M\\). Alternatively, we could first transport \\(v\\) in the \\(t\\) direction from \\((0,0)\\) to \\((0, \delta)\\) yielding \\(P^{(0,0)}\_{(0,\delta)}v \in T\_{(0,\delta)}\\), then transport this vector in the \\(s\\) direction from \\((0, \delta)\\) to \\((\varepsilon, \delta)\\) resulting in \\(P\_{(\varepsilon,\delta)}^{(0,\delta)}P^{(0,0)}\_{(0,\delta)}v \in T\_{(\varepsilon,\delta)}M\\). The difference between these two methods is quantified by
 
 \\[
     P\_{(\varepsilon,\delta)}^{(\varepsilon,0)} P\_{(\varepsilon,0)}^{(0,0)} v - P\_{(\varepsilon,\delta)}^{(0,\delta)} P\_{(0,\delta)}^{(0,0)} v.
 \\]
 We now compute a Taylor approximation of this difference. One trick to simplify this computation is to extend \\(v\\) to any vector field \\(X\\), then compare the value of \\(X\\) to the parallel transport of \\(v\\) along each of the four segments, giving
 \begin{align}
-    &P\_{(\varepsilon,\delta)}^{(\varepsilon,0)} P\_{(\varepsilon,0)}^{(0,0)} X_{(0,0)} - P\_{(\varepsilon,\delta)}^{(0,\delta)} P\_{(0,\delta)}^{(0,0)} X_{(0,0)}.\\\\\
+    &P\_{(\varepsilon,\delta)}^{(\varepsilon,0)} P\_{(\varepsilon,0)}^{(0,0)} X_{(0,0)} - P\_{(\varepsilon,\delta)}^{(0,\delta)} P\_{(0,\delta)}^{(0,0)} X_{(0,0)}\\\\\
     &= (P\_{(\varepsilon,\delta)}^{(\varepsilon,0)}(P\_{(\varepsilon,0)}^{(0,0)}X\_{(0,0)} - X\_{(\varepsilon,0)})
     - (P\_{(\varepsilon,\delta)}^{(0,\delta)}X\_{(0,\delta)} - X\_{(\varepsilon,\delta)}))\\\\\
     &- (P\_{(\varepsilon,\delta)}^{(0,\delta)}(P\_{(0,\delta)}^{(0,0)}X\_{(0,0)} - X\_{(0,\delta)})

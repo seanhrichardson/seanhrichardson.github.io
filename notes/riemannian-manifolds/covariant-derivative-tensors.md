@@ -4,6 +4,10 @@ title: Covariant Derivative on Tensors
 section: Covariant Derivative on Tensors
 ---
 
+<!-- TODO:
+- Formalize coord free definition at the end
+- Perhaps be more explicit about covariant derivative vs connection? -->
+
 # Covariant Derivative on Tensors
 
 Consider a smooth manifold \\(M\\) with connection \\(\nabla\\), which allows for the differentiation of vector fields. Furthermore, recall that if \\(\nabla\\) induces parallel transport map \\(P^{\gamma}\_{t\_1, t\_0}: T\_{\gamma(t\_1)}M \to T\_{\gamma(t\_0)}M\\) along a curve \\(\gamma(t)\\), and this identification between tangent spaces allows us to recover \\(\nabla\\) by

@@ -84,9 +84,10 @@ Then given any arbitrary vector fields \\(X = X^i\partial\_i\\) and \\(Y = Y^j\p
     \label{eq:As}
     \tag{A}
 \\]
-For any smooth functions \\(A_{ij}^k\\) that we choose, the above formula in fact defines a connection.
+For any smooth functions \\(A_{ij}^k\\) that we choose, the above formula in fact defines a connection. 
 <!-- TODO: define connection coefficients -->
 
 **Exercise.** Verify that for any smooth functions \\(A_{ij}^k\\), the formula (\ref{eq:As}) defines a connection by checking the three necessary properties are satisfied.
+<!-- TODO -->
 
 Thus there are many possible connections on a general smooth manifold. For some intuition for connections, note that choosing a connection gives us a sense of acceleration on our manifold. Given a curve \\(\gamma(t)\\), it's velocity at each point along the curve is given by the tangent vectors \\(\dot{\gamma}(t)\\). Then the acceleration should be the change of \\(\dot{\gamma}(t)\\) in direction \\(\dot{\gamma}(t)\\). That is, the *acceleration* of \\(\gamma(t)\\) is defined to be \\(\ddot{\gamma}(t) = \nabla\_{\dot{\gamma}(t)}\dot{\gamma}(t)\\).

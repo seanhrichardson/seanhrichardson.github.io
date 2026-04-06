@@ -4,6 +4,15 @@ title: Riemannian Curvature
 section: Riemannian Curvature
 ---
 
+<!-- TODO......... -->
+<!-- PREREQS: -->
+<!-- NECESSARY:
+    - 
+-->
+ <!-- MOTIVATION:
+    - 
+-->
+
 # The Riemann Curvature Tensor
 
 ## Definition
