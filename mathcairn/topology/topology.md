@@ -7,9 +7,10 @@ title: Topology
 <!-- all visuals -->
 <!-- hide solutions -->
 
-# Topology
+<!-- FIX NOTATION: -->
+<!-- perhaps decide between d_1, d_2 vs. d, d' and make this standard -->
 
-## Introduction
+# Topology
 
 /\*historical / visual / intuitive introduction\*/
 
@@ -46,10 +47,8 @@ Intuitively, a function is "continuous" if nearby points are mapped to nearby po
 <!-- note: can change this projection to x or y in the video... whatever works better. -->
 **Example.** Consider the projection function \\(\pi: \mathbb{R}^2 \to \mathbb{R}\\) defined by \\(\pi(x, y) = y\\). Then this is continuous as a function from the metric space \\((\mathbb{R}^2, d\_2)\\) with the Euclidean metric to \\(\mathbb{R}\\) with the standard metric.
 
-<!-- note in video, I could do this visually? -->
-
-<!-- hide this solution? -->
-**Solution.**
+<details markdown="1">
+<summary><i>Solution.</i></summary>
 To see that \\(\pi\\) is continuous, consider any point \\((x,y) \in \mathbb{R}^2\\) and some small \\(\varepsilon > 0\\). Then we want to find some small \\(\delta\\) so that \\(d_2((x,y), (x', y)) < \delta\\) gurantees \\(d(\pi((x,y)),\pi((x', y'))) < \varepsilon\\). It helps to study this map visually:
 
 /\*give visual representation of the balls\*/.
@@ -68,7 +67,9 @@ And therefore \\(\|y-y'\| < \varepsilon\\). This is exactly what we want to show
 \\[
     d(\pi((x,y)),\pi((x', y'))) = \|y-y'\| < \varepsilon.
 \\]
-<!-- end of example solution -->
+<div style="text-align: right"> // </div>
+</details>
+
 
 As illustrated in the visuals from the previous example, it was useful to consider a "ball" of all points within some distance \\(\delta\\) of our central point \\((x,y)\\).
 Given a metric space \\((X, d)\\), we define the ***open ball*** \\(B^d_{\delta}(x)\\) of radius \\(r\\) centered at \\(x\\) for some \\(x \in X\\) to be the set
@@ -86,19 +87,43 @@ Therefore, an equivalent formulation of the definition of continuity is that for
 
 **Proposition.** A function \\(f: X \to Y\\) between two metric spaces \\((X, d\_X)\\) and \\((Y, d\_Y)\\) is continuous if and only if for every \\(x \in X\\) and \\(\varepsilon > 0\\), there exists \\(\delta > 0\\) so that \\(B^{d_X}\_{\delta}(x) \subset f^{-1}(B^{d\_Y}\_{\varepsilon}(f(x)))\\).
 
-<!-- TODO some commentary here -->
+To practice this formulation of continuity, we prove the above projection is also continuous with respect to the taxicab metric.
 
 **Exercise.** Prove the projection \\(\pi: \mathbb{R}^2 \to \mathbb{R}\\) defined by \\(\pi(x, y) = x\\) is contininuous if \\(\mathbb{R}^2\\) is given the taxicab metric \\(d\_1\\).
 
-**Solution.**
+<details markdown="1">
+<summary><i>Solution.</i></summary>
+ Given a point \\((x,y) \in \mathbb{R}^2\\) and \\(\varepsilon > 0\\), we need to show there exists a \\(\delta > 0\\) such that \\(B^{d_1}\_{\delta}((x,y)) \subset \pi^{-1}(B^{d}\_{\varepsilon}(\pi(x, y)))\\). By unraveling the definition of \\(\pi\\) and \\(B^{d}\_{\varepsilon}\\), we can rewrite the set
+\\[
+    \pi^{-1}(B^{d}\_{\varepsilon}(\pi(x, y)))
+    = \\{(x',y') \in \mathbb{R}^2 : |y - y'| < \varepsilon\\},
+\\]
+which we can visualize as follows. 
 
-/\*TODO: SOLUTION ... in this solution note what the open balls look like.\*/
+/\*TODO: visual of preimage.\*/
+
+This visual suggests \\(B^{d_1}\_{\varepsilon}((x,y)) \subset \pi^{-1}(B^{d}\_{\varepsilon}(\pi(x, y)))\\). Indeed, note
+\\[
+\begin{align}
+    B^{d_1}\_{\varepsilon}((x,y))
+    &= \\{(x',y') : |x' - x| + |y - y'| < \varepsilon\\}\\\\\
+    &\subset \\{(x',y') \in \mathbb{R}^2 : |y - y'| < \varepsilon\\}
+    = \pi^{-1}(B^{d}\_{\varepsilon}(\pi(x, y))).
+\end{align}
+\\]
+<div style="text-align: right"> // </div>
+</details>
+
+We have seen that \\(\pi: \mathbb{R}^2 \to \mathbb{R}\\) is continuous both with respect to the Euclidean metric \\(d\_2\\) and with respect to the taxicab metric \\(d\_1\\), which raises the following interesting question.
 
 **Puzzle.** Is it possible to find a map \\(f: \mathbb{R}^2 \to \mathbb{R}\\) that is continuous with respect to the Euclidean metric \\(d\_2\\), but not the taxicab metric \\(d\_1\\)? What about continuous with respect to \\(d\_1\\) but not \\(d\_2\\)?
 
 <!-- todo: possibly give formal arguments for ball inclusions? (hidden?) -->
 
-**Solution.** If such a map \\(f: \mathbb{R}^2 \to \mathbb{R}\\) existed, then there would need to be some point \\(p \in \mathbb{R}^2\\) and \\(\varepsilon > 0\\) such that there is some \\(\delta\_2\\) satisfying \\(B_{\delta\_2}^{d\_2}(p) \subset f^{-1}(B^{d}\_{\varepsilon}(f(p)))\\) and yet there is no \\(\delta\_1 > 0\\) so that \\(B_{\delta\_1}^{d\_1}(p) \subset f^{-1}(B^{d}\_{\varepsilon}(f(p)))\\). However, we can observe visually that we have the inclusion
+<details markdown="1">
+<summary><i>Solution.</i></summary>
+
+If such a map \\(f: \mathbb{R}^2 \to \mathbb{R}\\) existed, then there would need to be some point \\(p \in \mathbb{R}^2\\) and \\(\varepsilon > 0\\) such that there is some \\(\delta\_2\\) satisfying \\(B_{\delta\_2}^{d\_2}(p) \subset f^{-1}(B^{d}\_{\varepsilon}(f(p)))\\) and yet there is no \\(\delta\_1 > 0\\) so that \\(B_{\delta\_1}^{d\_1}(p) \subset f^{-1}(B^{d}\_{\varepsilon}(f(p)))\\). However, we can observe visually that we have the inclusion
 \\(
     B_{\delta\_2}^{d\_1}(p) \subset B_{\delta\_2}^{d\_2}(p):
 \\)
@@ -122,7 +147,8 @@ Indeed, \\(f: \mathbb{R}^2 \to \mathbb{R}\\) is continuous with respect to \\(d\
     B\_{\delta/\sqrt{2}}^{d\_1}(p) \subset B_{\delta}^{d\_2}(p) \subset f^{-1}(B^{d}\_{\varepsilon}(f(p))).
 \\]
 Therefore, \\(f\\) is also continuous with respect to \\(d\_1\\). Thus it is not possible to find any such \\(f \colon \mathbb{R}^2 \to \mathbb{R}\\) in either case.
-<!-- end of solution -->
+<div style="text-align: right"> // </div>
+</details>
 
 The key to the above solution to the first part of the above puzzle is in observing that the the taxicab ball \\(B^{d\_1}\_{r}(p)\\) fits inside the Euclidean open ball \\(B^{d\_2}\_{r}(p)\\):
 \\[
@@ -136,44 +162,59 @@ For the second part of the puzzle, the key is in observing that given the taxica
 \\]
 /\*picture\*/
 
-Using these key ball inclusions, there is an equivalent and more structural way to answer this puzzle. Consider the identity map \\(\operatorname{Id}: \mathbb{R}^2 \to \mathbb{R}^2\\) where the domain has the \\(d\_1\\) metric and the codomain has the \\(d\_2\\) metric; we will notate this as \\(\operatorname{Id}: (\mathbb{R}^2, d\_1) \to (\mathbb{R}^2, d\_2)\\) to be clear. Then observe this map is continuous: for any \\(p \in \mathbb{R}^2\\) and \\(\varepsilon > 0\\), then
-\\[
-    B_{\varepsilon}^{d\_1}(p) \subset B_{\varepsilon}^{d\_2}(p) = \operatorname{Id}^{-1}(B_{\varepsilon}^{d\_2}(p))
-\\]
-because the preimage of a set under the identity map is just the set itself. Similarly, the map \\(\operatorname{Id}: (\mathbb{R}^2, d\_1) \to (\mathbb{R}^2, d\_2)\\) is continuous because for any \\(p \in \mathbb{R}^2\\) and \\(\varepsilon > 0\\), we have
-\\[
-     B_{\varepsilon/\sqrt{2}}^{d\_2}(p) \subset B_{\varepsilon}^{d\_1}(p) = \operatorname{Id}^{-1}(B_{\varepsilon}^{d\_1}(p)).
-\\]
-This property of the identity map is key. Indeed, consider any metric space \\(X\\) with two metrics \\(d\_1\\) and \\(d\_2\\) so that \\(\operatorname{Id}: (X, d\_1) \to (X, d\_2)\\) is continuous. Then for any continuous \\(f: (X, d\_2) \to (Y, d)\\), the composition \\(\operatorname{Id} \circ f\\) with the continuous function \\(\operatorname{Id}: (X, d\_1) \to (X, d\_2)\\) is exactly \\(f: (X, d\_1) \to (Y, d)\\), which therefore is also continuous as the composition of continuous functions. In the same way, if \\(\operatorname{Id}: (X, d\_2) \to (X, d\_1)\\) is continuous, then given a continuous \\(f: (X, d\_1) \to (Y, d)\\), we may conclude \\(f: (X, d\_2) \to (Y, d)\\) is also continuous.
+<!-- TODO: perhaps change below notation to \delta and \eps in whatever way they are applied later -->
+This argument will work so long as we have the following condition.
+If two metrics \\(d\\\) and \\(d'\\) on a metric space \\(X\\) have the property that given an open ball \\(B^{d'}\_\{r'\}(p)\\), we can find a smaller open ball \\(B^{d}\_{r}(p) \subset B^{d'}\_\{r'\}(p)\\) and for each open ball \\(B^{d}\_{s}(p)\\), we can find a smaller open ball \\(B^{d'}\_{s'}(p) \subset B^{d}\_\{s\}(p)\\), then we say \\(d\_1\\) and \\(d\_2\\) are ***topologically equivalent***. Then, by the same ideas as above, topologically equivalent metrics will induce exactly the same continuous maps.
 
-/\*TODO: commutative diagram?\*/
+**Proposition.** If \\(d\\) and \\(d'\\) are topologically equivalent metrics on \\(X\\), they induce the same continuous maps.
 
-If two metrics \\(d\_1\\) and \\(d\_2\\) on a metric space \\(X\\) have the property that \\(\operatorname{Id}: (X, d\_1) \to (X, d\_2)\\) and \\(\operatorname{Id}: (X, d\_2) \to (X, d\_1)\\) are both continuous, we say \\(d\_1\\) and \\(d\_2\\) are ***topologically equivalent***. Importantly, by the argument in the previous paragraph, topologically equivalent metric spaces will have exactly the same continuous maps.
+<details markdown="1">
+<summary><i>Proof.</i></summary>
+
+We could verify this by argument as above, but instead observe the identity map \\(\operatorname{Id}: (X, d) \to (X, d')\\) will be continuous. Indeed, note for any \\(x \in X\\) and ball \\(B^{d'}\_{\varepsilon}(x)\\), we can find a smaller ball so that
+\\[
+    B^{d}\_{\delta}(x) \subset B^{d'}\_{\varepsilon}(x).
+\\]
+But because \\(\operatorname{Id}^{-1}(B^{d'}\_{\varepsilon}(\operatorname{Id}(x))) = B^{d'}\_{\varepsilon}(x)\\), this is precisely the open ball formulation of continuity of \\(\operatorname{Id}\\). Therefore, because the composition of continuous function is continuous, we find:
+\\[
+\begin{align}
+    f: (X, d') \to Y \text{ continuous } &\implies f \circ \operatorname{Id}: (X, d) \to Y \text{ continuous},\\\\\
+    f: Y \to (X, d) \text{ continuous } &\implies \operatorname{Id} \circ f: (X, d') \to Y \text{ continuous}.
+\end{align}
+\\]
+By reversing the roles of \\(d\\) and \\(d'\\) and applying the same reasoning, \\(\operatorname{Id}: (X, d') \to (X, d)\\) will be continuous and therefore
+\\[
+\begin{align}
+    f: (X, d) \to Y \text{ continuous } &\implies f \circ \operatorname{Id}: (X, d') \to Y \text{ continuous},\\\\\
+    f: Y \to (X, d') \text{ continuous } &\implies \operatorname{Id} \circ f: (X, d) \to Y \text{ continuous}.
+\end{align}
+\\]
+In other words, \\((X, d)\\) and \\((X, d')\\) have exactly the same continuous maps.
+<div style="text-align: right"> \(\square\) </div>
+</details>
 
 **Exercise.** Prove topological equivalence is an equivalence relation.
 
-**Solution.** 
-
-/\*todo: solution\*/
-
-Further recall that a continuous map \\(f: X \to Y\\) between two metric spaces is called a ***homeomorphism*** if it is bijective and it's inverse is also continuous. With this terminology, note two metrics \\(d\_1\\) and \\(d\_2\\) are topologically equivalent if and only if the identity map \\(\operatorname{Id}: (X, d\_1) \to (X, d\_2)\\) is a homeomorphism.
-
-**Exercise.** We saw that for two topologically equivalent spaces \\((X, d\_1)\\) and \\((X, d\_2)\\), then \\(f: (X, d\_1) \to (Y, d)\\) is continuous if and only if \\(f: (X, d\_2) \to (Y, d)\\) is continuous. For this exercise, prove \\(f: (Y, d) \to (X, d\_1)\\) is continuous if and only if \\(f: (Y, d) \to (X, d\_2)\\) is continuous.
-
-**Solution.**
-
-/\*TODO: solution\*/
-
+<details markdown="1">
+<summary><i>Solution.</i></summary>
+First observe that \\((X, d)\\) is topologically equivalent to itself because \\(B^{d}\_{\varepsilon}(x) \subset B^{d}\_{\varepsilon}(x)\\). Next, note if \\((X, d)\\) is topologically equivalent to \\((X, d')\\), then \\((X, d')\\) is topologically equivalent to \\((X, d)\\) by the symmetry in the definition. Finally, suppose \\((X, d)\\) is topologically equivalent to \\((X, d')\\), which in turn is topologically equivalent to \\((X, d'')\\). Then by applying the definitions of topological equivalence, there exists smaller balls \\(B^{d'}\_{\varepsilon'}(x) \subset B^{d''}\_{\varepsilon''}(x)\\) and \\(B^{d}\_{\varepsilon}(x) \subset B^{d'}\_{\varepsilon'}(x)\\), which implies we can find a ball 
+\\[B^{d}\_{\varepsilon}(x) \subset B^{d''}\_{\varepsilon''}(x).\\]
+Repeating this argument in reverse will give for any ball \\(B^{d}\_{\delta}(x) > 0\\) a smaller ball
+\\[
+    B^{d''}\_{\delta''}(x) \subset B^{d}\_{\delta}(x).
+\\]
+Thus \\((X, d)\\) is topologically equivalent to \\((X, d'')\\).
+</details>
 
 ## Open sets
 
-As a first step to understanding topological equivalence, consider a set \\(X\\) with two metrics \\(d\\) and \\(d'\\) such that the identity map \\(\operatorname{Id}: (X, d) \to (X, d')\\) is a continuous. Then if we know the metric \\(d\\), what can we say about the metric \\(d'\\)? That is, how does this relationship constrain the two metrics?
+As a first step to understanding topological equivalence, consider a set \\(X\\) with two topologically equivalent metrics \\(d\\) and \\(d'\\). Then if we know the metric \\(d\\), what can we say about the metric \\(d'\\)? That is, how does this relationship constrain the two metrics?
 
-To begin, take a point \\(x \in X\\) and an open ball \\(B^{d'}\_{\varepsilon}(x)\\); then, while \\(B^{d'}\_{\varepsilon}(x)\\) is not necessarily a ball with respect to the metric \\(d\\), the continuity of \\(\operatorname{Id}\\) promises the existence of a small ball \\(\delta > 0\\) so that \\(B^{d}\_{\delta}(x) \subset B^{d'}\_{\varepsilon}(x)\\). In fact, we can say something similar for any point \\(y \in B^{d'}\_{\varepsilon}(x)\\). Indeed, first choose some small \\(\widetilde{\varepsilon} > 0\\) so that \\(B^{d'}\_{\widetilde{\varepsilon}}(y) \subset B^{d'}\_{\varepsilon}(x)\\). For example, we could choose \\(\widetilde{\varepsilon} = \varepsilon - d(x,y)\\), which is positive by \\(d(x,y) < \varepsilon\\), and we can verify that for any \\(z \in B^{d'}\_{\widetilde{\varepsilon}}(y)\\) we have 
+To begin, take a point \\(x \in X\\) and an open ball \\(B^{d'}\_{\varepsilon}(x)\\); then, while \\(B^{d'}\_{\varepsilon}(x)\\) is not necessarily a ball with respect to the metric \\(d\\), the equivalence of metrics promises a small ball \\(\delta > 0\\) so that \\(B^{d}\_{\delta}(x) \subset B^{d'}\_{\varepsilon}(x)\\). In fact, we can say something similar for any point \\(y \in B^{d'}\_{\varepsilon}(x)\\). Indeed, first choose some small \\(\widetilde{\varepsilon} > 0\\) so that \\(B^{d'}\_{\widetilde{\varepsilon}}(y) \subset B^{d'}\_{\varepsilon}(x)\\). For example, we could choose \\(\widetilde{\varepsilon} = \varepsilon - d(x,y)\\), which is positive by \\(d(x,y) < \varepsilon\\), and we can verify that for any \\(z \in B^{d'}\_{\widetilde{\varepsilon}}(y)\\) we have 
 \\[
     d(x,z) \leq d(y,z) + d(x,y) < \widetilde{\varepsilon} + d(x,y) = \varepsilon - d(x,y) + d(x,y) = \varepsilon,
 \\]
-which implies \\(B^{d'}\_{\widetilde{\varepsilon}}(y) \subset B^{d'}\_{\varepsilon}(x)\\). Therefore by continuity of \\(\operatorname{Id}\\) again, there exists some \\(\widetilde{\delta} > 0\\) so that 
+which implies \\(B^{d'}\_{\widetilde{\varepsilon}}(y) \subset B^{d'}\_{\varepsilon}(x)\\). Therefore by the equivalence of metrics again, there exists some \\(\widetilde{\delta} > 0\\) so that 
 \\[
     B^{d}\_{\widetilde{\delta}}(y) \subset B^{d'}\_{\widetilde{\varepsilon}}(y) \subset B^{d'}\_{\varepsilon}(x).
 \\]
@@ -183,33 +224,29 @@ Given a metric space \\((X, d)\\), a subset \\(U \subset X\\) is called ***open*
 
 In reflecting on the above argument that \\(B^{d'}\_{\varepsilon}(x)\\) must be open with respect \\(d\\), note the only property we used about \\(B^{d'}\_{\varepsilon}(x)\\) is that given \\(y \in B^{d'}\_{\varepsilon}(x)\\), we could find a small ball \\(B^{d'}\_{\widetilde{\varepsilon}}(y) \subset B^{d'}\_{\varepsilon}(x)\\). But this is exactly the definition of open with respect to the \\(d'\\) metric! That is, by the exact same argument, we could have argued that any \\(U\\) that is open with respect to \\(d'\\) is also open with respect to \\(d\\), which we formalize below.
 
-**Proposition.** If \\(\operatorname{Id}: (X, d) \to (X, d')\\) is a continuous, then any \\(U \subset X\\) that is open with respect to \\(d'\\) is open with respect to \\(d\\).
+**Proposition.** If \\(d\\) and \\(d'\\) are topologically equivalent metrics on \\(X\\), then \\(d\\) and \\(d'\\) produce the same open sets.
 
-<!-- possibly do not include this proof in the video. -->
-
-*Proof.* Take any point \\(x \in U\\). By definition of open, there is a ball \\(B^{d'}\_{\varepsilon}(x) \subset U\\). Next, by definition of continuity, there is a ball \\(B^{d}\_{\delta}(x) \subset B^{d'}\_{\varepsilon}(x)\\). But putting this together impies
+*Proof.* First suppose \\(U \subset X\\) is open with respect to \\(d'\\), so by the definition of open, there is a ball \\(B^{d'}\_{\varepsilon}(x) \subset U\\). Next, by the definition of topological equivalence, there is a ball \\(B^{d}\_{\delta}(x) \subset B^{d'}\_{\varepsilon}(x)\\). But putting this together impies
 \\[
     B^{d}\_{\delta}(x) \subset B^{d'}\_{\varepsilon}(x) \subset U
 \\]
-and therefore \\(U\\) is also open with respect to \\(d\\).
+and therefore \\(U\\) is also open with respect to \\(d\\). By repeating this argument with \\(d\\) and \\(d'\\) swapped, we conclude any \\(V \subset X\\) that is open with respect to \\(d\\) is also open with respect to \\(d'\\).
 <div style="text-align: right"> \(\square\) </div>
 
-We have found one contraint the continuity of \\(\operatorname{Id}: (X, d) \to (X, d')\\) puts on the metrics. In fact, this constraint exactly classifies the continuity of \\(\operatorname{Id}\\) because the converse is also true.
+We have found one contraint topological equivalence puts on the metrics. In fact, this constraint exactly classifies topological equivalence because the converse is also true, which we prove below.
 
-**Proposition.** If any \\(U \subset X\\) that is open with respect to \\(d'\\) is open with respect to \\(d\\), then \\(\operatorname{Id}: (X, d) \to (X, d')\\) is continuous.
+**Proposition.** If \\(d\\) and \\(d'\\) have the same open sets, then \\(d\\) and \\(d'\\) are topologically equivalent.
 
-*Proof.* Take any point \\(x \in X\\) and open ball \\(B^{d'}\_{\varepsilon}(x)\\). Then because \\(B^{d'}\_{\varepsilon}(x)\\) is open with respect to \\(d'\\), our assumption promises it is open with respect to \\(d\\) and therefore we can find a small ball \\(B^{d}\_{\delta}(x) \subset B^{d'}\_{\varepsilon}(x)\\), implying continuity.
+*Proof.* Take any point \\(x \in X\\) and open ball \\(B^{d'}\_{\varepsilon}(x)\\). Then because \\(B^{d'}\_{\varepsilon}(x)\\) is open with respect to \\(d'\\), our assumption promises it is open with respect to \\(d\\) and therefore we can find a small ball \\(B^{d}\_{\delta}(x) \subset B^{d'}\_{\varepsilon}(x)\\). Repeating this argument with \\(d\\) and \\(d'\\) flipped gives the definition of topological equivalence.
 <div style="text-align: right"> \(\square\) </div>
 
-To summarize, \\(\operatorname{Id}: (X, d) \to (X, d')\\) is continuous if and only if every \\(U \subset X\\) that is open with respect to \\(d'\\) is open with respect to \\(d\\). In the same way, \\(\operatorname{Id}: (X, d') \to (X, d)\\) is continuous if and only if every \\(U \subset X\\) that is open with respect to \\(d\\) is open with respect to \\(d'\\)    Putting these together, we conclude the following.
+Combining the above two results gives the following important alternate characterization of topological equivalence.
 
-**Corollary.** \\(\operatorname{Id}: (X, d) \to (X, d')\\) is a homeomorphism if and only if \\((X, d)\\) and \\((X, d')\\) have the exact same open sets.
-
-This provides important alternate characterization for when \\(d\\) and \\(d'\\) are topologically equivalent: *\\(d\\) and \\(d'\\) are topologically equivalent exactly when they have the same open sets*!
+**Theorem.** \\(d\\) and \\(d'\\) are topologically equivalent if and only if they have the exact same open sets.
 
 ## Continuity using open sets
 
-Note our original motivation for topological equivalence was to identify metrics that induce the same continuous maps. Next, we found the open set data is enough to determine topological equivalence. Therefore, we should expect that this open set data should encode continuity. Indeed, recall we found \\(\operatorname{Id}: (X, d) \to (X, d')\\) is continuous if and only if every \\(U \subset X\\) that is open with respect to \\(d'\\) is open with respect to \\(d\\). More generally, we could consider an arbitrary map \\(f: X \to Y\\) between metric spaces. In fact, the ideas from the proof in the case of the identity map directly generalize and we arrive at the following.
+Our original motivation for topological equivalence was to identify metrics that induce the same continuous maps. Next, we found the open set data is enough to determine topological equivalence. Therefore, we should expect that this open set data should encode continuity. Indeed, taking the open ball characterization of continuity and considering arbitrary open sets, we arrive at the following characterization of continuity.
 
 **Proposition.** A map \\(f: X \to Y\\) between metric spaces is continuous if and only if \\(f^{-1}(U) \subset X\\) is open for every open \\(U \subset Y\\).
 <!-- in video, just do quick visual motivating proof first and perhaps skip the formal proof -->
@@ -222,7 +259,7 @@ Therefore, \\(U\\) is open in \\(X\\). Conversely, suppose \\(f^{-1}(U)\\) is op
 
 ## Topological spaces
 
-Recall we determined two metrics \\(d\\) and \\(d'\\) over a space \\(X\\) will yield exactly the same continuous functions \\(X \to Y\\) and \\(Y \to X\\) if \\(\operatorname{Id}: (X, d) \to (X, d')\\) is a homeomorphism, which we called "topologically equivalence". From our subsequent investigations, we found the collection of open sets encode this notion of topological equivalence, and the collection of open sets is the only necessary data to determine if a function is continuous between two metric spaces. Given a metric space \\(X\\), the collection of all open sets
+Recall we determined two metrics \\(d\\) and \\(d'\\) over a space \\(X\\) will yield exactly the same continuous functions \\(X \to Y\\) and \\(Y \to X\\) if they are topologically equivalent. From our subsequent investigations, we found the collection of open sets encode this notion of topological equivalence; furthermore, the collection of open sets is the only necessary data to determine if a function is continuous between two metric spaces. Given a metric space \\(X\\), the collection of all open sets
 \\[
     \mathcal{T} = \\{U \subset X : U \text{ is open}\\}
 \\]
@@ -255,15 +292,71 @@ A ***topological space*** is a set \\(X\\) together with a collection \\(\mathca
 <!-- check history below -->
 The definition of a topological space evolved over time with mathematicians eventually agreeing on the above formulation. In truth, the open sets in a metric space have additional structure that is not reflected in the three properties above and the original definition of a "topological space" by Hausdorff in 1914 required some of this extra structure. However, mathematicians found useful spaces that did not fit into this original definition and so removed this extra structure and landed on the above definition, which is the most general definition.
 
-**Example.** Any metric space \\((X, d)\\) is also a topological space by considering the set \\(X\\) together with its topology \\(\mathcal{T}\\) of opens sets induced by the metric.
+**Example.** Any metric space \\((X, d)\\) is also a topological space by considering the set \\(X\\) together with its topology \\(\mathcal{T}\\) of opens sets induced by the metric. This is called the ***metric topology***.
 
 <!-- below in some order: -->
 
-/\*discrete topology\*/
+<div style="text-align: right"> // </div>
 
-/\*trivial topology\*/
+Another topology is given by defining *all* sets to be open.
 
-/\*Sierpiński topology\*/
+**Example.** Consider any set \\(X\\) with the topology \\(\mathcal{P}(X)\\) given by the power set of \\(X\\), which is called the ***discrete topology***. Then:
+1. If all sets are open, then any union \\(\bigcup_{\alpha \in A} U_{\alpha}\\) of open sets will still be open.
+2. Similarly, any finite intersection \\(\bigcap\_{i = 1}^n U\_{i}\\) will be open because all sets are open.
+3. The empty set \\(varnothing\\) and the full set \\(X\\) will be open as they are elements of the power set.
+
+<div style="text-align: right"> // </div>
+
+**Exercise.** Given any set \\(X\\), find a metric on \\(X\\) so that the metric topology is the discrete topology.
+
+<details markdown="1">
+<summary><i>Solution.</i></summary>
+Note that, in particular, every individual point \\(\\{x\\} \subset X\\) is an open set. Therefore, we need to find a metric \\(d\\) so that for small enough \\(\varepsilon > 0\\) we have \\(B^{d}\_{\varepsilon}(x) \subset \\{x\\}\\). That is, for every \\(x\\), we require there to be some distance \\(\varepsilon > 0\\) so that no points are with distance \\(\varepsilon\\) from \\(x\\). One way of accomplishing this is with the ***discrete metric***
+\\[
+    d(x,y) =
+    \begin{cases}
+        0 & \text{if } x = y,\\\\\
+        1 & \text{otherwise}.
+    \end{cases}
+\\]
+We verify that with this metric every arbitrary \\(U \subset X\\) is open. Indeed, take some point \\(x \in U\\) and observe that because the only point within distance \\(1/2\\) from \\(x\\) is the point \\(x\\) itself we have
+\\[
+    B^{d}\_{1/2}(x) = \\{x\\} \subset U.
+\\]
+<div style="text-align: right"> // </div>
+</details>
+
+However, a topology is more general than a metric: not every topology is the metric topology of some metric.
+
+**Example.** Given any set \\(X\\), the ***trivial topology*** is defines *only* \\(\varnothing\\) and \\(X\\) to be open. That is, we take the topology \\(\mathcal{T} = \\{\varnothing, X\\}\\). Notice:
+1. Any union using only the sets \\(\\{\varnothing, X\\}\\) will be either \\(\varnothing\\) or \\(X\\).
+2. Any intersection using only the sets \\(\\{\varnothing, X\\}\\) will be either \\(\varnothing\\) or \\(X\\).
+3. The empty set \\(\varnothing\\) and the full set \\(X\\) are open by.
+
+<div style="text-align: right"> // </div>
+
+**Exercise.** Prove the trivial topology of a set \\(X\\) (containing at least 2 elements) is not the metric topology of any metric.
+
+<details markdown="1">
+<summary><i>Solution</i>.</summary>
+Suppose for contradiction the trivial topology is the metric topology of some metric \\(d\\). Then consider two distinct elements \\(x, y \in X\\), which implies \\(d(x,y) > 0\\) by the definition of a metric. Therefore,
+\\[
+    y \notin B^{d}\_{d(x,y)/2}(x).
+\\]
+However, because open balls are open sets in a metric space, we have found the open set \\(B^{d}\_{d(x,y)/2}(x)\\) contains \\(x\\), but does not contain \\(y\\). Therefore we have found an open set that it is neither \\(\varnothing\\) nor \\(X\\), a contradiction.
+
+<div style="text-align: right"> // </div>
+</details>
+
+**Exercise.** The set with two elements \\(X = \\{0, 1\\}\\) with topology \\(\mathcal{T} = \\{\varnothing, \\{1\\}, \\{0,1\\}\\}\\) is called ***Sierpiński space***. Verify this is a topology.
+
+<details markdown="1">
+<summary><i>Solution.</i></summary>
+1. Any union consisting of only the sets \\(\\{\varnothing, \\{1\\}, \\{0,1\\}\\}\\) will again be one of these three sets.
+2. Any intersection consisting of only the sets \\(\\{\varnothing, \\{1\\}, \\{0,1\\}\\}\\) will again be one of these three sets.
+3. The emptyset \\(\varnothing\\) and the full space \\(X = \\{0,1\\}\\) are open by definition.
+<div style="text-align: right"> // </div>
+</details>
 
 ## On the definition of topological space
 
@@ -280,6 +373,8 @@ These are natural properties to require as the collection of open sets in any me
 2. \\(f^{-1}(\bigcap_{\alpha \in A} U_{\alpha}) = \bigcap_{\alpha \in A}f^{-1}(U_{\alpha})\\), and
 3. \\(f^{-1}(Y) = X\\) and \\(f^{-1}(\varnothing) = \varnothing\\).
 
+/\*TODO: solution.\*/
+
 Considering the above results, suppose \\(X\\) is a topological space, \\(Y\\) is any metric space, and \\(f: X \to Y\\) is any continuous function. Then, because \\(\varnothing\\) and \\(Y\\) are open in \\(Y\\), the definition of continuity forces \\(X = f^{-1}(Y)\\) and \\(\varnothing = f^{-1}(\varnothing)\\) to be open in \\(X\\). It is for this reason we define the empty set and the full space to be open; if they were not open, this would be an obstruction to there existing *any* continuous function \\(f: X \to Y\\) to a metric space \\(Y\\). Similarly, because open sets are closed under unions and finite intersections in metric spaces, points by points (1) and (2) above, we should require these same conditions in our definition of a topological space; otherwise, this would be an obstruction to defining continuous functions into metric spaces.
 <!-- 
 in this second case, there still could be continuous functions, but this would make them hard to define...
@@ -288,8 +383,24 @@ also, note historically, topology was originally defined with more conditions on
 
 Next, I follow up with the claim that, in some sense, a topology is the minimal necessary information to determine if a function is continuous. This is not true for metric spaces: we saw the Euclidean metric on \\(\mathbb{R}^2\\) and the taxicab metric on \\(\mathbb{R}^2\\) will result in exactly the same functions \\(f: X \to \mathbb{R}^2\\) and \\(g: \mathbb{R}^2 \to X\\) being continuous. However, knowledge of all continuous maps out of a topological space uniquely determines the topology by the following exercise.
 
-**Puzzle.** Is it possible to give a set \\(X\\) two different topologies so that \\(f: X \to Y\\) is continuous in the first topology if and only if \\(f: X \to Y\\) is continuous with respect to the second topology for all topological spaces \\(Y\\) and all functions \\(f: X \to Y\\)?
+**Puzzle.** Is it possible to give a set \\(X\\) two different topologies that induce the same continuous functions?
 
-/\*prove this using Sierpiński topology... perhaps first give a hint?\*/
+<details markdown="1">
+<summary><i>Solution.</i></summary>
+Because the notion of topology was motivated by topological equivalence, which in turn was motivated by requiring the same behavior of continuous functions, we should expect distinct topologies induce distinct behavior of continuous functions. To prove this, we prove we can reconstruct the topology from the knowledge of all continuous functions. To determine if some \\(U \subset X\\) is open, consider the set \\(\\{0,1\\}\\) with the Sierpiński topology \\(\mathcal{T} = \\{\varnothing, \\{1\\}, \\{0,1\\}\\}\\) together with the function
+\\[
+    f\_{U} =
+    \begin{cases}
+        0 &\text{if } x \notin U,\\\\\
+        1 &\text{if } x \in U.
+    \end{cases}
+\\]
+Then if \\(f\_{U}\\) is continuous, then \\(U = f\_{U}^{-1}(1)\\) is open because \\(\\{1\\}\\) is open. On the other hand, if \\(f\_U\\) is not continuous, this must be because one of the sets
+\\[
+    f^{-1}(\varnothing) = \varnothing, \quad f^{-1}(1) = U, \quad f^{-1}(\\{1,2\\}) = X
+\\]
+has failed to be open. Because \\(\varnothing\\) and \\(X\\) must be open, we conclude \\(U\\) is not open. Therefore, we are able to determine the topology of \\(X\\) from these continuous functions.
+<div style="text-align: right"> // </div>
+</details>
 
 /\*TODO: little conclusion on applications of topology... function spaces, manifolds, \*/
