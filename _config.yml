@@ -25,6 +25,7 @@ url: "https://www.seanhrichardson.com" # the base hostname & protocol for your s
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-scholar
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -45,3 +46,5 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+

@@ -25,6 +25,20 @@ ul, ol {
   font-size: 100%;
 }
 
+/*nice footnote lists*/
+.footnotes ol {
+  counter-reset: none;
+}
+
+.footnotes ol > li {
+  list-style: decimal;   /* restore normal numbering */
+  position: static;
+}
+
+.footnotes ol > li::before {
+  content: none;         /* remove (1), (2), etc */
+}
+
 /*no underline in links*/
 a {
   text-decoration: none;
