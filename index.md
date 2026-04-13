@@ -8,7 +8,7 @@ title: Home Page
 
 <!-- CHANGE... -->
 
-Hello! I am Sean Richardson, a mathematics Ph.D. candidate at the University of Washington. I have a passion for teaching mathematics and help run the [UW Math Circle](https://sites.math.washington.edu/~mathcircle/circle/). My mathematics research interests lie in Differential Geometry, Dynamics, Microlocal Analysis, and Inverse Problems. I completed my undergraduate degree from Lewis & Clark college in Portland, Oregon with a major in mathematics & computer science with a second major in physics. Outside of mathematics, you might find me biking around Seattle or trail running.
+Hi! I am Sean Richardson, a mathematics Ph.D. candidate at the University of Washington. I have a passion for teaching mathematics and help run the [UW Math Circle](https://sites.math.washington.edu/~mathcircle/circle/). My mathematics research interests lie in Differential Geometry, Dynamics, Microlocal Analysis, and Inverse Problems. I completed my undergraduate degree from Lewis & Clark college in Portland, Oregon with a major in mathematics & computer science with a second major in physics. Outside of mathematics, you might find me biking around Seattle or trail running.
 
 <p style = "text-align: center"><img src="/files/headshot-flowers.jpg" alt="Hiking headshot" width="50%"/></p>
 
